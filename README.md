@@ -49,7 +49,7 @@ assets/craby-mark.svg   Craby mascot / logomark, standalone
   - The announcement bar is removed, because the badge replaces it.
 - **Brand pillars, taken from crab biology:**
   - **Shell = Privacy Protect.** Every prompt gets a shell.
-  - **Molt = continuous fine-tuning.** Each nightly version is a molt, kept only if it's stronger.
+  - **Molt = continuous fine-tuning.** Each molt runs once enough approved data has built up, and is kept only if it's stronger.
   - **Claws = ownership.** You choose the data, roll back any molt and export your weights.
 
   Use the pillars in headlines, eyebrows and microcopy. Keep the literal feature names for clarity.

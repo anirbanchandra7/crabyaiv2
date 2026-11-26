@@ -607,7 +607,7 @@ table{border-collapse:collapse}
 .mn.next i{background:#fff;border:2px dashed var(--accent)}
 .mprog{margin-top:42px;font-size:12.5px;color:var(--ink-2)}
 .mprog i{display:block;margin-top:8px;height:4px;background:var(--surface-3);overflow:hidden}
-.mprog em{display:block;height:100%;width:64%;background:var(--accent)}
+.mprog em{display:block;height:100%;width:74%;background:linear-gradient(90deg,var(--accent) 0 40%,var(--peach) 50%,var(--accent) 60% 100%);background-size:250% 100%;background-position:100% 0}
 .fv-snip{display:flex;align-items:center;padding:0 24px}
 .snip-text{position:relative;font-size:16px;line-height:1.9;color:var(--ink)}
 .fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 24px;padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--border)}
@@ -622,12 +622,12 @@ table{border-collapse:collapse}
   .gpin:nth-of-type(4) .gring{animation-delay:1.8s}
   .garc{animation:gdash 1.6s linear infinite}
   .mn.next i{animation:spin 6s linear infinite}
-  .mprog em{animation:molt 4s var(--ease) infinite alternate}
+  .mprog em{animation:shimmer 2.8s linear infinite}
 }
 @keyframes gping{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.8);opacity:0}}
 @keyframes gdash{to{stroke-dashoffset:-18}}
 @keyframes spin{to{transform:rotate(360deg)}}
-@keyframes molt{from{width:42%}to{width:86%}}
+@keyframes shimmer{to{background-position:-150% 0}}
 @media (max-width:1000px){.fbento{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.fgrid{grid-template-columns:1fr}.fcard.wide .fvis{height:340px}.ptab{padding:0 8px;font-size:12px}}
 
@@ -887,7 +887,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     </div>
     <div class="mega" id="mega" role="region" aria-label="Product">
       <a class="mi" href="#how"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-server"/></svg></span><span><b>Deploy<em class="tag">CLAWS</em></b><small>Serverless by default. Dedicated GPUs on Enterprise.</small></span></a>
-      <a class="mi" href="#learn"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><span><b>Continuous fine-tuning<em class="tag">MOLT</em></b><small>Gets smarter nightly, ships only when it wins.</small></span></a>
+      <a class="mi" href="#learn"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><span><b>Continuous fine-tuning<em class="tag">MOLT</em></b><small>Molts once enough approved data builds up.</small></span></a>
       <a class="mi" href="#privacy"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><span><b>Privacy Protect<em class="tag">SHELL</em></b><small>Sensitive values masked before the model reads them.</small></span></a>
       <a class="mi" href="#api"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg></span><span><b>API + team chat</b><small>OpenAI-compatible endpoint and a private chat.</small></span></a>
       <a class="mega-card" href="#features"><svg class="crab-live" aria-hidden="true"></svg><span><b>See what you can build →</b><small>Support bots, contract review, internal search.</small></span></a>
@@ -946,7 +946,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   <div class="container">
     <div class="pillars">
       <div class="pillar reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><div><span class="k">Shell</span><h3>Every prompt masked</h3><p>Names, IDs and health data are swapped out before the model reads a word.</p></div></div>
-      <div class="pillar reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><div><span class="k">Molt</span><h3>Smarter every night</h3><p>A new version trains on your approved chats and ships only if it wins.</p></div></div>
+      <div class="pillar reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><div><span class="k">Molt</span><h3>Smarter with every molt</h3><p>Once enough chats are approved, a new version trains and ships only if it wins.</p></div></div>
       <div class="pillar reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-key"/></svg></span><div><span class="k">Claws</span><h3>Fully yours</h3><p>Your data, your weights, your rollback button. Export anytime.</p></div></div>
     </div>
   </div>
@@ -1098,8 +1098,8 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   <div class="container"><div class="panel">
     <div class="sec-head split-head reveal">
       <p class="eyebrow">Molt · Continuous fine-tuning</p>
-      <h2 class="display h2" id="learn-h">AI that learns from your team. <span class="dm">It molts into a stronger version every night.</span></h2>
-      <p>Crabs grow by molting. So does Craby.AI. Every night it trains a candidate on conversations your team approved and scores it on your own evals. The old shell is shed only if the new one wins.</p>
+      <h2 class="display h2" id="learn-h">AI that learns from your team. <span class="dm">It molts when it's ready, not on a timer.</span></h2>
+      <p>Crabs grow by molting. So does Craby.AI. Once your team has approved enough conversations, it trains a candidate and scores it on your own evals. The old shell is shed only if the new one wins.</p>
     </div>
     <div class="tabs-grid gap-top reveal">
       <div>
@@ -1109,7 +1109,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
           <button class="tab" role="tab" id="tab-lat" aria-controls="tp-lat" aria-selected="false" tabindex="-1"><b>Latency</b><span>p50 time to first token</span></button>
           <button class="tab" role="tab" id="tab-data" aria-controls="tp-data" aria-selected="false" tabindex="-1"><b>Data exposure</b><span>Sensitive values the vendor sees</span></button>
         </div>
-        <p class="tab-note">Illustrative example based on a support workload. Replace with your own eval data.</p>
+        <p class="tab-note">Illustrative example based on a support workload. Steps happen when enough approved data triggers a molt. Replace with your own eval data.</p>
       </div>
       <div>
         <div class="tabpanel" role="tabpanel" id="tp-acc" aria-labelledby="tab-acc">
@@ -1291,11 +1291,11 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
             <span class="mn"><i></i><b>v9</b><small>90.2</small></span>
             <span class="mn rej"><i></i><b>cand.</b><small>89.7</small></span>
             <span class="mn"><i></i><b>v10</b><small>92.1</small></span>
-            <span class="mn next"><i></i><b>v11</b><small>training</small></span>
+            <span class="mn next"><i></i><b>v11</b><small>collecting</small></span>
           </div>
-          <div class="mprog"><span>Molting on 2,418 approved chats</span><i><em></em></i></div>
+          <div class="mprog"><span>Next molt: 1,840 of 2,500 approved examples</span><i><em></em></i></div>
         </div>
-        <div class="fcopy"><h3>Molts into a stronger version</h3><p>Every candidate is scored on your evals. Losers are shed, winners ship.</p></div>
+        <div class="fcopy"><h3>Molts into a stronger version</h3><p>Molts kick in once enough data is approved. Every candidate is scored on your evals; losers are shed, winners ship.</p></div>
       </article>
       <article class="fcard reveal">
         <div class="fvis fv-snip">
@@ -1441,11 +1441,11 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
         <p>Something we missed? <a href="#">Talk to an engineer</a>, not a sales script.</p>
       </div>
       <div class="faq-list reveal">
-        <details open><summary>Why a crab?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Crabs carry their own shell, grow by molting, and never let go of what's theirs. That's the product: private by default, better every week, and fully yours. And yes, the only thing we're crabby about is your data.</div></details>
+        <details open><summary>Why a crab?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Crabs carry their own shell, grow by molting, and never let go of what's theirs. That's the product: private by default, better with every molt, and fully yours. And yes, the only thing we're crabby about is your data.</div></details>
         <details><summary>What does "own your intelligence" actually mean?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">The fine-tuned version of your model is yours. Your data only ever trains your model, never anyone else's, and you can export your weights whenever you like. No lock-in.</div></details>
         <details><summary>Which models can I deploy?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">The leading open-weight families, including Llama, Qwen, Mistral, Gemma, DeepSeek and gpt-oss, from small fast models to 100B+ parameters. New releases usually land within days.</div></details>
         <details><summary>How does Privacy Protect work?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Every prompt passes through a detection layer before it reaches the model. Sensitive values are replaced with typed placeholders, the model writes its answer, and Craby.AI restores the real values for authorised users only. The model never sees the originals.</div></details>
-        <details><summary>How does the model get smarter over time?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">You decide which conversations count as training data. Craby.AI fine-tunes a candidate on them, scores it against your evaluation set, and promotes it only if it wins. Every version is kept, so rolling back takes one click.</div></details>
+        <details><summary>How does the model get smarter over time?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">You decide which conversations count as training data. Craby.AI fine-tunes a candidate on them, scores it against your evaluation set, and promotes it only if it wins. A molt starts once enough approved data has built up, so the pace follows your usage, not a calendar. Every version is kept, so rolling back takes one click.</div></details>
         <details><summary>How does billing work?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Add credit, then pay per token at the rate for your model's size. There are no seat fees and no minimum spend. Turn on auto-recharge and set spend limits per team.</div></details>
         <details><summary>Will my existing code work?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Yes. The endpoint is OpenAI-compatible, so most apps move over by changing the base URL and the API key.</div></details>
       </div>
