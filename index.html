@@ -617,7 +617,9 @@ table{border-collapse:collapse}
 .fgrid p{margin-top:4px;font-size:14px;color:var(--muted)}
 @media (prefers-reduced-motion:no-preference){
   .gring{animation:gping 2.4s var(--ease) infinite}
-  .gpin:nth-of-type(2) .gring{animation-delay:1.2s}
+  .gpin:nth-of-type(2) .gring{animation-delay:.6s}
+  .gpin:nth-of-type(3) .gring{animation-delay:1.2s}
+  .gpin:nth-of-type(4) .gring{animation-delay:1.8s}
   .garc{animation:gdash 1.6s linear infinite}
   .mn.next i{animation:spin 6s linear infinite}
   .mprog em{animation:molt 4s var(--ease) infinite alternate}
@@ -648,30 +650,6 @@ table{border-collapse:collapse}
 .crab-art{width:100%;max-width:520px;aspect-ratio:1/1;margin-left:auto}
 .crab-art canvas{width:100%;height:100%}
 
-/* ---------- Picker (Ramp) ---------- */
-.picker{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:stretch}
-.picker-in label,.picker-in .q{display:block;font:600 13.5px/1 var(--font-ui)}
-.picker-in .q{margin-top:24px}
-.site-in{margin-top:10px;display:flex;align-items:center;gap:8px;height:50px;padding:0 14px;border:1px solid var(--border-strong);border-radius:var(--r);background:#fff}
-.site-in:focus-within{border-color:var(--ink);box-shadow:0 0 0 3px var(--accent-wash)}
-.site-in .i{width:17px;height:17px;color:var(--muted)}
-.site-in input{flex:1;min-width:0;border:0;outline:0;font:400 16px var(--font-ui);background:transparent}
-.choices{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.choice{display:flex;align-items:center;gap:10px;height:52px;padding:0 14px;border:1px solid var(--border-strong);border-radius:var(--r);background:#fff;font-weight:600;font-size:14.5px;text-align:left;transition:border-color .2s,box-shadow .2s}
-.choice .i{width:18px;height:18px;color:var(--muted)}
-.choice:hover{border-color:var(--ink-2)}
-.choice[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
-.choice[aria-pressed=true] .i{color:var(--accent)}
-.rec{border:1px solid var(--border);border-radius:var(--r);background:#F7FBFD;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column}
-.rec-k{font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.rec-model{margin-top:14px;display:flex;align-items:center;gap:12px;font:600 clamp(1.4rem,1.1rem + 1vw,1.9rem)/1.1 var(--font-ui);letter-spacing:-.035em}
-.rec-why{margin-top:10px;font-size:15px;color:var(--ink-2);max-width:440px}
-.rec-grid{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:var(--r);background:#fff}
-.rec-grid div{padding:12px 14px;border-left:1px solid var(--border)}
-.rec-grid div:first-child{border-left:0}
-.rec-grid span{display:block;font-size:11.5px;color:var(--muted)}
-.rec-grid b{display:block;margin-top:5px;font-weight:600;font-size:15px;letter-spacing:-.015em}
-.rec-cta{margin-top:auto;padding-top:22px}
 
 /* ---------- Calculator ---------- */
 .calc{display:grid;grid-template-columns:5fr 7fr;border:1px solid var(--border);border-radius:var(--r)}
@@ -835,9 +813,6 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   .principles{grid-template-columns:1fr}
   .principles > div,.principles > div + div{padding:18px 0;border-left:0;border-bottom:1px solid var(--dark-border)}
   .ticker{display:none}
-  .rec-grid{grid-template-columns:1fr}
-  .rec-grid div{border-left:0;border-top:1px solid var(--border)}
-  .rec-grid div:first-child{border-top:0}
   .pk > span:last-child{display:none}
 }
 @media (max-width:640px){
@@ -846,7 +821,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   .input-cta input{width:100%;height:46px;padding:0 10px}
   .input-cta .btn{width:100%;height:46px}
   .checks{flex-direction:column;gap:8px}
-  .amounts,.choices{grid-template-columns:1fr 1fr}
+  .amounts{grid-template-columns:1fr 1fr}
   .toast{display:none}
   .faq-a{padding-right:0}
   .announce{padding:10px 40px 10px 14px;text-align:left}
@@ -911,11 +886,11 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
       <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
     <div class="mega" id="mega" role="region" aria-label="Product">
-      <a class="mi" href="#how"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-server"/></svg></span><span><b>Deploy<em class="tag">CLAWS</em></b><small>Any open model on dedicated GPUs in one click.</small></span></a>
+      <a class="mi" href="#how"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-server"/></svg></span><span><b>Deploy<em class="tag">CLAWS</em></b><small>Serverless by default. Dedicated GPUs on Enterprise.</small></span></a>
       <a class="mi" href="#learn"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><span><b>Continuous fine-tuning<em class="tag">MOLT</em></b><small>Gets smarter nightly, ships only when it wins.</small></span></a>
       <a class="mi" href="#privacy"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><span><b>Privacy Protect<em class="tag">SHELL</em></b><small>Sensitive values masked before the model reads them.</small></span></a>
       <a class="mi" href="#api"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg></span><span><b>API + team chat</b><small>OpenAI-compatible endpoint and a private chat.</small></span></a>
-      <a class="mega-card" href="#pick"><svg class="crab-live" aria-hidden="true"></svg><span><b>Find your model →</b><small>Tell us your use case. Get a setup in seconds.</small></span></a>
+      <a class="mega-card" href="#features"><svg class="crab-live" aria-hidden="true"></svg><span><b>See what you can build →</b><small>Support bots, contract review, internal search.</small></span></a>
     </div>
     <div class="progress" aria-hidden="true"><span class="track"></span><svg class="walker crab-live"></svg></div>
   </div>
@@ -1005,7 +980,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
           </div>
           <div class="c-stats">
             <div class="c-stat"><div class="l">Requests today</div><div class="v">18,204</div><div class="d">+12% vs last week</div></div>
-            <div class="c-stat"><div class="l">p50 latency</div><div class="v">212 ms</div><div class="d n">Dedicated GPUs</div></div>
+            <div class="c-stat"><div class="l">p50 latency</div><div class="v">212 ms</div><div class="d n">Serverless</div></div>
             <div class="c-stat"><div class="l">Entities masked</div><div class="v">4,917</div><div class="d n">0 sent to model</div></div>
             <div class="c-stat"><div class="l">Eval score</div><div class="v">92.1%</div><div class="d">+1.9 pts vs v9</div></div>
           </div>
@@ -1057,7 +1032,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
             <span class="rail" aria-hidden="true"></span>
             <button class="step on" type="button" data-i="0"><span class="num">01 · REGISTER</span><h3>Create your workspace</h3><span class="sb"><p>Sign up with your work email or SSO. Invite your team whenever you're ready.</p></span></button>
             <button class="step" type="button" data-i="1"><span class="num">02 · ADD CREDIT</span><h3>Top up, pay per token</h3><span class="sb"><p>Start from $10. You only pay for the tokens you use. No seats, no minimums, no surprise invoices.</p></span></button>
-            <button class="step" type="button" data-i="2"><span class="num">03 · DEPLOY</span><h3>Pick a model, click deploy</h3><span class="sb"><p>Llama, Qwen, Mistral and more. One click puts it on dedicated GPUs with Privacy Protect already switched on.</p></span></button>
+            <button class="step" type="button" data-i="2"><span class="num">03 · DEPLOY</span><h3>Pick a model, click deploy</h3><span class="sb"><p>Choose a model and click deploy. It runs serverless, so you pay per token from the first request, with Privacy Protect already switched on.</p></span></button>
             <button class="step" type="button" data-i="3"><span class="num">04 · BUILD AND ROLL OUT</span><h3>Ship to developers and staff</h3><span class="sb"><p>Point your code at an OpenAI-compatible endpoint. Hand everyone else a secure chat. Same model, same guardrails.</p></span></button>
           </div>
           <div class="frame" aria-live="polite">
@@ -1084,12 +1059,12 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
             </div></div>
             <div class="viz" data-i="2"><div class="mock">
               <div class="mock-h">Deploy a model</div>
-              <p class="mock-sub">Region: EU · Frankfurt &nbsp;·&nbsp; Privacy Protect: always on</p>
+              <p class="mock-sub">Region: EU &nbsp;·&nbsp; Privacy Protect: always on</p>
               <div class="model-opt on" style="margin-top:14px"><span class="radio"></span><span><b>Llama 3.3 70B Instruct</b><small>128K context · Meta</small></span><span class="mtag">Most capable</span></div>
               <div class="model-opt"><span class="radio"></span><span><b>Qwen3 32B</b><small>128K context · Alibaba</small></span><span class="mtag">Balanced</span></div>
               <div class="model-opt"><span class="radio"></span><span><b>Mistral Small 3.1 24B</b><small>128K context · Mistral AI</small></span><span class="mtag">Fastest</span></div>
               <ul class="deploy-status">
-                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>GPUs allocated</li>
+                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Serverless endpoint provisioned</li>
                 <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Weights loaded · Privacy Protect attached</li>
                 <li><span class="swap"><span class="a">Warming up</span><span class="b" style="color:var(--good)">Live in 1m 52s</span></span><span class="prog"><i></i></span></li>
               </ul>
@@ -1150,11 +1125,11 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
           <details class="table-view"><summary>View as table</summary><div class="tv data-table" id="ft-table"></div></details>
         </div>
         <div class="tabpanel" role="tabpanel" id="tp-cost" aria-labelledby="tab-cost" hidden>
-          <div class="metric-row"><div class="metric"><span class="cap">Per 1M tokens</span><s>$5.00 leading closed API</s><span class="v">$1.50</span></div><p class="metric-desc">Open weights on dedicated GPUs, billed per token. No seat licences on top.</p></div>
+          <div class="metric-row"><div class="metric"><span class="cap">Per 1M tokens</span><s>$5.00 leading closed API</s><span class="v">$1.50</span></div><p class="metric-desc">Open weights, served serverless and billed per token. No seat licences on top.</p></div>
           <div class="chart-box" data-bars="cost"></div>
         </div>
         <div class="tabpanel" role="tabpanel" id="tp-lat" aria-labelledby="tab-lat" hidden>
-          <div class="metric-row"><div class="metric"><span class="cap">p50 time to first token</span><s>820 ms leading closed API</s><span class="v">212<small>ms</small></span></div><p class="metric-desc">Your model, your GPUs, your region. No shared queue at peak hours.</p></div>
+          <div class="metric-row"><div class="metric"><span class="cap">p50 time to first token</span><s>820 ms leading closed API</s><span class="v">212<small>ms</small></span></div><p class="metric-desc">Your model, in your region. Need guaranteed capacity? Dedicated GPUs come with Enterprise.</p></div>
           <div class="chart-box" data-bars="lat"></div>
         </div>
         <div class="tabpanel" role="tabpanel" id="tp-data" aria-labelledby="tab-data" hidden>
@@ -1173,7 +1148,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     <div class="sec-head split-head reveal">
       <p class="eyebrow">Models</p>
       <h2 class="display h2" id="mc-h">The models you want. <span class="dm">The speed you need.</span></h2>
-      <p>Every model runs on dedicated GPUs in the region you pick, with Privacy Protect attached from the first request.</p>
+      <p>Every model runs serverless in the region you pick, with Privacy Protect attached from the first request. Dedicated GPUs are available on Enterprise.</p>
     </div>
     <div class="mcards gap-top reveal">
       <article class="mcard"><div class="mcard-h"><span class="glyph">L</span>Llama 3.3 70B</div><p class="tags">Meta · 128K context · Fine-tunable</p><s>820 ms closed API</s><p class="v">212<small>ms</small></p><p class="cap">p50 time to first token</p><p class="dep">Deploy on <b>EU · US</b></p></article>
@@ -1296,14 +1271,18 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
             <circle cx="160" cy="125" r="92" fill="#fff"/>
             <rect x="60" y="30" width="200" height="190" fill="url(#gdots)" clip-path="url(#gclip)"/>
             <g fill="none" stroke="#171E52" stroke-opacity=".12"><ellipse cx="160" cy="125" rx="92" ry="30"/><ellipse cx="160" cy="125" rx="40" ry="92"/><ellipse cx="160" cy="125" rx="75" ry="92"/></g>
-            <path class="garc" d="M118 112 Q160 60 205 98" fill="none" stroke="#F2713A" stroke-width="1.6"/>
-            <g class="gpin"><circle cx="118" cy="112" r="10" class="gring"/><circle cx="118" cy="112" r="4" fill="#F2713A"/></g>
-            <g class="gpin"><circle cx="205" cy="98" r="10" class="gring"/><circle cx="205" cy="98" r="4" fill="#F2713A"/></g>
+            <path class="garc" d="M108 112 Q135 70 160 92 Q182 82 196 112 Q214 96 228 118" fill="none" stroke="#F2713A" stroke-width="1.6"/>
+            <g class="gpin"><circle cx="108" cy="112" r="10" class="gring"/><circle cx="108" cy="112" r="4" fill="#F2713A"/></g>
+            <g class="gpin"><circle cx="160" cy="92" r="10" class="gring"/><circle cx="160" cy="92" r="4" fill="#F2713A"/></g>
+            <g class="gpin"><circle cx="196" cy="112" r="10" class="gring"/><circle cx="196" cy="112" r="4" fill="#F2713A"/></g>
+            <g class="gpin"><circle cx="228" cy="118" r="10" class="gring"/><circle cx="228" cy="118" r="4" fill="#F2713A"/></g>
           </svg>
-          <span class="gchip" style="left:6%;top:56%"><b>us-east</b> Virginia · Live</span>
-          <span class="gchip" style="right:5%;top:20%"><b>eu-central</b> Frankfurt · Live</span>
+          <span class="gchip" style="left:5%;top:58%"><b>US</b> Live</span>
+          <span class="gchip" style="left:22%;top:12%"><b>EU</b> Live</span>
+          <span class="gchip" style="left:56%;top:76%"><b>GCC</b> Live</span>
+          <span class="gchip" style="right:4%;top:30%"><b>Asia</b> Live</span>
         </div>
-        <div class="fcopy"><h3>Deploy in your region</h3><p>Dedicated GPUs in the EU or US. Your data stays where you put it.</p></div>
+        <div class="fcopy"><h3>Deploy in your region</h3><p>US, EU, GCC or Asia. Your data stays where you put it.</p></div>
       </article>
       <article class="fcard reveal">
         <div class="fvis fv-molt" aria-hidden="true">
@@ -1366,43 +1345,8 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   </div>
 </section>
 
-<!-- ============ Picker (Ramp) ============ -->
-<!-- PLACEHOLDER: recommendations in PICKS (script) -->
-<section class="block first" id="pick" aria-labelledby="pick-h">
-  <div class="container"><div class="panel">
-    <div class="sec-head center reveal">
-      <p class="eyebrow">Get a recommendation</p>
-      <h2 class="display h2" id="pick-h">Find the right model <span class="dm">for your business.</span></h2>
-    </div>
-    <div class="picker gap-top reveal">
-      <div class="picker-in">
-        <label for="site">Your website</label>
-        <div class="site-in"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><input id="site" type="text" inputmode="url" placeholder="yourcompany.com" autocomplete="url"></div>
-        <span class="q" id="use-q">What will you use it for first?</span>
-        <div class="choices" role="group" aria-labelledby="use-q">
-          <button class="choice" type="button" data-k="support" aria-pressed="true"><svg class="i" aria-hidden="true"><use href="#i-headset"/></svg>Customer support</button>
-          <button class="choice" type="button" data-k="internal" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg>Internal assistant</button>
-          <button class="choice" type="button" data-k="regulated" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-pulse"/></svg>Regulated data</button>
-          <button class="choice" type="button" data-k="coding" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>Coding</button>
-        </div>
-      </div>
-      <div class="rec" aria-live="polite">
-        <p class="rec-k" id="rec-k">Recommended for you</p>
-        <p class="rec-model"><span class="app-badge" style="width:34px;height:34px"><svg aria-hidden="true" style="width:26px;height:26px"><use href="#craby"/></svg></span><span id="rec-model">Llama 3.3 70B</span></p>
-        <p class="rec-why" id="rec-why"></p>
-        <div class="rec-grid">
-          <div><span>Region</span><b id="rec-region">EU · Frankfurt</b></div>
-          <div><span>Privacy policy</span><b id="rec-policy">PII + payment</b></div>
-          <div><span>Est. per month</span><b id="rec-cost">$450</b></div>
-        </div>
-        <div class="rec-cta"><a class="btn btn-ink" href="#start">Deploy this setup <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-      </div>
-    </div>
-  </div></div>
-</section>
-
 <!-- ============ Calculator ============ -->
-<section class="block" id="math" aria-labelledby="math-h">
+<section class="block first" id="math" aria-labelledby="math-h">
   <div class="container"><div class="panel">
     <div class="sec-head split-head reveal">
       <p class="eyebrow">The math</p>
@@ -1462,7 +1406,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
         <div class="p-price">Pay as you go</div>
         <p class="p-sub">Add credit from $10. Per-token rates by model size.</p>
         <ul class="p-list">
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Every supported open model</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Serverless: pay only for tokens used</li>
           <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Privacy Protect on every request</li>
           <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Continuous fine-tuning and evals</li>
           <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>API plus team chat, unlimited seats</li>
@@ -1475,7 +1419,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
         <div class="p-price">Let's talk</div>
         <p class="p-sub">For regulated teams and large rollouts.</p>
         <ul class="p-list">
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Dedicated GPUs or your own VPC</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Dedicated GPUs on request, or your own VPC</li>
           <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Custom Privacy Protect policies</li>
           <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>SSO, SAML and SCIM provisioning</li>
           <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Uptime SLA and audit exports</li>
@@ -1523,7 +1467,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     <!-- PLACEHOLDER: only list certifications you actually hold -->
     <div class="compliance reveal">
       <span class="comp"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>GDPR ready</span>
-      <span class="comp"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>EU and US data residency</span>
+      <span class="comp"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>US, EU, GCC and Asia regions</span>
       <span class="comp"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>Encrypted in transit and at rest</span>
       <span class="comp"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg>SOC 2 Type II in progress</span>
     </div>
@@ -1597,13 +1541,6 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     cost: { fmt: v => '$' + v.toFixed(2), rows: [['Leading closed API', 5.00], ['Craby.AI, Llama 3.3 70B', 1.50]] },
     lat:  { fmt: v => Math.round(v) + ' ms', rows: [['Leading closed API', 820], ['Craby.AI, Llama 3.3 70B', 212]] },
     data: { fmt: v => Math.round(v) + '%', rows: [['Leading closed API', 100], ['Craby.AI with Privacy Protect', 0]] }
-  };
-  // PLACEHOLDER: picker recommendations.
-  const PICKS = {
-    support:   { model: 'Llama 3.3 70B', why: 'Strong at grounded, polite answers over your help centre. Learns tone from resolved tickets.', policy: 'PII + payment', tokensM: 300 },
-    internal:  { model: 'Qwen3 32B', why: 'Fast and capable for drafting, summaries and search across internal docs. Cheap to run for the whole company.', policy: 'PII + secrets', tokensM: 150 },
-    regulated: { model: 'Llama 3.3 70B', why: 'Our most capable option on dedicated EU GPUs, with health and payment masking switched on from day one.', policy: 'PII + PHI + PCI', tokensM: 200 },
-    coding:    { model: 'gpt-oss-120b', why: 'Built for reasoning and tool use. Pair it with secrets masking so keys never leave your repo.', policy: 'Secrets + keys', tokensM: 500 }
   };
 
   /* ---------------- Reveal ---------------- */
@@ -1946,18 +1883,6 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     });
   });
 
-  /* ---------------- Picker ---------------- */
-  const site = $('#site'); let pick = 'support';
-  const EU = /\.(eu|de|fr|uk|ie|nl|es|it|se|dk|fi|no|pl|be|at|ch|pt)$/i;
-  const renderPick = () => {
-    const p = PICKS[pick], host = site.value.trim().replace(/^https?:\/\//, '').replace(/\/.*$/, '');
-    $('#rec-k').textContent = host ? `Recommended for ${host}` : 'Recommended for you';
-    $('#rec-model').textContent = p.model; $('#rec-why').textContent = p.why; $('#rec-policy').textContent = p.policy;
-    $('#rec-region').textContent = pick === 'regulated' || EU.test(host) ? 'EU · Frankfurt' : 'US · Virginia';
-    $('#rec-cost').textContent = fmtUSD(p.tokensM * PRICING.crabyPerM);
-  };
-  $$('.choice').forEach(c => c.addEventListener('click', () => { pick = c.dataset.k; $$('.choice').forEach(x => x.setAttribute('aria-pressed', x === c)); renderPick(); }));
-  site.addEventListener('input', renderPick); renderPick();
 
   /* ---------------- Calculator ---------------- */
   const tok = $('#tok'), seats = $('#seats');

@@ -64,7 +64,8 @@ Search the file for `PLACEHOLDER` and `PROOF NEEDED`. None of these numbers are 
 
 - [ ] **Hero live stat + bottom ticker** (`TICKER`): connect them to real usage or delete them.
 - [ ] **Accuracy chart** (`FT`), **comparison tabs** (`BARS`) and **model card** latencies.
-- [ ] **Picker** (`PICKS`) and **calculator pricing** (`PRICING`).
+- [ ] **Calculator pricing** (`PRICING`).
+- [ ] **Launch models:** we start with 2 models. The model cards, the deploy-step mock, the model marquee and the FAQ still list more, so trim them to the real launch pair.
 - [ ] **Receipts wall**: commented out until you have named design-partner quotes.
 - [ ] **Compliance pills**: only list what you actually hold.
 - [ ] **Product claims to confirm**:
