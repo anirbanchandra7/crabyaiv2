@@ -692,12 +692,10 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
 .foot-col a:hover{color:#fff}
 .foot-bottom{margin-top:56px;padding:20px 0;border-top:1px solid var(--dark-border);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--on-dark-muted)}
 .foot-bottom span{display:inline-flex;align-items:center;gap:8px}
-.seafloor{position:relative;height:clamp(190px,21vw,300px);margin-top:8px;overflow:hidden;user-select:none;pointer-events:none;isolation:isolate}
+.seafloor{position:relative;height:clamp(110px,13vw,210px);margin-top:8px;overflow:hidden;user-select:none;pointer-events:none;isolation:isolate}
 .seafloor::before{content:"";position:absolute;left:0;right:0;bottom:0;height:75%;z-index:-1;background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(255,155,110,.22),transparent 70%)}
-.giant{position:absolute;left:0;right:0;bottom:21%;text-align:center;z-index:0}
+.giant{position:absolute;left:0;right:0;bottom:-0.02em;line-height:0;text-align:center;z-index:0}
 .giant span{font:600 clamp(5rem,1rem + 17vw,16rem)/.8 var(--font-ui);letter-spacing:-.06em;color:var(--accent)}
-.dunes{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;z-index:1}
-.pebble{position:absolute;z-index:2;border-radius:50%}
 
 /* ---------- Bottom ticker (Ramp) ---------- */
 .ticker{position:fixed;left:0;right:0;bottom:0;z-index:80;height:44px;display:flex;align-items:center;gap:16px;padding-left:var(--gutter);background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--border);transition:transform .35s var(--ease)}
@@ -1400,19 +1398,6 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   <div class="seafloor" aria-hidden="true">
     <div class="bubbles" data-n="8"></div>
     <div class="giant"><span>Craby.AI</span></div>
-    <svg class="dunes" viewBox="0 0 1440 160" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="sandfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3D9B1"/><stop offset="1" stop-color="#E7C493"/></linearGradient>
-        <pattern id="speck" width="16" height="12" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1" fill="#C99B66"/><circle cx="11" cy="8" r=".8" fill="#C99B66"/></pattern>
-      </defs>
-      <path d="M0 62C160 26 330 84 540 54S900 10 1110 48S1350 76 1440 44V160H0Z" fill="#DDB988"/>
-      <path d="M0 96C210 66 430 118 720 92S1140 66 1440 98V160H0Z" fill="url(#sandfade)"/>
-      <path d="M0 96C210 66 430 118 720 92S1140 66 1440 98V160H0Z" fill="url(#speck)" opacity=".35"/>
-    </svg>
-    <span class="pebble" style="left:14%;bottom:6%;width:12px;height:7px;background:#D9B07E"></span>
-    <span class="pebble" style="left:27%;bottom:9%;width:7px;height:5px;background:#FF9B6E;opacity:.7"></span>
-    <span class="pebble" style="left:71%;bottom:7%;width:14px;height:8px;background:#CFA373"></span>
-    <span class="pebble" style="left:86%;bottom:11%;width:8px;height:6px;background:#FF9B6E;opacity:.6"></span>
   </div>
 </footer>
 
