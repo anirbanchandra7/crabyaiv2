@@ -10,7 +10,8 @@ assets/craby-mark.svg   Craby mascot / logomark, standalone
 ## Design system
 
 - **Art direction:** warm brand. Sand canvas `#F8F5F0`, deep-sea ink `#0E1A2B`, crab coral accent `#CF4426`.
-- **Type:** Instrument Serif for display (weight 400, negative tracking), Geist for UI, Geist Mono for eyebrows, buttons and numbers.
+- **Type:** Frank Ruhl Libre for display (weight 400, -0.032em tracking) and Roboto Flex for UI, the Origami pairing from the design skill. Geist Mono only for small eyebrows, tickers and code.
+- **Layout rhythm:** left hero › left sticky steps › text left / chart right › visual left / text right › centred API + chat › split chips › left dark band › centred calculator › split header + 3-up › centred pricing › split FAQ › split CTA card.
 - **Radius family:** soft, 6 / 10 / 16 / 24px for surfaces, pill for buttons and inputs.
 - **Mascot:** a geometric Craby built on a 64px grid with one coral colour and a 3px stroke, so it still reads at 24px. It's used as the logo, the app icon, the chat avatar, and a halftone version in the "Why now" band.
 - **Charts:** hand-built SVG. They use hairline solid gridlines and 2px lines, carry direct end labels plus a legend, and give the highlighted series the accent colour with context series in grey. They have a crosshair tooltip, arrow-key navigation and a table view.
