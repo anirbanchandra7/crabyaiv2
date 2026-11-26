@@ -6,7 +6,7 @@
 <title>Craby.AI · Own your intelligence</title>
 <meta name="description" content="Craby.AI deploys an open-weight model for your team in minutes, fine-tunes it on how you work, keeps every prompt private with Privacy Protect, and gives you an API and a team chat on day one.">
 <meta property="og:title" content="Craby.AI · Own your intelligence">
-<meta property="og:description" content="Private, self-improving open-weight models. Deploy in minutes, own it forever.">
+<meta property="og:description" content="Private, self-improving open-weight models for your company. Coming soon. Request early access.">
 <meta name="theme-color" content="#BDE2F1">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='%23F2713A' stroke='%23F2713A' stroke-linecap='round'%3E%3Cpath stroke='none' d='M13 41C13 31.5 21.5 26.5 32 26.5S51 31.5 51 41C51 45 44 47 32 47S13 45 13 41Z'/%3E%3Cpath fill='none' stroke-width='3' d='M26 27V22M38 27V22'/%3E%3Ccircle stroke='none' cx='26' cy='19.5' r='3.4'/%3E%3Ccircle stroke='none' cx='38' cy='19.5' r='3.4'/%3E%3Cpath stroke='none' d='M18.25 13.18A7.5 7.5 0 1 1 9.94 10.95L13.2 17.3Z'/%3E%3Cpath stroke='none' d='M45.75 13.18A7.5 7.5 0 1 0 54.06 10.95L50.8 17.3Z'/%3E%3Cpath fill='none' stroke-width='3' d='M16 24.2L21.4 30.4M14.2 39L7.4 40.8M15.2 42.6L9.7 46.9M18.2 45.1L14.7 51.2M48 24.2L42.6 30.4M49.8 39L56.6 40.8M48.8 42.6L54.3 46.9M45.8 45.1L49.3 51.2'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,28 +14,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* =========================================================
-   Craby.AI landing page
-   Direction: OpenLake (dark cinematic hero, floating pill nav, 2px
-   technical radii, white document panels on a grey page, tabbed charts,
-   struck-through metric cards) + Ramp (live stat, email CTA, product UI
-   hero, bottom ticker, recommendation picker, two-tone statements).
-   Palette: ocean depth. Sky hero, sea-foam body, navy bands and footer.
-   Crab orange only for the mascot, primary CTA and data; peach for tints.
+   Craby.AI: coming-soon landing page
+   Premium AI infrastructure: confident, technical, minimal.
+   Palette: ocean depth (sky, sea-foam, navy). Crab orange only for
+   the mascot, the primary CTA, chart highlights and the footer wordmark.
+   One radius family: 2px, pill only for the nav and the badge.
    ========================================================= */
 :root{
   --sky:#BDE2F1; --sky-2:#E3F2F9; --peach:#FF9B6E;
   --bg:#F2F8FB; --surface:#FFFFFF; --surface-2:#EEF5F9; --surface-3:#DFEAF1;
   --ink:#171E52; --ink-2:#2E3670; --muted:#5A6085; --subtle:#9AA0BF;
-  --border:#DCE7EE; --border-strong:#C5D3DE; --grid:rgba(23,30,82,.05);
-  --accent:#F2713A; --accent-hover:#E4612A; --accent-bright:#FF9B6E; --accent-text:#C94E1C; --accent-wash:rgba(242,113,58,.16);
-  --dark:#0E1340; --dark-2:#131A4B; --dark-3:#171E52; --on-dark:#F2F6FB; --on-dark-muted:#A9B0D6; --dark-border:rgba(189,226,241,.14);
+  --border:#DCE7EE; --border-strong:#C5D3DE;
+  --accent:#F2713A; --accent-hover:#E4612A; --accent-text:#C94E1C; --accent-wash:rgba(242,113,58,.16);
+  --dark:#0E1340; --dark-3:#171E52; --on-dark:#F2F6FB; --on-dark-muted:#A9B0D6; --dark-border:rgba(189,226,241,.14);
   --good:#1E7A4C; --good-bg:#E5F3EB; --context:#8A90AE;
   --font-ui:"Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono:"Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --r:2px; --r-pill:999px;
-  --container:1240px; --gutter:clamp(16px,4vw,48px);
+  --container:1200px; --gutter:clamp(16px,4vw,48px);
   --ease:cubic-bezier(.2,.7,.2,1);
-  --shadow:0 1px 2px rgb(23 30 82/.05),0 20px 44px -20px rgb(23 30 82/.28);
+  --shadow:0 1px 2px rgb(23 30 82/.04),0 8px 24px rgb(23 30 82/.06);
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth}
@@ -57,98 +55,59 @@ table{border-collapse:collapse}
 
 /* ---------- Type ---------- */
 .display{font-family:var(--font-ui);font-weight:500;letter-spacing:-.035em}
-.h1{font-size:clamp(2.55rem,1.35rem + 3.7vw,4.3rem);line-height:1.02}
-.h2{font-size:clamp(2rem,1.4rem + 1.8vw,2.9rem);line-height:1.06}
+.h1{font-size:clamp(2.6rem,1.4rem + 3.6vw,4.3rem);line-height:1.02}
+.h2{font-size:clamp(2rem,1.4rem + 1.7vw,2.8rem);line-height:1.06}
 .dm{color:var(--muted)}
 .on-dark .dm{color:var(--on-dark-muted)}
-.eyebrow{display:flex;align-items:center;gap:8px;font:500 11.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.eyebrow::before{content:"";width:6px;height:6px;background:var(--accent)}
+.label{display:inline-flex;align-items:center;gap:10px;font:500 11.5px/1 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.label span{display:inline-grid;place-items:center;min-width:28px;height:22px;padding:0 6px;border:1px solid var(--border-strong);border-radius:var(--r);letter-spacing:.04em;color:var(--ink)}
+.on-dark .label{color:var(--on-dark-muted)}
+.on-dark .label span{border-color:var(--dark-border);color:var(--on-dark)}
 .lead{font-size:clamp(1.05rem,1rem + .3vw,1.2rem);line-height:1.55;color:var(--ink-2)}
-.sec-head{max-width:760px}
-.sec-head.center{margin-inline:auto;text-align:center}
-.sec-head.center .eyebrow{justify-content:center}
+.sec{padding-block:clamp(96px,11vw,150px)}
 .sec-head .h2{margin-top:18px}
-.sec-head p:not(.eyebrow){margin-top:18px;font-size:16.5px;color:var(--muted);max-width:560px}
-.sec-head.center p:not(.eyebrow){margin-inline:auto}
-.split-head{max-width:none;display:grid;grid-template-columns:7fr 5fr;gap:18px 64px;align-items:end}
-.split-head .eyebrow{grid-column:1/-1}
+.split-head{display:grid;grid-template-columns:7fr 5fr;gap:18px 64px;align-items:end}
+.split-head .label{grid-column:1/-1;justify-self:start}
 .split-head .h2{margin-top:0}
-.split-head > p:not(.eyebrow){margin:0;justify-self:end;max-width:420px}
+.split-head > p:not(.label){color:var(--muted);font-size:16.5px;max-width:420px;justify-self:end}
+.gap-top{margin-top:clamp(36px,4.5vw,56px)}
 
-/* ---------- Buttons ---------- */
+/* ---------- Buttons & links ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 18px;border-radius:var(--r);font:500 14.5px/1 var(--font-ui);text-decoration:none;white-space:nowrap;border:1px solid transparent;transition:background-color .2s,border-color .2s,color .2s}
 .btn .i{width:15px;height:15px;transition:transform .25s var(--ease)}
 .btn:hover .i{transform:translateX(3px)}
-.btn-accent{position:relative;background:var(--accent);color:var(--ink)}
+.btn-accent{background:var(--accent);color:var(--ink)}
 .btn-accent:hover{background:var(--accent-hover)}
-.btn-ink{background:var(--ink);color:#fff}
-.btn-ink:hover{background:#232B6B}
-.btn-ghost{border-color:var(--border-strong);color:var(--ink);background:#fff}
-.btn-ghost:hover{border-color:var(--ink-2)}
-.btn-glass{background:rgba(245,246,242,.08);color:var(--on-dark);border-color:var(--dark-border)}
-.btn-glass:hover{background:rgba(245,246,242,.14)}
-.btn-sm{height:36px;padding:0 14px;font-size:13.5px}
 .link-arrow{display:inline-flex;align-items:center;gap:6px;font:500 14.5px/1 var(--font-ui);color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--border-strong)}
 .link-arrow .i{width:15px;height:15px;transition:transform .25s var(--ease)}
 .link-arrow:hover{text-decoration-color:var(--ink)}
 .link-arrow:hover .i{transform:translateX(3px)}
 
-/* ---------- Announcement ---------- */
-.announce{position:relative;z-index:3;background:var(--dark);color:var(--on-dark-muted);font-size:13.5px;text-align:center;padding:10px 48px}
-.announce::after{content:"";position:absolute;left:0;right:0;top:100%;height:28px;background:linear-gradient(180deg,rgba(14,19,64,.28),rgba(14,19,64,0));pointer-events:none}
-.announce b{color:var(--on-dark);font-weight:600;margin-right:6px}
-.announce a{color:var(--on-dark);margin-left:10px;text-underline-offset:3px;white-space:nowrap}
-.announce button{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:grid;place-items:center;color:var(--on-dark-muted)}
-.announce button:hover{color:var(--on-dark)}
-
-/* ---------- Morphing nav: full bar at top, frosted pill on scroll ---------- */
-.nav{position:fixed;left:0;right:0;top:0;z-index:90;display:flex;justify-content:center;pointer-events:none;transition:transform .45s var(--ease)}
-.nav-inner{pointer-events:auto;position:relative;width:min(var(--container),calc(100vw - 2 * var(--gutter)));height:72px;margin-top:0;display:flex;align-items:center;gap:6px;padding:0;border:1px solid transparent;border-radius:var(--r-pill);color:var(--ink);transition:width .55s var(--ease),height .45s var(--ease),margin-top .45s var(--ease),padding .45s var(--ease),background-color .3s,border-color .3s,box-shadow .3s,color .3s}
-.nav.compact .nav-inner{width:min(760px,calc(100vw - 24px));height:56px;margin-top:12px;padding:0 6px 0 14px;background:rgba(255,255,255,.82);-webkit-backdrop-filter:blur(16px) saturate(1.5);backdrop-filter:blur(16px) saturate(1.5);border-color:var(--border);box-shadow:0 12px 32px -16px rgb(23 30 82/.32)}
-.nav.compact.dark .nav-inner{background:rgba(14,19,64,.8);border-color:var(--dark-border);color:var(--on-dark);box-shadow:0 12px 32px -16px rgb(0 0 0/.5)}
+/* ---------- Nav: full bar at top, frosted pill on scroll ---------- */
+.nav{position:fixed;left:0;right:0;top:0;z-index:90;display:flex;justify-content:center;pointer-events:none}
+.nav-inner{pointer-events:auto;position:relative;width:min(var(--container),calc(100vw - 2 * var(--gutter)));height:72px;display:flex;align-items:center;gap:6px;padding:0;border:1px solid transparent;border-radius:var(--r-pill);color:var(--ink);transition:width .55s var(--ease),height .45s var(--ease),margin-top .45s var(--ease),padding .45s var(--ease),background-color .3s,border-color .3s,box-shadow .3s,color .3s}
+.nav.compact .nav-inner{width:min(740px,calc(100vw - 24px));height:56px;margin-top:12px;padding:0 6px 0 14px;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(16px) saturate(1.5);backdrop-filter:blur(16px) saturate(1.5);border-color:var(--border);box-shadow:var(--shadow)}
+.nav.compact.dark .nav-inner{background:rgba(14,19,64,.82);border-color:var(--dark-border);color:var(--on-dark)}
 .logo{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
 .logo svg{width:30px;height:30px;color:var(--accent);flex:none;overflow:visible}
 .wordmark{display:inline-block;overflow:hidden;white-space:nowrap;max-width:140px;font:600 20px/1.1 var(--font-ui);letter-spacing:-.04em;transition:max-width .45s var(--ease),opacity .3s}
 .wordmark em{font-style:normal;color:var(--muted)}
 .footer .wordmark em,.sheet .wordmark em,.nav.compact.dark .wordmark em{color:var(--on-dark-muted)}
 .nav.compact .wordmark{max-width:0;opacity:0}
-.nav-links{display:flex;gap:2px;margin-left:24px;transition:margin .45s var(--ease)}
+.nav-links{display:flex;gap:2px;margin-left:28px;transition:margin .45s var(--ease)}
 .nav.compact .nav-links{margin-left:8px}
-.nav-links > a,.nav-dd{position:relative;height:36px;display:inline-flex;align-items:center;gap:4px;padding:0 12px;border-radius:var(--r-pill);font-size:14.5px;color:var(--ink-2);text-decoration:none;transition:background-color .2s,color .2s,max-width .4s var(--ease),opacity .3s,padding .4s}
-.nav-dd .i{width:14px;height:14px;transition:transform .25s var(--ease)}
-.nav-dd[aria-expanded=true] .i{transform:rotate(180deg)}
-.nav-links > a:hover,.nav-dd:hover,.nav-dd[aria-expanded=true]{background:rgba(23,30,82,.06);color:var(--ink)}
-.nav.compact.dark .nav-links > a,.nav.compact.dark .nav-dd,.nav.compact.dark .signin{color:#C6CBE6}
-.nav.compact.dark .nav-links > a:hover,.nav.compact.dark .nav-dd:hover,.nav.compact.dark .nav-dd[aria-expanded=true]{background:rgba(189,226,241,.1);color:#fff}
-.nav-links > a.active{color:var(--ink)}
-.nav.compact.dark .nav-links > a.active{color:#fff}
-.nav-links > a.active::after{content:"";position:absolute;left:50%;bottom:3px;width:4px;height:4px;border-radius:50%;background:var(--accent);transform:translateX(-50%)}
-.collapse{overflow:hidden;white-space:nowrap;max-width:120px}
-.nav.compact .collapse{max-width:0;opacity:0;padding-inline:0}
+.nav-links a{position:relative;height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:var(--r-pill);font-size:14.5px;color:var(--ink-2);text-decoration:none;transition:background-color .2s,color .2s}
+.nav-links a:hover{background:rgba(23,30,82,.06);color:var(--ink)}
+.nav.compact.dark .nav-links a{color:#C6CBE6}
+.nav.compact.dark .nav-links a:hover{background:rgba(189,226,241,.1);color:#fff}
+.nav-links a.active{color:var(--ink)}
+.nav.compact.dark .nav-links a.active{color:#fff}
+.nav-links a.active::after{content:"";position:absolute;left:50%;bottom:3px;width:4px;height:4px;border-radius:50%;background:var(--accent);transform:translateX(-50%)}
 .nav-right{margin-left:auto;display:flex;align-items:center;gap:4px}
-.signin{display:inline-flex;align-items:center;height:36px;font-size:14.5px;color:var(--ink-2);text-decoration:none;padding:0 12px;transition:max-width .4s var(--ease),opacity .3s,padding .4s}
-.signin:hover{color:var(--ink)}
 .nav .btn{height:42px;border-radius:var(--r-pill);padding:0 18px;font-size:14px}
 .nav.compact .btn{height:40px}
 .menu-btn{display:none;width:42px;height:42px;border-radius:var(--r-pill);place-items:center;color:inherit}
 .menu-btn .i{width:20px;height:20px}
-.progress{position:absolute;left:24px;right:24px;bottom:-1px;height:2px;opacity:0;transition:opacity .3s;pointer-events:none}
-.nav.compact .progress{opacity:1}
-.progress .track{position:absolute;inset:0;border-radius:2px;background:linear-gradient(90deg,var(--peach) 0 var(--p,0%),rgba(255,155,110,.2) var(--p,0%))}
-.walker{position:absolute;left:0;bottom:-3px;width:18px;height:18px;color:var(--accent);transform:translateX(var(--x,0px));overflow:visible}
-.mega{position:absolute;top:calc(100% + 10px);left:50%;width:min(780px,calc(100vw - 24px));transform:translate(-50%,-6px);opacity:0;visibility:hidden;transition:opacity .2s,transform .25s var(--ease),visibility .2s;background:#fff;color:var(--ink);border:1px solid var(--border);border-radius:var(--r);box-shadow:0 30px 60px -24px rgb(23 30 82/.35);display:grid;grid-template-columns:1fr 1fr 210px;gap:4px;padding:10px}
-.mega.open{opacity:1;visibility:visible;transform:translate(-50%,0)}
-.mi{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:12px;border-radius:var(--r);text-decoration:none;transition:background-color .2s}
-.mi:hover,.mi:focus-visible{background:var(--sky-2)}
-.mi .ib{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--border);border-radius:var(--r);background:#fff}
-.mi .ib .i{width:17px;height:17px}
-.mi b{display:block;font-weight:600;font-size:14.5px;letter-spacing:-.015em}
-.mi .tag{font:500 9.5px/1 var(--font-mono);font-style:normal;letter-spacing:.1em;color:var(--accent-text);margin-left:8px;vertical-align:2px}
-.mi small{display:block;margin-top:3px;font-size:13px;color:var(--muted);line-height:1.4}
-.mega-card{grid-column:3;grid-row:1 / span 2;display:flex;flex-direction:column;justify-content:space-between;gap:16px;padding:16px;border-radius:var(--r);background:linear-gradient(180deg,var(--sky-2),var(--sky));text-decoration:none;color:var(--ink)}
-.mega-card svg{width:48px;height:48px;color:var(--accent);overflow:visible}
-.mega-card b{display:block;font-weight:600;font-size:15px;letter-spacing:-.015em}
-.mega-card small{display:block;margin-top:4px;font-size:13px;color:var(--ink-2);line-height:1.4}
 .sheet{position:fixed;inset:0;z-index:120;background:var(--dark);color:var(--on-dark);padding:16px var(--gutter) 28px;display:none;flex-direction:column}
 .sheet.open{display:flex}
 .sheet-top{display:flex;align-items:center;justify-content:space-between;height:52px}
@@ -156,129 +115,60 @@ table{border-collapse:collapse}
 .sheet nav{margin-top:20px;display:flex;flex-direction:column}
 .sheet nav a{font:500 28px/1.2 var(--font-ui);letter-spacing:-.03em;padding:14px 0;border-bottom:1px solid var(--dark-border);text-decoration:none}
 .sheet .btn{margin-top:auto}
-@media (max-width:900px){.nav-links,.nav-right .signin{display:none}.menu-btn{display:grid}.nav.compact .nav-inner{width:calc(100vw - 24px)}.mega{display:none}}
+@media (max-width:900px){.nav-links{display:none}.menu-btn{display:grid}.nav.compact .nav-inner{width:calc(100vw - 24px)}}
 @media (max-width:420px){.nav-right .btn{display:none}}
 
-/* ---------- Crab motion (all parts are groups in the #craby symbol) ---------- */
+/* ---------- Crab parts (signature moments only) ---------- */
 .crab-live g{transform-box:view-box}
 .crab-live .claw-l{transform-origin:21px 30px}
 .crab-live .claw-r{transform-origin:43px 30px}
-.crab-live .legs-l{transform-origin:17px 42px}
-.crab-live .legs-r{transform-origin:47px 42px}
 @keyframes pinchL{50%{transform:rotate(-18deg)}}
 @keyframes pinchR{50%{transform:rotate(18deg)}}
-@keyframes legA{50%{transform:rotate(14deg)}}
-@keyframes legB{50%{transform:rotate(-14deg)}}
-@keyframes bob{50%{transform:translateY(-1.5px)}}
-@keyframes wave{0%,55%,100%{transform:rotate(0)}65%{transform:rotate(22deg)}75%{transform:rotate(-6deg)}85%{transform:rotate(18deg)}}
-@keyframes bub{0%{opacity:0;transform:translateY(4px)}25%{opacity:1}100%{opacity:0;transform:translateY(-22px)}}
 @keyframes spark{0%{box-shadow:0 0 0 0 rgba(255,155,110,.9)}100%{box-shadow:0 0 0 10px rgba(255,155,110,0)}}
-@keyframes drift{to{transform:translateX(-50%)}}
-@keyframes rise{0%{transform:translate(0,0);opacity:0}12%{opacity:.85}50%{transform:translate(14px,-40vh)}88%{opacity:.5}100%{transform:translate(-8px,-80vh);opacity:0}}
-.btn-accent::before{content:"";position:absolute;left:30%;bottom:78%;width:6px;height:6px;border-radius:50%;background:rgba(255,155,110,.9);box-shadow:14px 8px 0 -1px rgba(255,155,110,.75),30px 2px 0 -2px rgba(242,113,58,.7);opacity:0;pointer-events:none}
 @media (prefers-reduced-motion:no-preference){
   .logo:hover .claw-l,.logo:focus-visible .claw-l{animation:pinchL .2s var(--ease) 2}
   .logo:hover .claw-r,.logo:focus-visible .claw-r{animation:pinchR .2s var(--ease) 2}
-  .walker.walking .legs-l{animation:legA .2s linear infinite}
-  .walker.walking .legs-r{animation:legB .2s linear infinite}
-  .walker.walking .shell{animation:bob .2s linear infinite}
-  .sheet .logo .claw-r{animation:wave 2.6s var(--ease) infinite}
-  .btn-accent:hover::before{animation:bub .9s var(--ease)}
   .claw.pinch .claw-l{animation:pinchL .22s var(--ease)}
   .claw.pinch .claw-r{animation:pinchR .22s var(--ease)}
   .spark{animation:spark .5s var(--ease)}
-  .sea .w1{animation:drift 26s linear infinite}
-  .sea .w2{animation:drift 18s linear infinite reverse}
-  .sea .w3{animation:drift 34s linear infinite}
-  .bubbles i{animation:rise var(--d) linear var(--dl) infinite}
+  .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .js .reveal.in{opacity:1;transform:none}
 }
 
-/* ---------- Hero (sky to sea-foam) ---------- */
-.hero{position:relative;background:linear-gradient(180deg,var(--sky) 0%,#D3ECF6 42%,#EAF5FA 78%,var(--bg) 100%);color:var(--ink);isolation:isolate;overflow:hidden;padding:clamp(128px,13vw,168px) 0 clamp(200px,17vw,240px)}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse 50% 60% at 88% 18%,rgba(255,255,255,.75),transparent 70%),radial-gradient(ellipse 40% 40% at 72% 82%,rgba(255,155,110,.18),transparent 70%)}
-.sea{position:absolute;left:0;right:0;bottom:24px;height:150px;z-index:-1;pointer-events:none;overflow:hidden}
-.sea svg{position:absolute;left:0;top:0;width:200%;height:100%;overflow:visible}
-.sea path{fill:none;stroke-width:1.5;vector-effect:non-scaling-stroke}
-.sea .w1 path{stroke:rgba(23,30,82,.14)}
-.sea .w2 path{stroke:rgba(255,155,110,.6)}
-.sea .w3 path{stroke:rgba(255,255,255,.95);stroke-width:2}
-.bubbles{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-.bubbles i{position:absolute;bottom:-24px;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;border:1.5px solid rgba(23,30,82,.16);background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.95),rgba(255,255,255,.2) 55%,transparent 70%);opacity:0}
-.on-dark .bubbles i{border-color:rgba(189,226,241,.28);background:radial-gradient(circle at 32% 30%,rgba(189,226,241,.45),transparent 65%)}
-@media (prefers-reduced-motion:reduce){.bubbles{display:none}}
-.hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(32px,5vw,72px);align-items:center}
-.hero h1{margin-top:22px}
-.hero h1 .setup{display:block;margin-bottom:.22em;font-size:.5em;line-height:1.1;letter-spacing:-.025em;color:var(--muted)}
+/* ---------- Hero ---------- */
+.hero{position:relative;background:linear-gradient(180deg,var(--sky) 0%,#D3ECF6 38%,#EAF5FA 70%,var(--bg) 100%);isolation:isolate;padding:clamp(112px,13vw,172px) 0 clamp(72px,8vw,104px)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 50% 50% at 85% 12%,rgba(255,255,255,.7),transparent 70%)}
+.hero-copy{max-width:720px}
 .badge{display:inline-flex;align-items:center;gap:10px;height:32px;padding:0 12px 0 4px;border:1px solid rgba(23,30,82,.12);background:rgba(255,255,255,.72);border-radius:var(--r-pill);font-size:13.5px;color:var(--ink-2);text-decoration:none;transition:border-color .2s,background-color .2s}
 .badge:hover{border-color:rgba(23,30,82,.25);background:#fff}
 .badge b{font:500 10.5px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;border-radius:var(--r-pill);padding:6px 9px}
 .badge .i{width:14px;height:14px;color:var(--muted)}
-/* hero pillar cards: Shell / Molt / Claws */
-.pillars{margin-top:clamp(44px,5vw,64px);display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.pillar{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:18px 20px;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:var(--r);box-shadow:0 1px 2px rgb(23 30 82/.04),0 8px 24px rgb(23 30 82/.06)}
-.pillar .ib{width:44px;height:44px;display:grid;place-items:center;border-radius:var(--r);background:var(--ink);color:var(--peach)}
-.pillar .ib .i{width:20px;height:20px}
-.pillar .k{display:block;font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-text)}
-.pillar h3{margin-top:6px;font:600 16px/1.3 var(--font-ui);letter-spacing:-.015em}
-.pillar p{margin-top:4px;font-size:14px;line-height:1.5;color:var(--muted)}
-@media (max-width:900px){.pillars{grid-template-columns:1fr}}
-.hero .lead{margin-top:22px;max-width:560px;color:var(--ink-2)}
-.signup{margin-top:34px;max-width:540px}
-.input-cta{display:flex;align-items:center;gap:8px;height:56px;padding:5px 5px 5px 16px;background:#fff;border-radius:var(--r);border:1px solid rgba(23,30,82,.14);box-shadow:0 14px 34px -18px rgb(23 30 82/.35)}
-.input-cta:focus-within{box-shadow:0 0 0 3px rgba(242,113,58,.35)}
+.hero h1{margin-top:24px}
+.hero h1 .setup{display:block;margin-bottom:.22em;font-size:.5em;line-height:1.1;letter-spacing:-.025em;color:var(--muted)}
+.hero .lead{margin-top:22px;max-width:580px}
+.signup{margin-top:32px;max-width:560px}
+.input-cta{display:flex;align-items:center;gap:8px;height:56px;padding:5px 5px 5px 16px;background:#fff;border-radius:var(--r);border:1px solid rgba(23,30,82,.14);box-shadow:var(--shadow)}
+.input-cta:focus-within{border-color:var(--ink-2);box-shadow:0 0 0 3px rgba(242,113,58,.25)}
 .input-cta .i{width:18px;height:18px;color:var(--muted)}
 .input-cta input{flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;font:400 16px var(--font-ui);color:var(--ink)}
 .input-cta input::placeholder{color:#6B7196}
 .input-cta .btn{height:100%}
-.hero-actions{margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
-.hero .btn-glass{background:rgba(255,255,255,.6);color:var(--ink);border-color:rgba(23,30,82,.14)}
-.hero .btn-glass:hover{background:rgba(255,255,255,.9)}
+.form-row{margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
 .form-note{font-size:14px;color:var(--ink-2)}
 .checks{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--ink-2)}
 .checks li{display:inline-flex;align-items:center;gap:7px}
 .checks .i{width:15px;height:15px;color:var(--ink);stroke-width:2}
-.glass{position:relative;border:1px solid rgba(255,255,255,.95);background:rgba(255,255,255,.62);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-radius:var(--r);padding:24px;box-shadow:0 30px 60px -30px rgb(23 30 82/.35)}
-.glass-k{display:flex;justify-content:space-between;align-items:center;font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.glass-k span{display:inline-flex;align-items:center;gap:8px}
-.glass-k .i{width:14px;height:14px;color:var(--accent);stroke-width:2}
-.stage-label{margin-top:20px;display:flex;align-items:center;gap:8px;font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
-.stage-label::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
-.glass-body{position:relative;margin-top:14px;min-height:132px;font-size:16.5px;line-height:1.85;color:var(--ink)}
-.ent{background:rgba(255,155,110,.32);color:#8A2E0C;padding:1px 5px;border-radius:var(--r);white-space:nowrap;transition:background-color .25s,color .25s}
-.ent.tok{font:500 13px/1 var(--font-mono);background:var(--ink);color:#fff;padding:4px 7px}
-.rest{background:var(--good-bg);color:#17603C;padding:1px 5px;border-radius:var(--r);white-space:nowrap}
-.claw{position:absolute;left:0;top:0;z-index:2;width:28px;height:28px;color:var(--accent);pointer-events:none;opacity:0;transition:transform .35s var(--ease),opacity .2s}
-.claw.on{opacity:1}
-.claw svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 4px 6px rgb(23 30 82/.25))}
-.glass-foot{margin-top:18px;padding-top:16px;border-top:1px solid rgba(23,30,82,.1);display:flex;align-items:center;justify-content:space-between;gap:12px}
-.glass-dots{display:flex;gap:6px}
-.glass-dots i{width:18px;height:2px;background:rgba(23,30,82,.15)}
-.glass-dots i.on{background:var(--ink)}
-.glass-arrows{display:flex;gap:4px}
-.glass-arrows button{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(23,30,82,.15);border-radius:var(--r);color:var(--ink);background:rgba(255,255,255,.5)}
-.glass-arrows button:hover{background:#fff}
-.glass-arrows .back .i{transform:rotate(180deg)}
-.priv.armed .t{opacity:.15;transform:scale(.9);display:inline-block;transition:opacity .3s,transform .3s var(--ease)}
-.priv.armed .t.pop{opacity:1;transform:none}
-.hero-models{position:relative;padding:clamp(44px,5vw,64px) 0 0}
-.hero-models .lbl{font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center}
-.marquee-view{margin-top:16px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-.marquee{display:flex;gap:56px;width:max-content;padding-right:56px}
-.model-word{display:flex;align-items:baseline;gap:8px;white-space:nowrap;font:600 22px/1 var(--font-ui);letter-spacing:-.04em;color:#5E6590}
-.model-word small{font:400 10px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:#6B7196}
 
-/* ---------- Console (Ramp: product UI as hero art) ---------- */
-.console-zone{position:relative;z-index:2;margin-top:-120px}
-.console-wrap{position:relative;max-width:1140px;margin:0 auto;padding-inline:var(--gutter)}
-.console{background:#fff;border:1px solid var(--border);border-radius:var(--r);box-shadow:0 40px 90px -40px rgb(0 0 0/.45);overflow:hidden;font-size:13px}
+/* product preview console */
+.console{position:relative;margin-top:clamp(56px,6vw,80px);background:#fff;border:1px solid var(--border);border-radius:var(--r);box-shadow:0 1px 2px rgb(23 30 82/.05),0 30px 70px -40px rgb(23 30 82/.35);overflow:hidden;font-size:13px}
 .c-top{height:46px;display:flex;align-items:center;gap:14px;padding:0 14px;border-bottom:1px solid var(--border)}
 .c-ws{display:flex;align-items:center;gap:8px;font-weight:600;white-space:nowrap}
 .c-ws .i{width:14px;height:14px;color:var(--muted)}
-.app-badge{width:24px;height:24px;border-radius:var(--r);background:var(--ink);display:grid;place-items:center;color:var(--accent-bright);flex:none}
-.app-badge svg{width:19px;height:19px}
+.app-badge{width:24px;height:24px;border-radius:var(--r);background:var(--ink);display:grid;place-items:center;color:var(--peach);flex:none}
+.app-badge svg{width:19px;height:19px;overflow:visible}
 .c-crumbs{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .c-crumbs b{color:var(--ink);font-weight:600}
-.c-credit{margin-left:auto;font:500 11.5px/1 var(--font-mono);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r);padding:6px 9px;white-space:nowrap}
+.pv-tag{margin-left:auto;font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-text);border:1px solid rgba(242,113,58,.45);border-radius:var(--r);padding:6px 8px;white-space:nowrap}
 .c-avatar{width:28px;height:28px;border-radius:50%;background:var(--surface-3);font:600 11px var(--font-ui);display:grid;place-items:center;flex:none}
 .c-body{display:grid;grid-template-columns:200px 1fr}
 .c-side{border-right:1px solid var(--border);padding:12px 8px;background:#F7FBFD;display:flex;flex-direction:column;gap:1px}
@@ -289,9 +179,8 @@ table{border-collapse:collapse}
 .c-main{padding:20px 22px 22px;min-width:0}
 .c-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
 .c-title{display:flex;align-items:center;gap:10px;font:600 18px/1.2 var(--font-ui);letter-spacing:-.025em}
-.pill-live{display:inline-flex;align-items:center;gap:6px;height:22px;padding:0 9px;border-radius:var(--r-pill);background:var(--good-bg);color:var(--good);font:600 11.5px/1 var(--font-ui);letter-spacing:0}
-.pill-live::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 2.4s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(30,122,76,.45)}70%{box-shadow:0 0 0 6px rgba(30,122,76,0)}100%{box-shadow:0 0 0 0 rgba(30,122,76,0)}}
+.pill-live{display:inline-flex;align-items:center;gap:6px;height:22px;padding:0 9px;border-radius:var(--r);background:var(--good-bg);color:var(--good);font:600 11.5px/1 var(--font-ui);letter-spacing:0}
+.pill-live::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
 .c-meta{margin-top:7px;font:400 11.5px/1.4 var(--font-mono);color:var(--muted)}
 .c-actions{display:flex;gap:6px;flex:none}
 .btn-mini{height:30px;padding:0 11px;border-radius:var(--r);font:600 12.5px/1 var(--font-ui);display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border-strong);background:#fff;white-space:nowrap}
@@ -305,10 +194,10 @@ table{border-collapse:collapse}
 .c-stat .d{margin-top:8px;font:500 11px/1 var(--font-mono);color:var(--good)}
 .c-stat .d.n{color:var(--muted)}
 .c-grid{margin-top:14px;display:grid;grid-template-columns:1.55fr 1fr;gap:14px}
-.c-card{border:1px solid var(--border);border-radius:var(--r);padding:13px 15px;min-width:0}
+.c-card{border:1px solid var(--border);border-radius:var(--r);padding:13px 15px;min-width:0;display:flex;flex-direction:column}
 .c-card h4{display:flex;justify-content:space-between;gap:10px;font:600 13px/1.3 var(--font-ui)}
 .c-card h4 span{font-weight:400;color:var(--muted)}
-.spark{margin-top:10px;height:128px}
+.spark{margin-top:10px;flex:1;min-height:120px}
 .versions{margin-top:6px}
 .versions li{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--border);font-size:12.5px}
 .versions li:first-child{border-top:0}
@@ -317,124 +206,49 @@ table{border-collapse:collapse}
 .v-st b{font-weight:600;color:var(--ink)}
 .v-up{font:500 11.5px/1 var(--font-mono);color:var(--good)}
 .v-dn{font:500 11.5px/1 var(--font-mono);color:var(--muted)}
-.float{position:absolute;z-index:3;width:264px;background:#fff;border:1px solid var(--border-strong);border-radius:var(--r);padding:13px 15px;box-shadow:var(--shadow);font-size:12.5px}
-.float .k{display:flex;align-items:center;gap:7px;font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.float .k .i{width:13px;height:13px;color:var(--accent);stroke-width:2}
-.float p{margin-top:10px;line-height:1.65}
-.float .foot{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font:500 11px/1 var(--font-mono);color:var(--muted)}
-.float .foot b{color:var(--good);font-weight:500}
-.float .big{font:500 26px/1 var(--font-ui);letter-spacing:-.04em;margin-top:10px}
-.float .big small{font:500 11.5px var(--font-mono);color:var(--good);letter-spacing:0;margin-left:6px}
-.float .tk{font:500 11.5px/1 var(--font-mono);background:var(--surface-2);border:1px solid rgba(242,113,58,.45);border-radius:var(--r);padding:2px 5px;white-space:nowrap}
-.handles i{position:absolute;width:7px;height:7px;background:#fff;border:1.5px solid var(--ink)}
-.handles i:nth-child(1){top:-4px;left:-4px}.handles i:nth-child(2){top:-4px;right:-4px}.handles i:nth-child(3){bottom:-4px;left:-4px}.handles i:nth-child(4){bottom:-4px;right:-4px}
-.float-a{top:120px;right:calc(var(--gutter) - 170px)}
-.float-b{bottom:40px;left:calc(var(--gutter) - 170px)}
+/* 4-step strip */
+.steps4{margin-top:clamp(36px,4vw,52px);display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border-strong)}
+.steps4 > div{padding:20px 22px 0 0}
+.steps4 > div + div{padding-left:22px;border-left:1px solid var(--border)}
+.steps4 .n{font:500 11px/1 var(--font-mono);letter-spacing:.1em;color:var(--muted)}
+.steps4 h3{margin-top:10px;font:600 15.5px/1.3 var(--font-ui);letter-spacing:-.015em}
+.steps4 p{margin-top:4px;font-size:14px;color:var(--muted)}
 
-/* ---------- Document panels (OpenLake) ---------- */
-.block{padding-block:clamp(8px,1vw,14px)}
-.block.first{padding-top:clamp(40px,5vw,64px)}
-.panel{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:clamp(26px,5vw,72px)}
-.gap-top{margin-top:clamp(36px,4.5vw,56px)}
+/* ---------- Split story sections ---------- */
+.split{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,6vw,88px);align-items:center}
+.split.rev{grid-template-columns:7fr 5fr}
+.split.rev .split-text{order:2}
+.split-text .h2{margin-top:18px}
+.split-text > p:not(.label){margin-top:20px;font-size:16.5px;color:var(--muted);max-width:460px}
+.mini-list{margin-top:26px;display:grid;border-top:1px solid var(--border)}
+.mini-list li{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);font-size:15px;color:var(--ink-2)}
+.mini-list .i{width:17px;height:17px;color:var(--ink)}
 
-/* ---------- How it works ---------- */
-.how-track{position:relative;height:300vh;margin-top:clamp(28px,4vw,40px)}
-.how-sticky{position:sticky;top:84px;height:calc(100vh - 100px);display:flex;align-items:center}
-.how-grid{width:100%;display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,5vw,72px);align-items:center}
-.steps{position:relative;padding-left:24px}
-.steps::before,.steps .rail{content:"";position:absolute;left:0;top:10px;width:1px;background:var(--border-strong)}
-.steps::before{bottom:10px}
-.steps .rail{background:var(--accent);height:calc((100% - 20px) * var(--p,0));transition:height .15s linear}
-.step{display:block;width:100%;text-align:left;padding:17px 0;border-top:1px solid var(--border);opacity:.42;transition:opacity .45s var(--ease)}
-.step:first-of-type{border-top:0}
-.step.on,.step:hover{opacity:1}
-.step .num{font:500 11px/1 var(--font-mono);letter-spacing:.1em;color:var(--muted)}
-.step.on .num{color:var(--accent-text)}
-.step h3{margin-top:9px;font:600 20px/1.25 var(--font-ui);letter-spacing:-.025em}
-.step .sb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
-.step.on .sb{grid-template-rows:1fr}
-.step .sb > p{overflow:hidden;font-size:15px;color:var(--muted);max-width:420px}
-.step .sb > p::before{content:"";display:block;height:8px}
-.frame{position:relative;height:min(560px,calc(100vh - 160px));min-height:460px;border:1px solid var(--border);border-radius:var(--r);background-color:#F7FBFD;background-image:radial-gradient(rgba(23,30,82,.13) 1px,transparent 1px);background-size:18px 18px;overflow:hidden}
-.viz{position:absolute;inset:0;display:grid;place-items:center;padding:clamp(18px,3.5vw,44px);opacity:0;transform:translateY(12px);transition:opacity .5s var(--ease),transform .6s var(--ease);pointer-events:none}
-.viz.on{opacity:1;transform:none;pointer-events:auto}
-.viz > *,.bento-visual > *{min-width:0;max-width:100%}
-.mock{width:min(100%,400px);background:#fff;border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);padding:22px;font-size:13.5px}
-.mock-h{display:flex;align-items:center;gap:10px;font:600 16px/1.2 var(--font-ui);letter-spacing:-.02em}
-.mock-sub{margin-top:6px;color:var(--muted);font-size:13px}
-.field{margin-top:14px}
-.field label{display:block;font:600 12px/1 var(--font-ui);color:var(--ink-2)}
-.field .in{margin-top:7px;height:40px;border:1px solid var(--border-strong);border-radius:var(--r);padding:0 12px;display:flex;align-items:center;gap:8px}
-.field .in.focus{border-color:var(--ink);box-shadow:0 0 0 3px var(--accent-wash)}
-.field .in .i{color:var(--muted);width:15px;height:15px}
-.caret{display:inline-block;width:1.5px;height:16px;background:var(--ink);margin-left:1px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.btn-full{margin-top:16px;width:100%;height:42px;border-radius:var(--r);background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;font:600 13.5px/1 var(--font-ui)}
-.or{margin-top:14px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
-.or::before,.or::after{content:"";flex:1;height:1px;background:var(--border)}
-.sso{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.sso span{height:40px;border:1px solid var(--border-strong);border-radius:var(--r);display:flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:13px}
-.sso svg{width:15px;height:15px}
-.bal{margin-top:14px;display:flex;justify-content:space-between;align-items:baseline;padding:13px 15px;border-radius:var(--r);background:var(--surface-2)}
-.bal span{color:var(--muted);font-size:12.5px}
-.bal b{font:500 26px/1 var(--font-ui);letter-spacing:-.04em}
-.amounts{margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.amt{height:42px;border:1px solid var(--border-strong);border-radius:var(--r);display:grid;place-items:center;font:600 14px/1 var(--font-ui)}
-.amt.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
-.row{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.toggle{flex:none;width:34px;height:20px;border-radius:var(--r-pill);background:var(--ink);position:relative}
-.toggle::after{content:"";position:absolute;top:3px;right:3px;width:14px;height:14px;border-radius:50%;background:#fff}
-.opt-line{margin-top:14px;padding-top:13px;border-top:1px solid var(--border);font-size:13px}
-.opt-line small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
-.mtag{font:500 10.5px/1 var(--font-mono);letter-spacing:.04em;padding:5px 7px;border-radius:var(--r);background:var(--surface-2);color:var(--ink-2);white-space:nowrap}
-.model-opt{margin-top:8px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:11px 12px;border:1px solid var(--border);border-radius:var(--r)}
-.model-opt.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
-.radio{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border-strong)}
-.model-opt.on .radio{border:5px solid var(--ink)}
-.model-opt b{font-weight:600;display:block}
-.model-opt small{font:400 11.5px/1.3 var(--font-mono);color:var(--muted)}
-.deploy-status{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);font:400 12px/1 var(--font-mono);color:var(--ink-2)}
-.deploy-status li{display:flex;align-items:center;gap:8px;padding:5px 0}
-.deploy-status .i{width:14px;height:14px;color:var(--good);stroke-width:2.2}
-.prog{flex:1;height:3px;background:var(--surface-3);overflow:hidden}
-.prog i{display:block;height:100%;width:0;background:var(--accent)}
-.viz.on .prog i{animation:fill 2.6s .4s var(--ease) forwards}
-@keyframes fill{to{width:100%}}
-.swap{display:inline-grid}
-.swap > *{grid-area:1/1}
-.swap .b{opacity:0}
-.viz.on .swap .a{animation:out .3s 3s forwards}
-.viz.on .swap .b{animation:in .3s 3s forwards}
-@keyframes out{to{opacity:0}}
-@keyframes in{to{opacity:1}}
-.code{min-width:0;max-width:100%;background:var(--dark-3);color:#D6D9DF;border-radius:var(--r);font:400 12.75px/1.75 var(--font-mono);overflow:hidden;box-shadow:var(--shadow);text-align:left;border:1px solid #252D6B}
-.code-top{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--dark-border);font-size:12px;color:var(--on-dark-muted)}
-.code-top .dots{display:flex;gap:6px;margin-right:6px}
-.code-top .dots i{width:9px;height:9px;border-radius:50%;background:#2C3577}
-.code-top .ctab{color:var(--on-dark);background:rgba(255,255,255,.07);border-radius:var(--r);padding:4px 8px}
-.code pre{margin:0;padding:16px 18px 18px;overflow-x:auto;white-space:pre}
-.code .c{color:#8890BF}.code .k{color:#F08F72}.code .s{color:#D6E8F2}.code .f{color:#fff}.code .n{color:#AEB6DD}
-.toast{position:absolute;right:clamp(14px,3vw,32px);bottom:clamp(14px,3vw,28px);display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:11px 13px;box-shadow:var(--shadow);font-size:12.5px;max-width:290px}
-.toast b{display:block;font-weight:600;font-size:13px}
-.toast span{color:var(--muted)}
+/* privacy flow */
+.priv{position:relative;padding:clamp(18px,3vw,30px);border:1px solid var(--border);border-radius:var(--r);background:#F7FBFD}
+.pcard{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:15px 17px}
+.pcard.dark{background:var(--dark-3);border-color:var(--dark-3);color:var(--on-dark)}
+.pk{display:flex;align-items:center;justify-content:space-between;gap:10px;font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pcard.dark .pk{color:var(--on-dark-muted)}
+.pk .who{display:inline-flex;align-items:center;gap:8px}
+.pk .av{width:20px;height:20px;border-radius:50%;background:var(--surface-3);color:var(--ink);display:grid;place-items:center;font:600 9.5px var(--font-ui);letter-spacing:0}
+.pt{margin-top:11px;font-size:14.5px;line-height:1.7}
+.pcard .e{background:var(--surface-2);border:1px solid rgba(242,113,58,.6);color:var(--ink);padding:0 5px;border-radius:var(--r);font-weight:600;white-space:nowrap}
+.pcard .t{display:inline-block;font:500 12.5px/1 var(--font-mono);color:#E4E6EA;background:rgba(255,255,255,.07);border:1px solid rgba(255,155,110,.6);border-radius:var(--r);padding:2px 6px;white-space:nowrap;transition:opacity .3s,transform .3s var(--ease)}
+.pcard .r{background:var(--good-bg);color:#17603C;padding:0 5px;border-radius:var(--r);font-weight:600;white-space:nowrap}
+.gate{position:relative;padding:11px 0 11px 22px}
+.gate::before{content:"";position:absolute;left:28px;top:0;bottom:0;width:1px;background:var(--border-strong)}
+.gate span{position:relative;display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 11px 0 9px;border-radius:var(--r);background:#fff;border:1px solid var(--border-strong);font:500 11.5px/1 var(--font-mono)}
+.gate .i{width:14px;height:14px;color:var(--ink);stroke-width:2}
+.gate em{font-style:normal;color:var(--muted)}
+.priv.armed .t{opacity:.15;transform:scale(.9)}
+.priv.armed .t.pop{opacity:1;transform:none}
+.claw{position:absolute;left:0;top:0;z-index:2;width:28px;height:28px;color:var(--accent);pointer-events:none;opacity:0;transition:transform .35s var(--ease),opacity .2s}
+.claw.on{opacity:1}
+.claw svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 4px 6px rgb(23 30 82/.25))}
 
-/* ---------- Tabs + chart (OpenLake) ---------- */
-.tabs-grid{display:grid;grid-template-columns:4fr 8fr;gap:clamp(28px,4vw,56px);align-items:start}
-.tabs-grid > *{min-width:0}
-.tablist{display:flex;flex-direction:column;border-top:1px solid var(--border)}
-.tab{display:block;width:100%;text-align:left;padding:16px 16px 16px 18px;border-bottom:1px solid var(--border);border-left:2px solid transparent;transition:background-color .2s}
-.tab:hover{background:#F7FBFD}
-.tab[aria-selected=true]{background:var(--surface-2);border-left-color:var(--accent)}
-.tab b{display:block;font-weight:600;font-size:15.5px;letter-spacing:-.015em}
-.tab span{display:block;margin-top:4px;font-size:13.5px;color:var(--muted)}
-.tab-note{margin-top:22px;font-size:13px;color:var(--muted)}
-.tabpanel[hidden]{display:none}
-.metric-row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 28px;padding-bottom:18px;border-bottom:1px solid var(--border)}
-.metric .cap{display:block;font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.metric s{display:block;margin-top:10px;font-size:14px;color:var(--muted);text-decoration-thickness:1.5px}
-.metric .v{display:block;margin-top:4px;font:500 clamp(2.6rem,2rem + 1.8vw,3.4rem)/1 var(--font-ui);letter-spacing:-.045em;color:var(--accent-text)}
-.metric .v small{font-size:16px;letter-spacing:-.01em;margin-left:4px;color:var(--muted)}
-.metric-desc{max-width:360px;font-size:14.5px;color:var(--ink-2)}
+/* chart card */
+.chart-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:clamp(20px,2.5vw,28px);box-shadow:var(--shadow);min-width:0}
 .chart-title{font:600 15px/1.3 var(--font-ui);letter-spacing:-.015em}
 .chart-sub{margin-top:3px;font-size:13px;color:var(--muted)}
 .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:12.5px;color:var(--ink-2)}
@@ -443,7 +257,7 @@ table{border-collapse:collapse}
 .key-dash{width:16px;height:2px;background:repeating-linear-gradient(90deg,var(--ink-2) 0 5px,transparent 5px 8px)}
 .key-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 2px #fff,0 0 0 2.5px rgba(23,30,82,.08)}
 .key-hollow{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--context);background:#fff}
-.chart-box{position:relative;margin-top:16px;outline:none}
+.chart-box{position:relative;margin-top:14px;outline:none}
 .chart-box svg{overflow:visible}
 .viz-svg .g{stroke:#E6EEF3;stroke-width:1}
 .viz-svg .axl{stroke:#C5D3DE;stroke-width:1}
@@ -470,10 +284,15 @@ table{border-collapse:collapse}
 .tip-h{font:500 10.5px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-muted);margin-bottom:8px}
 .tip-r{display:grid;grid-template-columns:14px auto 1fr;gap:8px;align-items:center;padding:3px 0}
 .tip-r i{height:2px;background:var(--c)}
-.tip-r i.dash{background:repeating-linear-gradient(90deg,#C6CBE6 0 4px,transparent 4px 6px)}
+.tip-r i.dash{background:repeating-linear-gradient(90deg,#C9CDD3 0 4px,transparent 4px 6px)}
 .tip-r i.hollow{width:8px;height:8px;border-radius:50%;border:1.5px solid #B7B7BE;background:transparent}
 .tip-r b{font-weight:600;color:#fff;font-variant-numeric:tabular-nums}
 .tip-r span{color:var(--on-dark-muted);text-align:right}
+.mprog{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:center;font-size:13px;color:var(--ink-2)}
+.mprog b{font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mprog i{grid-column:1/-1;display:block;height:4px;background:var(--surface-3)}
+.mprog em{display:block;height:100%;width:74%;background:var(--accent)}
+.chart-note{margin-top:12px;font-size:12px;color:var(--muted)}
 .table-view summary{cursor:pointer;font:400 12px/1 var(--font-mono);color:var(--ink-2);list-style:none;display:inline-flex;gap:6px;padding:8px 0}
 .table-view summary::-webkit-details-marker{display:none}
 .table-view summary::before{content:"+"}
@@ -483,71 +302,32 @@ table{border-collapse:collapse}
 .data-table th + th,.data-table td + td{padding-left:18px}
 .data-table th:first-child,.data-table td:first-child{text-align:left;color:var(--muted)}
 .data-table th{font:500 10.5px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.tv{max-height:260px;overflow:auto}
+.tv{max-height:240px;overflow:auto}
 
-/* ---------- Model cards (OpenLake) ---------- */
-.mcards{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:var(--r)}
-.mcard{padding:26px 24px;border-left:1px solid var(--border);display:flex;flex-direction:column}
-.mcard:first-child{border-left:0}
-.mcard-h{display:flex;align-items:center;gap:10px;font:600 17px/1.2 var(--font-ui);letter-spacing:-.02em}
-.mcard-h .glyph{width:30px;height:30px;border-radius:var(--r);background:var(--ink);color:#fff;display:grid;place-items:center;font:500 12px var(--font-mono)}
-.mcard .tags{margin-top:10px;font:400 12px/1.4 var(--font-mono);color:var(--muted)}
-.mcard s{display:block;margin-top:28px;font-size:14px;color:var(--muted);text-decoration-thickness:1.5px}
-.mcard .v{margin-top:4px;font:500 clamp(2.8rem,2.2rem + 1.6vw,3.5rem)/1 var(--font-ui);letter-spacing:-.05em;color:var(--accent-text)}
-.mcard .v small{font-size:16px;letter-spacing:-.01em;color:var(--muted);margin-left:4px}
-.mcard .cap{margin-top:8px;font:500 10.5px/1.4 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.mcard .dep{margin-top:24px;padding-top:18px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.mcard .dep b{font-weight:500;color:var(--ink)}
-
-/* ---------- Split + privacy ---------- */
-.split{display:grid;grid-template-columns:5fr 7fr;gap:clamp(36px,5vw,80px);align-items:center}
-.split.rev{grid-template-columns:7fr 5fr}
-.split.rev .split-text{order:2}
-.split-text .h2{margin-top:18px}
-.split-text > p:not(.eyebrow){margin-top:20px;font-size:16.5px;color:var(--muted);max-width:460px}
-.mini-list{margin-top:26px;display:grid;border-top:1px solid var(--border)}
-.mini-list li{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);font-size:15px;color:var(--ink-2)}
-.mini-list .i{width:17px;height:17px;color:var(--ink)}
-.split-text .link-arrow{margin-top:26px}
-.priv{position:relative;padding:clamp(18px,3vw,32px);border:1px solid var(--border);border-radius:var(--r);background-color:#F7FBFD;background-image:radial-gradient(rgba(23,30,82,.12) 1px,transparent 1px);background-size:18px 18px}
-.pcard{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:15px 17px;box-shadow:0 1px 2px rgb(23 30 82/.04)}
-.pcard.dark{background:var(--dark-3);border-color:var(--dark-3);color:var(--on-dark)}
-.pk{display:flex;align-items:center;justify-content:space-between;gap:10px;font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.pcard.dark .pk{color:var(--on-dark-muted)}
-.pk .who{display:inline-flex;align-items:center;gap:8px}
-.pk .av{width:20px;height:20px;border-radius:50%;background:var(--surface-3);color:var(--ink);display:grid;place-items:center;font:600 9.5px var(--font-ui);letter-spacing:0}
-.pt{margin-top:11px;font-size:14.5px;line-height:1.7}
-.pcard .e{background:var(--surface-2);border:1px solid rgba(242,113,58,.5);color:var(--ink);padding:0 5px;border-radius:var(--r);font-weight:600;white-space:nowrap}
-.pcard .t{font:500 12.5px/1 var(--font-mono);color:#E4E6EA;background:rgba(255,255,255,.07);border:1px solid rgba(255,155,110,.6);border-radius:var(--r);padding:2px 6px;white-space:nowrap}
-.pcard .r{background:var(--good-bg);color:#17603C;padding:0 5px;border-radius:var(--r);font-weight:600;white-space:nowrap}
-.gate{position:relative;padding:11px 0 11px 22px}
-.gate::before{content:"";position:absolute;left:28px;top:0;bottom:0;width:1px;background:var(--border-strong)}
-.gate span{position:relative;display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 11px 0 9px;border-radius:var(--r-pill);background:#fff;border:1px solid var(--border-strong);font:500 11.5px/1 var(--font-mono)}
-.gate .i{width:14px;height:14px;color:var(--accent);stroke-width:2}
-.gate em{font-style:normal;color:var(--muted)}
-.pfoot{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:var(--r);background:#fff}
-.pfoot div{padding:11px 13px;border-left:1px solid var(--border)}
-.pfoot div:first-child{border-left:0}
-.pfoot span{display:block;font-size:11.5px;color:var(--muted)}
-.pfoot b{display:block;margin-top:4px;font:500 20px/1 var(--font-ui);letter-spacing:-.03em}
-
-/* ---------- Bento ---------- */
-.bento{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:var(--r)}
+/* API + chat */
+.bento{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:var(--r);background:#fff}
 .bento-card{display:flex;flex-direction:column;min-width:0}
 .bento-card + .bento-card{border-left:1px solid var(--border)}
-.bento-copy{padding:clamp(22px,3vw,32px) clamp(22px,3vw,32px) 0}
+.bento-copy{padding:clamp(22px,3vw,30px) clamp(22px,3vw,30px) 0}
 .bento-copy .k{font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.bento-copy h3{margin-top:12px;font:600 20px/1.3 var(--font-ui);letter-spacing:-.025em}
+.bento-copy h3{margin-top:12px;font:600 19px/1.3 var(--font-ui);letter-spacing:-.025em}
 .bento-copy p{margin-top:8px;color:var(--muted);font-size:15px;max-width:430px}
-.bento-visual{margin-top:24px;flex:1;min-height:380px;padding:clamp(18px,3vw,30px);display:flex;align-items:flex-end;justify-content:center;background-color:#F7FBFD;background-image:radial-gradient(rgba(23,30,82,.12) 1px,transparent 1px);background-size:18px 18px;border-top:1px solid var(--border)}
-.bento-visual .code{width:100%}
+.bento-visual{margin-top:24px;flex:1;min-height:340px;padding:clamp(18px,3vw,28px);display:flex;align-items:flex-end;justify-content:center;background:#F7FBFD;border-top:1px solid var(--border)}
+.bento-visual > *{min-width:0;max-width:100%}
+.code{width:100%;background:var(--dark-3);color:#D6D9DF;border-radius:var(--r);font:400 12.75px/1.75 var(--font-mono);overflow:hidden;text-align:left;border:1px solid #252D6B}
+.code-top{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--dark-border);font-size:12px;color:var(--on-dark-muted)}
+.code-top .dots{display:flex;gap:6px;margin-right:6px}
+.code-top .dots i{width:9px;height:9px;border-radius:50%;background:#2C3577}
+.code-top .ctab{color:var(--on-dark);background:rgba(255,255,255,.07);border-radius:var(--r);padding:4px 8px}
+.code pre{margin:0;padding:16px 18px 18px;overflow-x:auto;white-space:pre}
+.code .c{color:#8890BF}.code .k{color:#F08F72}.code .s{color:#D6E8F2}.code .f{color:#fff}.code .n{color:#AEB6DD}
 .chat{width:100%;max-width:440px;background:#fff;border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;font-size:13.5px}
 .chat-top{display:flex;align-items:center;gap:10px;padding:11px 13px;border-bottom:1px solid var(--border)}
 .chat-top .app-badge{width:30px;height:30px}
 .chat-top .app-badge svg{width:23px;height:23px}
 .chat-top b{display:block;font-weight:600}
 .chat-top small{display:block;font-size:11.5px;color:var(--muted)}
-.pp{margin-left:auto;display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px;border-radius:var(--r-pill);background:var(--good-bg);color:var(--good);font:600 11px/1 var(--font-ui)}
+.pp{margin-left:auto;display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px;border-radius:var(--r);background:var(--good-bg);color:var(--good);font:600 11px/1 var(--font-ui)}
 .pp .i{width:12px;height:12px;stroke-width:2.2}
 .chat-body{padding:15px 13px;display:flex;flex-direction:column;gap:12px;background:#F7FBFD}
 .msg-u{align-self:flex-end;max-width:82%;background:var(--ink);color:#fff;border-radius:var(--r);padding:9px 12px}
@@ -556,103 +336,18 @@ table{border-collapse:collapse}
 .msg-a .bub{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:10px 12px;line-height:1.55}
 .src{margin-top:8px;display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 8px;border:1px solid var(--border);border-radius:var(--r);font:400 11px/1 var(--font-mono);color:var(--ink-2);background:var(--surface-2)}
 .src .i{width:12px;height:12px}
-.chat-in{display:flex;align-items:center;gap:8px;padding:10px 12px 10px 14px;border-top:1px solid var(--border);color:#6B7196}
-.chat-in .send{margin-left:auto;width:30px;height:30px;border-radius:var(--r);background:var(--ink);color:#fff;display:grid;place-items:center}
-.chat-in .send .i{width:14px;height:14px;transform:rotate(-90deg)}
-.chips{margin-top:clamp(28px,3vw,40px);display:flex;flex-wrap:wrap;gap:8px}
-.chip{display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 12px;border:1px solid var(--border);border-radius:var(--r-pill);background:#fff;font-size:13px;color:var(--ink-2)}
-.chip .i{width:14px;height:14px;color:var(--muted)}
+.facts{margin-top:18px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;padding:16px 18px;border:1px solid var(--border);border-radius:var(--r);background:#fff}
+.regions{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.regions .k{font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.region{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;border:1px solid var(--border-strong);border-radius:var(--r);font:500 12px/1 var(--font-mono);color:var(--ink)}
+.region .i{width:13px;height:13px;color:var(--muted)}
+.facts ul{display:flex;flex-wrap:wrap;gap:8px 22px;margin-left:auto;font-size:14px;color:var(--ink-2)}
+.facts li{display:inline-flex;align-items:center;gap:7px}
+.facts li .i{width:15px;height:15px;stroke-width:2;color:var(--ink)}
 
-
-/* ---------- Feature bento + small-feature grid ---------- */
-.fbento{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.fcard{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:var(--r);background:#fff;overflow:hidden;min-width:0}
-.fcard.wide{grid-column:1 / -1}
-.fvis{position:relative;height:230px;background:#F7FBFD;border-bottom:1px solid var(--border);overflow:hidden}
-.fcard.wide .fvis{height:300px}
-.fcopy{padding:20px 22px 22px}
-.fcopy h3{font:600 17px/1.3 var(--font-ui);letter-spacing:-.02em}
-.fcopy p{margin-top:6px;font-size:14.5px;color:var(--muted)}
-.fv-prompt{display:flex;flex-direction:column;align-items:center;padding:26px 20px;background:radial-gradient(ellipse 60% 70% at 50% 110%,rgba(255,155,110,.25),transparent 70%),#F7FBFD}
-.ptabs{display:inline-flex;gap:2px;padding:3px;border:1px solid var(--border);border-radius:var(--r);background:#fff}
-.ptab{height:30px;padding:0 12px;border-radius:var(--r);font-size:13px;color:var(--muted)}
-.ptab[aria-selected=true]{background:var(--ink);color:#fff}
-.pbox{margin-top:16px;width:min(100%,520px);height:46px;display:flex;align-items:center;gap:10px;padding:0 10px 0 12px;background:#fff;border:1px solid var(--border-strong);border-radius:var(--r);font-size:15px;color:var(--ink)}
-.pbox svg{width:22px;height:22px;color:var(--accent);flex:none;overflow:visible}
-.pcaret{width:1.5px;height:18px;background:var(--ink);animation:blink 1s steps(1) infinite}
-.penter{margin-left:auto;width:26px;height:26px;display:grid;place-items:center;border:1px solid var(--border);border-radius:var(--r);font-size:12px;color:var(--muted)}
-.presult{margin-top:14px;width:min(100%,520px);padding:12px 14px;background:#fff;border:1px solid var(--border);border-radius:var(--r);opacity:0;transform:translateY(8px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
-.presult.on{opacity:1;transform:none}
-.pr-top{display:flex;align-items:center;gap:10px}
-.pr-top .app-badge{width:30px;height:30px}
-.pr-top .app-badge svg{width:22px;height:22px;overflow:visible}
-.pr-top b{display:block;font-weight:600;font-size:14px}
-.pr-top small{display:block;font:400 11.5px/1.3 var(--font-mono);color:var(--muted)}
-.pr-top .pill-live{margin-left:auto}
-.pr-sample{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:13.5px;color:var(--ink-2)}
-.globe{position:absolute;left:50%;top:50%;width:300px;height:auto;transform:translate(-50%,-50%)}
-.gring{fill:none;stroke:#F2713A;stroke-opacity:.5;transform-box:fill-box;transform-origin:center}
-.garc{stroke-dasharray:4 5}
-.gchip{position:absolute;display:inline-flex;gap:6px;align-items:center;height:26px;padding:0 9px;background:#fff;border:1px solid var(--border);border-radius:var(--r);font:400 11.5px/1 var(--font-mono);color:var(--muted);white-space:nowrap}
-.gchip b{font-weight:500;color:var(--ink)}
-.fv-molt{display:flex;flex-direction:column;justify-content:center;padding:0 22px}
-.mline{position:relative;display:flex;justify-content:space-between;align-items:flex-start}
-.mline::before{content:"";position:absolute;left:8px;right:8px;top:7px;height:2px;background:linear-gradient(90deg,var(--accent) 0 78%,var(--border-strong) 78%)}
-.mn{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;width:44px}
-.mn i{width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px #F7FBFD}
-.mn b{margin-top:6px;font:500 12px/1 var(--font-mono);color:var(--ink)}
-.mn small{font:400 11px/1 var(--font-mono);color:var(--muted)}
-.mn.rej i{background:#fff;border:1.5px solid var(--context);transform:translateY(16px) scale(.8)}
-.mn.rej b,.mn.rej small{transform:translateY(16px);color:var(--muted)}
-.mn.next i{background:#fff;border:2px dashed var(--accent)}
-.mprog{margin-top:42px;font-size:12.5px;color:var(--ink-2)}
-.mprog i{display:block;margin-top:8px;height:4px;background:var(--surface-3);overflow:hidden}
-.mprog em{display:block;height:100%;width:74%;background:linear-gradient(90deg,var(--accent) 0 40%,var(--peach) 50%,var(--accent) 60% 100%);background-size:250% 100%;background-position:100% 0}
-.fv-snip{display:flex;align-items:center;padding:0 24px}
-.snip-text{position:relative;font-size:16px;line-height:1.9;color:var(--ink)}
-.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 24px;padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--border)}
-.fgrid .ib{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--border-strong);border-radius:var(--r);background:#fff}
-.fgrid .ib .i{width:17px;height:17px}
-.fgrid h4{margin-top:14px;font:600 15px/1.3 var(--font-ui);letter-spacing:-.01em}
-.fgrid p{margin-top:4px;font-size:14px;color:var(--muted)}
-@media (prefers-reduced-motion:no-preference){
-  .gring{animation:gping 2.4s var(--ease) infinite}
-  .gpin:nth-of-type(2) .gring{animation-delay:.6s}
-  .gpin:nth-of-type(3) .gring{animation-delay:1.2s}
-  .gpin:nth-of-type(4) .gring{animation-delay:1.8s}
-  .garc{animation:gdash 1.6s linear infinite}
-  .mn.next i{animation:spin 6s linear infinite}
-  .mprog em{animation:shimmer 2.8s linear infinite}
-}
-@keyframes gping{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.8);opacity:0}}
-@keyframes gdash{to{stroke-dashoffset:-18}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes shimmer{to{background-position:-150% 0}}
-@media (max-width:1000px){.fbento{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.fgrid{grid-template-columns:1fr}.fcard.wide .fvis{height:340px}.ptab{padding:0 8px;font-size:12px}}
-
-/* ---------- Statement (Ramp) ---------- */
-.statement{padding:clamp(80px,10vw,140px) 0;text-align:center}
-.statement h2{max-width:980px;margin:0 auto;font-size:clamp(2rem,1.3rem + 2.4vw,3.4rem);line-height:1.08}
-
-/* ---------- Band (dark) ---------- */
-.band{position:relative;background:linear-gradient(180deg,var(--bg) 0,#C9DCE8 50px,#3A4278 120px,var(--dark-3) 190px,var(--dark-3) calc(100% - 190px),#3A4278 calc(100% - 120px),#C9DCE8 calc(100% - 50px),var(--bg) 100%);color:var(--on-dark);overflow:hidden;isolation:isolate;padding:clamp(190px,16vw,250px) 0}
-.band::before{content:"";position:absolute;inset:190px 0;z-index:-1;background:radial-gradient(ellipse 50% 65% at 78% 50%,rgba(242,113,58,.14),transparent 65%)}
-.band-grid{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center}
-.band .eyebrow{color:var(--on-dark-muted)}
-.band h2{margin-top:22px;font-size:clamp(2.9rem,1.6rem + 4.6vw,5.9rem);line-height:.98;letter-spacing:-.05em}
-.band-lead{margin-top:28px;max-width:520px;font-size:17.5px;line-height:1.6;color:#C6CBE6}
-.principles{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--dark-border)}
-.principles > div{padding:22px 22px 0 0}
-.principles > div + div{padding-left:22px;border-left:1px solid var(--dark-border)}
-.principles .n{font:500 11px/1 var(--font-mono);letter-spacing:.1em;color:var(--accent-bright)}
-.principles p{margin-top:12px;font-size:15px;line-height:1.5}
-.crab-art{width:100%;max-width:520px;aspect-ratio:1/1;margin-left:auto}
-.crab-art canvas{width:100%;height:100%}
-
-
-/* ---------- Calculator ---------- */
-.calc{display:grid;grid-template-columns:5fr 7fr;border:1px solid var(--border);border-radius:var(--r)}
+/* calculator */
+.panel{background:#fff;border:1px solid var(--border);border-radius:var(--r)}
+.calc{display:grid;grid-template-columns:5fr 7fr}
 .calc-controls{padding:clamp(22px,3vw,36px);border-right:1px solid var(--border)}
 .ctrl + .ctrl{margin-top:30px}
 .ctrl-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
@@ -682,127 +377,80 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
 .calc-chart .data-table th:last-child{color:var(--accent-text)}
 .assume{margin-top:auto;padding-top:20px;font-size:12.5px;line-height:1.6;color:var(--muted)}
 
-/* ---------- Use cases ---------- */
-.feature-row{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:var(--r)}
-.feature-row > div{padding:28px 26px}
-.feature-row > div + div{border-left:1px solid var(--border)}
-.icon-box{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--border-strong);border-radius:var(--r);background:#fff}
-.icon-box .i{width:18px;height:18px}
-.feature-row h3{margin-top:20px;font:600 18px/1.3 var(--font-ui);letter-spacing:-.02em}
-.feature-row p{margin-top:8px;font-size:15px;color:var(--muted)}
-.feature-row .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
-.feature-row .tags span{font:400 11px/1 var(--font-mono);padding:6px 8px;border-radius:var(--r);background:var(--surface-2);color:var(--ink-2)}
-
-/* ---------- Pricing ---------- */
-.pricing-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:var(--r);max-width:1000px;margin-inline:auto}
-.price-card{padding:clamp(26px,3.5vw,40px);display:flex;flex-direction:column}
-.price-card + .price-card{border-left:1px solid var(--border)}
-.price-card.dark{background:var(--dark-3);color:var(--on-dark)}
-.p-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.p-name{font:500 11px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase}
-.p-tag{font:500 10.5px/1 var(--font-mono);padding:6px 9px;border-radius:var(--r-pill);background:rgba(255,155,110,.18);color:var(--peach)}
-.p-price{margin-top:22px;font:500 clamp(2.2rem,1.8rem + 1.2vw,2.9rem)/1.05 var(--font-ui);letter-spacing:-.045em}
-.p-sub{margin-top:10px;color:var(--muted);font-size:15px}
-.dark .p-sub{color:var(--on-dark-muted)}
-.p-list{margin-top:26px;padding-top:26px;border-top:1px solid var(--border);display:grid;gap:12px;font-size:15px}
-.dark .p-list{border-color:var(--dark-border)}
-.p-list li{display:flex;gap:11px;align-items:flex-start}
-.p-list .i{width:16px;height:16px;margin-top:3px;stroke-width:2}
-.dark .p-list .i{color:var(--accent-bright)}
-.p-cta{margin-top:auto;padding-top:32px}
-.p-cta .btn{width:100%}
+/* ---------- Enterprise band (navy, faded edges) ---------- */
+.band{position:relative;background:linear-gradient(180deg,var(--bg) 0,#C9DCE8 50px,#3A4278 120px,var(--dark-3) 190px,var(--dark-3) calc(100% - 190px),#3A4278 calc(100% - 120px),#C9DCE8 calc(100% - 50px),var(--bg) 100%);color:var(--on-dark);overflow:hidden;isolation:isolate;padding:clamp(190px,16vw,240px) 0}
+.band::before{content:"";position:absolute;inset:190px 0;z-index:-1;background:radial-gradient(440px circle at 84% 30%,rgba(242,113,58,.12),transparent 70%)}
+.nav-zone{position:absolute;left:0;right:0;top:120px;bottom:120px;pointer-events:none}
+.final .nav-zone{top:150px;bottom:0}
+.band-top{display:grid;grid-template-columns:8fr 4fr;gap:40px;align-items:center}
+.band h2{margin-top:20px;font-size:clamp(2.8rem,1.6rem + 4vw,5.2rem);line-height:.98;letter-spacing:-.05em}
+.band-lead{margin-top:24px;max-width:540px;font-size:17px;line-height:1.6;color:#C6CBE6}
+.crab-art{width:100%;max-width:320px;aspect-ratio:1/1;margin-left:auto}
+.crab-art canvas{width:100%;height:100%}
+.fgrid{margin-top:clamp(44px,5vw,64px);display:grid;grid-template-columns:repeat(4,1fr);gap:28px 24px;padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--dark-border)}
+.fgrid .ib{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--dark-border);border-radius:var(--r);background:rgba(255,255,255,.04);color:var(--peach)}
+.fgrid .ib .i{width:17px;height:17px}
+.fgrid h4{margin-top:14px;font:600 15px/1.3 var(--font-ui);letter-spacing:-.01em}
+.fgrid p{margin-top:4px;font-size:14px;color:var(--on-dark-muted)}
+.compliance{margin-top:clamp(36px,4vw,48px);display:flex;flex-wrap:wrap;gap:8px}
+.comp{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 12px;border-radius:var(--r);border:1px solid var(--dark-border);background:rgba(245,246,242,.04);font:500 11px/1 var(--font-mono);letter-spacing:.04em;color:#C6CBE6}
+.comp .i{width:14px;height:14px;stroke-width:2}
 
 /* ---------- FAQ ---------- */
 .faq{display:grid;grid-template-columns:4fr 8fr;gap:clamp(28px,5vw,72px);align-items:start}
-.faq-side p:not(.eyebrow){margin-top:16px;color:var(--muted);font-size:15.5px;max-width:300px}
+.faq-side .h2{margin-top:18px}
+.faq-side p:not(.label){margin-top:16px;color:var(--muted);font-size:15.5px;max-width:300px}
 .faq-side a{color:var(--ink);text-underline-offset:4px}
 .faq-list{border-top:1px solid var(--border)}
 .faq details{border-bottom:1px solid var(--border)}
 .faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:21px 0;font:600 16.5px/1.4 var(--font-ui);letter-spacing:-.015em;cursor:pointer}
 .faq summary::-webkit-details-marker{display:none}
-.faq .pm{position:relative;flex:none;width:28px;height:28px;border:1px solid var(--border-strong);border-radius:var(--r);transition:transform .3s var(--ease)}
-.faq .pm::before,.faq .pm::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+.faq .pm{position:relative;flex:none;width:28px;height:28px;border:1px solid var(--border-strong);border-radius:var(--r)}
+.faq .pm::before,.faq .pm::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%);transition:transform .3s var(--ease)}
 .faq .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
-.faq details[open] .pm{transform:rotate(45deg)}
+.faq details[open] .pm::after{transform:translate(-50%,-50%) rotate(0deg)}
 .faq-a{padding:0 48px 22px 0;color:var(--muted);font-size:15.5px;line-height:1.65}
 
-/* ---------- Final CTA (dark) ---------- */
-.final{position:relative;background:linear-gradient(180deg,var(--bg) 0,#C9DCE8 60px,#323A72 150px,var(--dark) 230px);color:var(--on-dark);isolation:isolate;overflow:hidden;padding:clamp(230px,18vw,280px) 0 clamp(56px,6vw,80px)}
-.final::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 50% 24% at 50% 70%,rgba(242,113,58,.18),transparent 100%)}
-.cta-card{max-width:1080px;margin:0 auto;background:#fff;color:var(--ink);border-radius:var(--r);padding:clamp(30px,5vw,60px);display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(26px,4vw,56px);align-items:end}
-.cta-card .mark{width:48px;height:48px;color:var(--accent)}
+/* ---------- Final CTA + footer (deep navy) ---------- */
+.final{position:relative;background:linear-gradient(180deg,var(--bg) 0,#C9DCE8 60px,#323A72 150px,var(--dark) 230px);color:var(--on-dark);isolation:isolate;padding:clamp(220px,17vw,260px) 0 clamp(64px,7vw,96px)}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 50% 26% at 50% 72%,rgba(242,113,58,.16),transparent 100%)}
+.cta-card{max-width:760px;margin:0 auto;background:#fff;color:var(--ink);border-radius:var(--r);padding:clamp(32px,5vw,56px);text-align:center}
+.cta-card .mark{width:52px;height:52px;margin:0 auto;color:var(--accent)}
 .cta-card .h2{margin-top:20px}
 .cta-card .dm{color:var(--muted)}
-.cta-card p{font-size:16.5px;color:var(--muted);max-width:420px}
-.cta-btns{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
-.compliance{margin-top:30px;display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
-.comp{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 13px;border-radius:var(--r-pill);border:1px solid var(--dark-border);background:rgba(245,246,242,.05);font:500 11px/1 var(--font-mono);letter-spacing:.04em;color:#C6CBE6}
-.comp .i{width:14px;height:14px;stroke-width:2}
-
-/* ---------- Footer (black) ---------- */
-.footer{background:var(--dark);color:var(--on-dark);padding-top:64px;overflow:hidden}
-.foot-grid{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:32px}
-.foot-brand p{margin-top:14px;max-width:280px;color:var(--on-dark-muted);font-size:14.5px}
+.cta-card > p{margin:14px auto 0;font-size:16.5px;color:var(--muted);max-width:460px}
+.cta-card .signup{margin:28px auto 0;text-align:left}
+.cta-card .form-row{justify-content:center}
+.footer{background:var(--dark);color:var(--on-dark);padding-top:56px;overflow:hidden}
+.foot-grid{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:32px}
+.foot-brand p{margin-top:14px;max-width:300px;color:var(--on-dark-muted);font-size:14.5px}
 .foot-col h4{font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--on-dark-muted)}
 .foot-col ul{margin-top:16px;display:grid;gap:10px}
 .foot-col a{font-size:14.5px;color:#C6CBE6;text-decoration:none}
 .foot-col a:hover{color:#fff}
-.foot-bottom{margin-top:56px;padding:20px 0;border-top:1px solid var(--dark-border);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--on-dark-muted)}
-.foot-bottom span{display:inline-flex;align-items:center;gap:8px}
-.seafloor{position:relative;height:clamp(120px,17vw,260px);margin-top:8px;overflow:hidden;user-select:none;pointer-events:none;isolation:isolate}
-.seafloor::before{content:"";position:absolute;left:0;right:0;bottom:0;height:75%;z-index:-1;background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(255,155,110,.22),transparent 70%)}
-.giant-dots{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;z-index:0}
-.giant span{font:600 clamp(5rem,1rem + 17vw,16rem)/.8 var(--font-ui);letter-spacing:-.06em;color:var(--accent)}
-
-/* ---------- Bottom ticker (Ramp) ---------- */
-.ticker{position:fixed;left:0;right:0;bottom:0;z-index:80;height:44px;display:flex;align-items:center;gap:16px;padding-left:var(--gutter);background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--border);transition:transform .35s var(--ease)}
-.ticker.hide{transform:translateY(100%)}
-.ticker-label{flex:none;display:inline-flex;align-items:center;gap:8px;font:500 11px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase}
-.ticker-label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse-c 2s infinite}
-@keyframes pulse-c{0%{box-shadow:0 0 0 0 rgba(242,113,58,.5)}70%{box-shadow:0 0 0 7px rgba(242,113,58,0)}100%{box-shadow:0 0 0 0 rgba(242,113,58,0)}}
-.ticker-view{flex:1;overflow:hidden;border-left:1px solid var(--border);-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 94%,transparent)}
-.ticker-track{display:flex;gap:26px;width:max-content;padding-left:20px}
-.t-item{display:inline-flex;align-items:center;gap:9px;font:500 11px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
-.t-item b{font-weight:500;letter-spacing:0;color:var(--ink);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r);padding:5px 7px;font-variant-numeric:tabular-nums}
-@media (prefers-reduced-motion:no-preference){
-  .marquee,.ticker-track{animation:marquee var(--dur,48s) linear infinite}
-  .marquee-view:hover .marquee,.ticker-view:hover .ticker-track{animation-play-state:paused}
-  .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-  .js .reveal.in{opacity:1;transform:none}
-  .js .reveal-blur{opacity:0;filter:blur(14px);transition:opacity 1s var(--ease),filter 1s var(--ease)}
-  .js .reveal-blur.in{opacity:1;filter:none}
-}
-@keyframes marquee{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.step .sb,.viz,.step{transition:none}.prog i{width:100%}.swap .a{opacity:0}.swap .b{opacity:1}}
+.foot-bottom{margin-top:48px;padding:20px 0;border-top:1px solid var(--dark-border);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--on-dark-muted)}
+.wordmark-wrap{position:relative;height:clamp(110px,23vw,340px);margin-top:16px;pointer-events:none;user-select:none}
+.wordmark-wrap canvas{position:absolute;inset:0;width:100%;height:100%}
 
 /* ---------- Responsive ---------- */
-@media (max-width:1420px){.float{display:none}}
 @media (max-width:1000px){
-  .hero-grid,.split,.split.rev,.band-grid,.picker,.calc,.faq,.cta-card,.tabs-grid,.split-head{grid-template-columns:1fr}
+  .split,.split.rev,.split-head,.calc,.faq,.band-top{grid-template-columns:1fr}
   .split.rev .split-text{order:0}
-  .split-head > p:not(.eyebrow){justify-self:start}
+  .split-head > p:not(.label){justify-self:start}
   .bento{grid-template-columns:1fr}
   .bento-card + .bento-card{border-left:0;border-top:1px solid var(--border)}
   .calc-controls{border-right:0;border-bottom:1px solid var(--border)}
-  .feature-row,.pricing-grid{grid-template-columns:1fr}
-  .feature-row > div + div,.price-card + .price-card{border-left:0;border-top:1px solid var(--border)}
-  .crab-art{max-width:400px;margin:8px auto 0}
-  .foot-grid{grid-template-columns:1fr 1fr}
-  .foot-brand{grid-column:1/-1}
   .c-body{grid-template-columns:1fr}
   .c-side{display:none}
-  .how-track{height:auto}
-  .how-sticky{position:static;height:auto;display:block}
-  .how-grid{grid-template-columns:1fr;gap:24px}
-  .frame{height:500px;min-height:0}
-  .step{opacity:.55}
-  .tablist{flex-direction:row;overflow-x:auto;border-top:0;border-bottom:1px solid var(--border)}
-  .tab{flex:none;width:auto;border-left:0;border-bottom:2px solid transparent;padding:12px 14px}
-  .tab span{display:none}
-  .tab[aria-selected=true]{border-bottom-color:var(--accent);border-left-color:transparent}
-  .mcards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
-  .mcard{flex:0 0 82%;scroll-snap-align:start}
-  .mcard:first-child{border-left:0}
+  .steps4{grid-template-columns:1fr 1fr}
+  .steps4 > div:nth-child(3){padding-left:0;border-left:0}
+  .steps4 > div:nth-child(n+3){padding-top:20px}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .crab-art{max-width:240px;margin:0}
+  .band::before{display:none}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+  .facts ul{margin-left:0}
 }
 @media (max-width:720px){
   .c-grid{grid-template-columns:1fr}
@@ -810,9 +458,6 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   .c-stats{grid-template-columns:1fr 1fr}
   .c-stat:nth-child(3){border-left:0}
   .c-stat:nth-child(n+3){border-top:1px solid var(--border)}
-  .principles{grid-template-columns:1fr}
-  .principles > div,.principles > div + div{padding:18px 0;border-left:0;border-bottom:1px solid var(--dark-border)}
-  .ticker{display:none}
   .pk > span:last-child{display:none}
 }
 @media (max-width:640px){
@@ -821,17 +466,14 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   .input-cta input{width:100%;height:46px;padding:0 10px}
   .input-cta .btn{width:100%;height:46px}
   .checks{flex-direction:column;gap:8px}
-  .amounts{grid-template-columns:1fr 1fr}
-  .toast{display:none}
+  .steps4,.fgrid{grid-template-columns:1fr}
+  .steps4 > div,.steps4 > div + div{padding:18px 0;border-left:0;border-bottom:1px solid var(--border)}
   .faq-a{padding-right:0}
-  .announce{padding:10px 40px 10px 14px;text-align:left}
-  .glass-body{min-height:0}
 }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="craby" viewBox="0 0 64 64">
     <g fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -871,28 +513,17 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M4 4l16 16"/><path d="M9.9 5.2A9.5 9.5 0 0 1 12 5c5 0 8.5 4.5 9.5 7-.4 1-1.2 2.4-2.4 3.7M6.6 6.6C4.6 7.9 3.2 10 2.5 12c1 2.5 4.5 7 9.5 7 1.8 0 3.4-.6 4.8-1.4"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
 </svg>
 
-
-<!-- ============ Floating pill nav (OpenLake) ============ -->
+<!-- ============ Nav ============ -->
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a class="logo" href="#" aria-label="Craby.AI home"><svg class="crab-live" aria-hidden="true"></svg><span class="wordmark">Craby<em>.AI</em></span></a>
     <nav class="nav-links" aria-label="Primary">
-      <button class="nav-dd" type="button" aria-expanded="false" aria-controls="mega">Product <svg class="i" aria-hidden="true"><use href="#i-down"/></svg></button>
-      <a href="#models" data-sec="models">Models</a><a href="#privacy" data-sec="privacy">Privacy</a><a href="#pricing" data-sec="pricing">Pricing</a><a class="collapse" href="#">Docs</a>
+      <a href="#shell" data-sec="shell">Privacy</a><a href="#molt" data-sec="molt">Fine-tuning</a><a href="#claws" data-sec="claws">Deploy</a><a href="#enterprise" data-sec="enterprise">Security</a><a href="#faq" data-sec="faq">FAQ</a>
     </nav>
     <div class="nav-right">
-      <a class="signin collapse" href="#">Sign in</a>
-      <a class="btn btn-accent" href="#start">Start free</a>
+      <a class="btn btn-accent" href="#access">Request access</a>
       <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
-    <div class="mega" id="mega" role="region" aria-label="Product">
-      <a class="mi" href="#how"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-server"/></svg></span><span><b>Deploy<em class="tag">CLAWS</em></b><small>Serverless by default. Dedicated GPUs on Enterprise.</small></span></a>
-      <a class="mi" href="#learn"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><span><b>Continuous fine-tuning<em class="tag">MOLT</em></b><small>Molts once enough approved data builds up.</small></span></a>
-      <a class="mi" href="#privacy"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><span><b>Privacy Protect<em class="tag">SHELL</em></b><small>Sensitive values masked before the model reads them.</small></span></a>
-      <a class="mi" href="#api"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg></span><span><b>API + team chat</b><small>OpenAI-compatible endpoint and a private chat.</small></span></a>
-      <a class="mega-card" href="#features"><svg class="crab-live" aria-hidden="true"></svg><span><b>See what you can build →</b><small>Support bots, contract review, internal search.</small></span></a>
-    </div>
-    <div class="progress" aria-hidden="true"><span class="track"></span><svg class="walker crab-live"></svg></div>
   </div>
 </header>
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Menu">
@@ -900,66 +531,41 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     <a class="logo" href="#"><svg class="crab-live" aria-hidden="true"></svg><span class="wordmark">Craby<em>.AI</em></span></a>
     <button class="menu-btn" type="button" aria-label="Close menu" data-close><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
   </div>
-  <nav aria-label="Mobile"><a href="#how" data-close>Product</a><a href="#models" data-close>Models</a><a href="#privacy" data-close>Privacy</a><a href="#pricing" data-close>Pricing</a><a href="#" data-close>Docs</a><a href="#" data-close>Sign in</a></nav>
-  <a class="btn btn-accent" href="#start" data-close>Start free <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <nav aria-label="Mobile"><a href="#shell" data-close>Privacy</a><a href="#molt" data-close>Fine-tuning</a><a href="#claws" data-close>Deploy</a><a href="#enterprise" data-close>Security</a><a href="#faq" data-close>FAQ</a></nav>
+  <a class="btn btn-accent" href="#access" data-close>Request early access <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
 </div>
 
 <main id="main">
 
-<!-- ============ Hero (dark, OpenLake + Ramp) ============ -->
+<!-- ============ 1. Hero ============ -->
 <section class="hero" id="start" aria-labelledby="hero-h">
-  <div class="sea" aria-hidden="true"></div><div class="bubbles" data-n="12" aria-hidden="true"></div>
-  <div class="container hero-grid">
-    <div>
-      <a class="badge reveal" href="#privacy"><b>New</b>Privacy Protect ships with every model<svg class="i" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <div class="container">
+    <div class="hero-copy">
+      <a class="badge reveal" href="#access"><b>Coming soon</b>Early access is open<svg class="i" aria-hidden="true"><use href="#i-right"/></svg></a>
       <h1 class="display h1 reveal" id="hero-h"><span class="setup">Most AI is rented.</span> This one's yours.</h1>
-      <p class="lead reveal">Craby.AI deploys an open-weight model for your team in minutes, fine-tunes it on how you work, and keeps every prompt private. You get an API and a team chat on day one.</p>
+      <p class="lead reveal">Private, self-improving open-weight models for your company. Deploy in minutes, keep every prompt private, and own what your model learns.</p>
       <div class="signup reveal">
         <form class="input-cta" data-signup novalidate>
           <svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>
           <label class="sr-only" for="hero-email">Work email</label>
-          <input id="hero-email" type="email" placeholder="What's your work email?" autocomplete="email" required>
-          <button class="btn btn-accent" type="submit">Start free <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <input id="hero-email" type="email" placeholder="Your work email" autocomplete="email" required>
+          <button class="btn btn-accent" type="submit">Request early access <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
         </form>
-        <div class="hero-actions"><a class="link-arrow" href="#">Book a 15-min demo <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a><p class="form-note" role="status" aria-live="polite"></p></div>
+        <div class="form-row"><a class="link-arrow" href="#">Talk to the founders <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a><p class="form-note" role="status" aria-live="polite"></p></div>
       </div>
       <ul class="checks reveal">
-        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Live in under 5 minutes</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Open-weight models</li>
         <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Pay per token, no seats</li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Your weights, yours to keep</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>US, EU, GCC and Asia</li>
       </ul>
     </div>
-    <div class="glass reveal" aria-roledescription="carousel" aria-label="Privacy Protect example">
-      <div class="glass-k"><span><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Privacy Protect</span><span id="glass-step">1 / 3</span></div>
-      <p class="stage-label" id="stage-label">What Amara typed</p>
-      <div class="glass-body" aria-live="polite">
-        <p id="g-prompt">Refund <span class="ent" data-tok="[PERSON_1]">Maria Lopez</span> for claim <span class="ent" data-tok="[CLAIM_1]">HX-48213</span>. Her card ending <span class="ent" data-tok="[CARD_1]">4421</span> was charged twice.</p>
-        <p id="g-reply" hidden>Done. <span class="rest">Maria</span> has been refunded for claim <span class="rest">HX-48213</span> on the card ending <span class="rest">4421</span>.</p>
-        <span class="claw" id="g-claw" aria-hidden="true"><svg class="crab-live"></svg></span>
-      </div>
-      <div class="glass-foot">
-        <div class="glass-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
-        <div class="glass-arrows"><button type="button" class="back" aria-label="Previous step"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button><button type="button" class="next" aria-label="Next step"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pillars">
-      <div class="pillar reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><div><span class="k">Shell</span><h3>Every prompt masked</h3><p>Names, IDs and health data are swapped out before the model reads a word.</p></div></div>
-      <div class="pillar reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><div><span class="k">Molt</span><h3>Smarter with every molt</h3><p>Once enough chats are approved, a new version trains and ships only if it wins.</p></div></div>
-      <div class="pillar reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-key"/></svg></span><div><span class="k">Claws</span><h3>Fully yours</h3><p>Your data, your weights, your rollback button. Export anytime.</p></div></div>
-    </div>
-  </div>
-</section>
 
-<!-- ============ Console (Ramp: product UI as hero art) ============ -->
-<div class="console-zone">
-  <div class="console-wrap reveal">
-    <div class="console" role="img" aria-label="Craby.AI console showing a live Llama 3.3 70B deployment called halden-assistant, version 10, evaluation score 92.1 percent, 4,917 sensitive entities masked today.">
+    <!-- Product preview (mock data) -->
+    <div class="console reveal" role="img" aria-label="Product preview of the Craby.AI console: a serverless deployment called halden-assistant on version 10, with an evaluation score of 92.1 percent and sensitive data masked before inference.">
       <div class="c-top">
-        <span class="c-ws"><span class="app-badge"><svg aria-hidden="true"><use href="#craby"/></svg></span>Halden Health<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span>
+        <span class="c-ws"><span class="app-badge"><svg class="crab-live" aria-hidden="true"></svg></span>Halden Health<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></span>
         <span class="c-crumbs">Deployments / <b>halden-assistant</b></span>
-        <span class="c-credit">$212.40 credit</span>
+        <span class="pv-tag">Product preview</span>
         <span class="c-avatar">AO</span>
       </div>
       <div class="c-body">
@@ -975,7 +581,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
         </div>
         <div class="c-main">
           <div class="c-head">
-            <div><div class="c-title">halden-assistant <span class="pill-live">Live</span></div><div class="c-meta">Llama 3.3 70B Instruct · eu-central · v10</div></div>
+            <div><div class="c-title">halden-assistant <span class="pill-live">Live</span></div><div class="c-meta">Serverless · eu · v10</div></div>
             <div class="c-actions"><span class="btn-mini"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>Open chat</span><span class="btn-mini ink"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>Copy endpoint</span></div>
           </div>
           <div class="c-stats">
@@ -985,8 +591,8 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
             <div class="c-stat"><div class="l">Eval score</div><div class="v">92.1%</div><div class="d">+1.9 pts vs v9</div></div>
           </div>
           <div class="c-grid">
-            <div class="c-card"><h4>Eval score by week <span>Your eval set · 412 cases</span></h4><div class="spark" id="spark"></div></div>
-            <div class="c-card vers"><h4>Versions <span>Auto-promote on</span></h4>
+            <div class="c-card"><h4>Eval score by molt <span>Your eval set · 412 cases</span></h4><div class="spark" id="spark"></div></div>
+            <div class="c-card vers"><h4>Molts <span>Auto-promote on</span></h4>
               <ul class="versions">
                 <li><span class="v-tag">v10</span><span class="v-st"><b>Molted</b> · 2h ago</span><span class="v-up">+1.9</span></li>
                 <li><span class="v-tag">cand.</span><span class="v-st">Rejected · 1d ago</span><span class="v-dn">−0.5</span></li>
@@ -998,80 +604,92 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
         </div>
       </div>
     </div>
-    <div class="float float-a" aria-hidden="true"><div class="handles"><i></i><i></i><i></i><i></i></div>
-      <div class="k"><svg class="i"><use href="#i-shield"/></svg>Privacy Protect</div>
-      <p>Refund <span class="tk">[PERSON_1]</span> for claim <span class="tk">[CLAIM_1]</span> to card <span class="tk">[CARD_1]</span></p>
-      <div class="foot"><span>3 entities masked</span><b>+14 ms</b></div>
-    </div>
-    <div class="float float-b" aria-hidden="true"><div class="handles"><i></i><i></i><i></i><i></i></div>
-      <div class="k"><svg class="i"><use href="#i-trend"/></svg>Molted to v10</div>
-      <div class="big">v10 <small>+1.9 pts</small></div>
-      <div class="foot"><span>2,418 approved chats</span><span>412 evals</span></div>
+
+    <div class="steps4" aria-label="How it works">
+      <div class="reveal"><span class="n">01</span><h3>Register</h3><p>Create a workspace with your work email or SSO.</p></div>
+      <div class="reveal"><span class="n">02</span><h3>Add credit</h3><p>Top up and pay per token. No seats.</p></div>
+      <div class="reveal"><span class="n">03</span><h3>Deploy</h3><p>Pick a model. It runs serverless with Privacy Protect on.</p></div>
+      <div class="reveal"><span class="n">04</span><h3>Build and roll out</h3><p>Use the endpoint in code and the chat across your team.</p></div>
     </div>
   </div>
-</div>
-
-<!-- ============ Model strip (Ramp logo-row placement) ============ -->
-<section class="hero-models" aria-label="Supported model families">
-  <p class="lbl">Deploy the open models you already trust</p>
-  <div class="marquee-view"><div class="marquee" id="models-marquee"></div></div>
 </section>
 
-<!-- ============ How it works ============ -->
-<section class="block first" id="how" aria-labelledby="how-h">
-  <div class="container"><div class="panel">
-    <div class="sec-head split-head reveal">
-      <p class="eyebrow">How it works</p>
-      <h2 class="display h2" id="how-h">From sign-up to production. <span class="dm">Before your coffee cools.</span></h2>
-      <p>Four steps, no ML team, no GPU contracts. Most teams go from email to a live endpoint in under five minutes.</p>
+<!-- ============ 2. Shell: Privacy Protect ============ -->
+<section class="sec" id="shell" aria-labelledby="shell-h">
+  <div class="container split">
+    <div class="split-text reveal">
+      <p class="label"><span>01</span>Shell · Privacy Protect</p>
+      <h2 class="display h2" id="shell-h">Every prompt gets a shell. <span class="dm">Even from the model.</span></h2>
+      <p>Before a single token reaches the model, Privacy Protect swaps names, account numbers, health details and secrets for placeholders. Answers come back with the real values restored, for your people only.</p>
+      <ul class="mini-list">
+        <li><svg class="i" aria-hidden="true"><use href="#i-eye-off"/></svg>PII, health data, payment data and API keys</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-key"/></svg>Your own terms: client names, project codes</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>On by default, for every model and every user</li>
+      </ul>
     </div>
-    <div class="how-track">
-      <div class="how-sticky">
-        <div class="how-grid">
-          <div class="steps" style="--p:0">
-            <span class="rail" aria-hidden="true"></span>
-            <button class="step on" type="button" data-i="0"><span class="num">01 · REGISTER</span><h3>Create your workspace</h3><span class="sb"><p>Sign up with your work email or SSO. Invite your team whenever you're ready.</p></span></button>
-            <button class="step" type="button" data-i="1"><span class="num">02 · ADD CREDIT</span><h3>Top up, pay per token</h3><span class="sb"><p>Start from $10. You only pay for the tokens you use. No seats, no minimums, no surprise invoices.</p></span></button>
-            <button class="step" type="button" data-i="2"><span class="num">03 · DEPLOY</span><h3>Pick a model, click deploy</h3><span class="sb"><p>Choose a model and click deploy. It runs serverless, so you pay per token from the first request, with Privacy Protect already switched on.</p></span></button>
-            <button class="step" type="button" data-i="3"><span class="num">04 · BUILD AND ROLL OUT</span><h3>Ship to developers and staff</h3><span class="sb"><p>Point your code at an OpenAI-compatible endpoint. Hand everyone else a secure chat. Same model, same guardrails.</p></span></button>
-          </div>
-          <div class="frame" aria-live="polite">
-            <div class="viz on" data-i="0"><div class="mock">
-              <div class="mock-h"><span class="app-badge"><svg aria-hidden="true"><use href="#craby"/></svg></span>Create your workspace</div>
-              <p class="mock-sub">Your models, data and weights live here.</p>
-              <div class="field"><label>Work email</label><div class="in"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>amara@haldenhealth.com</div></div>
-              <div class="field"><label>Workspace name</label><div class="in focus">Halden Health<span class="caret"></span></div></div>
-              <div class="btn-full">Create workspace <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></div>
-              <div class="or">or</div>
-              <div class="sso">
-                <span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.5 12.3c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2.1-1.9 3.3-4.7 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.2-2.7l-3.5-2.7c-1 .7-2.2 1-3.7 1-2.9 0-5.3-1.9-6.2-4.5H2.2v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.2a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.1-3.1A11 11 0 0 0 2.2 7.1l3.6 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>Google</span>
-                <span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F25022" d="M3 3h8.5v8.5H3z"/><path fill="#7FBA00" d="M12.5 3H21v8.5h-8.5z"/><path fill="#00A4EF" d="M3 12.5h8.5V21H3z"/><path fill="#FFB900" d="M12.5 12.5H21V21h-8.5z"/></svg>Microsoft</span>
-              </div>
-            </div></div>
-            <div class="viz" data-i="1"><div class="mock">
-              <div class="mock-h">Add credit</div>
-              <p class="mock-sub">Billed per token at your model's rate.</p>
-              <div class="bal"><span>Current balance</span><b>$0.00</b></div>
-              <div class="amounts"><span class="amt">$10</span><span class="amt">$50</span><span class="amt on">$250</span><span class="amt">$1,000</span></div>
-              <div class="opt-line row"><div>Auto-recharge<small>Top up $250 when balance drops below $25</small></div><span class="toggle" aria-hidden="true"></span></div>
-              <div class="opt-line row"><div>Monthly limit<small>Alerts at 80%, hard stop at $500</small></div><span class="mtag">$500</span></div>
-              <div class="btn-full">Add $250 credit <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></div>
-            </div></div>
-            <div class="viz" data-i="2"><div class="mock">
-              <div class="mock-h">Deploy a model</div>
-              <p class="mock-sub">Region: EU &nbsp;·&nbsp; Privacy Protect: always on</p>
-              <div class="model-opt on" style="margin-top:14px"><span class="radio"></span><span><b>Llama 3.3 70B Instruct</b><small>128K context · Meta</small></span><span class="mtag">Most capable</span></div>
-              <div class="model-opt"><span class="radio"></span><span><b>Qwen3 32B</b><small>128K context · Alibaba</small></span><span class="mtag">Balanced</span></div>
-              <div class="model-opt"><span class="radio"></span><span><b>Mistral Small 3.1 24B</b><small>128K context · Mistral AI</small></span><span class="mtag">Fastest</span></div>
-              <ul class="deploy-status">
-                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Serverless endpoint provisioned</li>
-                <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Weights loaded · Privacy Protect attached</li>
-                <li><span class="swap"><span class="a">Warming up</span><span class="b" style="color:var(--good)">Live in 1m 52s</span></span><span class="prog"><i></i></span></li>
-              </ul>
-            </div></div>
-            <div class="viz" data-i="3">
-              <div class="code" style="width:min(100%,520px)">
-                <div class="code-top"><span class="dots"><i></i><i></i><i></i></span><span class="ctab">app.py</span><span>OpenAI-compatible</span></div>
+    <div class="priv reveal" role="img" aria-label="An employee's prompt with a patient name, date of birth, claim number and card digits is masked into placeholders before the model sees it, then the reply is restored with real values for the employee only.">
+      <div class="pcard">
+        <div class="pk"><span class="who"><span class="av">AO</span>Typed by Amara</span><span>Support · 10:42</span></div>
+        <p class="pt">Draft a reply to <span class="e">Maria Lopez</span> (DOB <span class="e">14/03/1986</span>) about claim <span class="e">HX-48213</span>. Her card ending <span class="e">4421</span> was charged twice.</p>
+      </div>
+      <div class="gate"><span><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Privacy Protect <em>· 4 entities masked</em></span></div>
+      <div class="pcard dark">
+        <div class="pk"><span class="who">What the model sees</span><span>halden-assistant v10</span></div>
+        <p class="pt">Draft a reply to <span class="t">[PERSON_1]</span> (DOB <span class="t">[DATE_1]</span>) about claim <span class="t">[CLAIM_1]</span>. Her card ending <span class="t">[CARD_1]</span> was charged twice.</p>
+      </div>
+      <div class="gate"><span><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>Restored <em>· for Amara only</em></span></div>
+      <div class="pcard">
+        <div class="pk"><span class="who"><span class="av">AO</span>Returned to Amara</span><span>1.2s</span></div>
+        <p class="pt">Hi <span class="r">Maria</span>, thanks for flagging claim <span class="r">HX-48213</span>. I can see the duplicate charge on your card ending <span class="r">4421</span> and have issued a refund.</p>
+      </div>
+      <span class="claw" id="p-claw" aria-hidden="true"><svg class="crab-live"></svg></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. Molt: continuous fine-tuning ============ -->
+<section class="sec" id="molt" aria-labelledby="molt-h" style="padding-top:0">
+  <div class="container split rev">
+    <div class="split-text reveal">
+      <p class="label"><span>02</span>Molt · Continuous fine-tuning</p>
+      <h2 class="display h2" id="molt-h">It learns from your team. <span class="dm">Molts when it's ready.</span></h2>
+      <p>Crabs grow by molting. So does Craby.AI. Once your team has approved enough conversations, it trains a candidate and scores it on your own evals. The old shell is shed only if the new one wins.</p>
+      <ul class="mini-list">
+        <li><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg>You choose exactly what it learns from</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>Every candidate scored on your evals</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-rewind"/></svg>One-click rollback to any molt</li>
+      </ul>
+    </div>
+    <figure class="chart-card reveal" style="margin:0">
+      <figcaption><div class="chart-title">Accuracy on your evaluation set</div><div class="chart-sub">Support assistant, first 12 weeks after deploy</div></figcaption>
+      <div class="legend">
+        <span><i class="key-line" style="--c:var(--accent)"></i>Craby.AI, in production</span>
+        <span><i class="key-dot"></i>Molt shipped</span>
+        <span><i class="key-hollow"></i>Candidate rejected</span>
+        <span><i class="key-dash"></i>Leading closed API</span>
+        <span><i class="key-line" style="--c:var(--context)"></i>Base open model</span>
+      </div>
+      <div class="chart-box" id="ft-chart" tabindex="0" aria-label="Line chart. Craby.AI accuracy rises from 71.3 percent at deploy to 92.1 percent at week 12, overtaking a leading closed API at 86 percent in week 7. The base open model stays at 71.3 percent. Use left and right arrow keys to read each week."></div>
+      <div class="mprog"><b>Next molt</b><span>1,840 of 2,500 approved examples</span><i><em></em></i></div>
+      <p class="chart-note">Illustrative example. Steps happen when enough approved data triggers a molt.</p>
+      <details class="table-view"><summary>View as table</summary><div class="tv data-table" id="ft-table"></div></details>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 4. Claws: deploy and own ============ -->
+<section class="sec" id="claws" aria-labelledby="claws-h" style="padding-top:0">
+  <div class="container">
+    <div class="split-head reveal">
+      <p class="label"><span>03</span>Claws · Deploy and own</p>
+      <h2 class="display h2" id="claws-h">One endpoint. One chat. <span class="dm">Fully yours.</span></h2>
+      <p>Developers get an OpenAI-compatible endpoint. Everyone else gets a private chat with SSO. One model, one bill, one set of guardrails.</p>
+    </div>
+    <div class="bento gap-top reveal">
+      <article class="bento-card">
+        <div class="bento-copy"><p class="k">For developers</p><h3>Swap two lines. Keep your code.</h3><p>Streaming, function calling and JSON mode. Your existing SDKs just work.</p></div>
+        <div class="bento-visual"><div class="code">
+          <div class="code-top"><span class="dots"><i></i><i></i><i></i></span><span class="ctab">app.py</span><span>OpenAI-compatible</span></div>
 <pre><span class="k">from</span> <span class="f">openai</span> <span class="k">import</span> <span class="f">OpenAI</span>
 
 <span class="n">client</span> = <span class="f">OpenAI</span>(
@@ -1083,277 +701,39 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     <span class="n">model</span>=<span class="s">"halden-assistant"</span>,
     <span class="n">messages</span>=[{<span class="s">"role"</span>: <span class="s">"user"</span>, <span class="s">"content"</span>: <span class="n">ticket</span>}],
 )</pre>
-              </div>
-              <div class="toast"><span class="app-badge" style="width:32px;height:32px"><svg aria-hidden="true" style="width:24px;height:24px"><use href="#craby"/></svg></span><div><b>Team chat is live</b><span>148 teammates invited via Okta</span></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ============ Proof: tabs + chart (OpenLake) ============ -->
-<section class="block" id="learn" aria-labelledby="learn-h">
-  <div class="container"><div class="panel">
-    <div class="sec-head split-head reveal">
-      <p class="eyebrow">Molt · Continuous fine-tuning</p>
-      <h2 class="display h2" id="learn-h">AI that learns from your team. <span class="dm">It molts when it's ready, not on a timer.</span></h2>
-      <p>Crabs grow by molting. So does Craby.AI. Once your team has approved enough conversations, it trains a candidate and scores it on your own evals. The old shell is shed only if the new one wins.</p>
-    </div>
-    <div class="tabs-grid gap-top reveal">
-      <div>
-        <div class="tablist" role="tablist" aria-label="Compare outcomes">
-          <button class="tab" role="tab" id="tab-acc" aria-controls="tp-acc" aria-selected="true"><b>Accuracy</b><span>On your own evaluation set</span></button>
-          <button class="tab" role="tab" id="tab-cost" aria-controls="tp-cost" aria-selected="false" tabindex="-1"><b>Cost per 1M tokens</b><span>Blended input and output</span></button>
-          <button class="tab" role="tab" id="tab-lat" aria-controls="tp-lat" aria-selected="false" tabindex="-1"><b>Latency</b><span>p50 time to first token</span></button>
-          <button class="tab" role="tab" id="tab-data" aria-controls="tp-data" aria-selected="false" tabindex="-1"><b>Data exposure</b><span>Sensitive values the vendor sees</span></button>
-        </div>
-        <p class="tab-note">Illustrative example based on a support workload. Steps happen when enough approved data triggers a molt. Replace with your own eval data.</p>
-      </div>
-      <div>
-        <div class="tabpanel" role="tabpanel" id="tp-acc" aria-labelledby="tab-acc">
-          <div class="metric-row"><div class="metric"><span class="cap">Week 12 accuracy</span><s>86.0% leading closed API</s><span class="v">92.1<small>%</small></span></div><p class="metric-desc">Passes a leading closed API in week 7, then keeps climbing. Rejected candidates never reach production.</p></div>
-          <div class="legend">
-            <span><i class="key-line" style="--c:var(--accent)"></i>Craby.AI, in production</span>
-            <span><i class="key-dot"></i>Version promoted</span>
-            <span><i class="key-hollow"></i>Candidate rejected</span>
-            <span><i class="key-dash"></i>Leading closed API</span>
-            <span><i class="key-line" style="--c:var(--context)"></i>Base open model</span>
-          </div>
-          <div class="chart-box" id="ft-chart" tabindex="0" aria-label="Line chart. Craby.AI accuracy rises from 71.3 percent at deploy to 92.1 percent at week 12, overtaking a leading closed API at 86 percent in week 7. The base open model stays at 71.3 percent. Use left and right arrow keys to read each week."></div>
-          <details class="table-view"><summary>View as table</summary><div class="tv data-table" id="ft-table"></div></details>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tp-cost" aria-labelledby="tab-cost" hidden>
-          <div class="metric-row"><div class="metric"><span class="cap">Per 1M tokens</span><s>$5.00 leading closed API</s><span class="v">$1.50</span></div><p class="metric-desc">Open weights, served serverless and billed per token. No seat licences on top.</p></div>
-          <div class="chart-box" data-bars="cost"></div>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tp-lat" aria-labelledby="tab-lat" hidden>
-          <div class="metric-row"><div class="metric"><span class="cap">p50 time to first token</span><s>820 ms leading closed API</s><span class="v">212<small>ms</small></span></div><p class="metric-desc">Your model, in your region. Need guaranteed capacity? Dedicated GPUs come with Enterprise.</p></div>
-          <div class="chart-box" data-bars="lat"></div>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="tp-data" aria-labelledby="tab-data" hidden>
-          <div class="metric-row"><div class="metric"><span class="cap">Sensitive values seen by the model</span><s>100% leading closed API</s><span class="v">0<small>%</small></span></div><p class="metric-desc">Privacy Protect masks names, IDs, health and payment data before inference.</p></div>
-          <div class="chart-box" data-bars="data"></div>
-        </div>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ============ Model cards (OpenLake) ============ -->
-<!-- PLACEHOLDER: model card numbers -->
-<section class="block" id="models" aria-labelledby="mc-h">
-  <div class="container"><div class="panel">
-    <div class="sec-head split-head reveal">
-      <p class="eyebrow">Models</p>
-      <h2 class="display h2" id="mc-h">The models you want. <span class="dm">The speed you need.</span></h2>
-      <p>Every model runs serverless in the region you pick, with Privacy Protect attached from the first request. Dedicated GPUs are available on Enterprise.</p>
-    </div>
-    <div class="mcards gap-top reveal">
-      <article class="mcard"><div class="mcard-h"><span class="glyph">L</span>Llama 3.3 70B</div><p class="tags">Meta · 128K context · Fine-tunable</p><s>820 ms closed API</s><p class="v">212<small>ms</small></p><p class="cap">p50 time to first token</p><p class="dep">Deploy on <b>EU · US</b></p></article>
-      <article class="mcard"><div class="mcard-h"><span class="glyph">Q</span>Qwen3 32B</div><p class="tags">Alibaba · 128K context · Fine-tunable</p><s>640 ms closed API</s><p class="v">148<small>ms</small></p><p class="cap">p50 time to first token</p><p class="dep">Deploy on <b>EU · US</b></p></article>
-      <article class="mcard"><div class="mcard-h"><span class="glyph">M</span>Mistral Small 3.1</div><p class="tags">Mistral AI · 128K context · Fine-tunable</p><s>510 ms closed API</s><p class="v">96<small>ms</small></p><p class="cap">p50 time to first token</p><p class="dep">Deploy on <b>EU · US</b></p></article>
-    </div>
-  </div></div>
-</section>
-
-<!-- ============ Privacy Protect ============ -->
-<section class="block" id="privacy" aria-labelledby="privacy-h">
-  <div class="container"><div class="panel">
-    <div class="split rev">
-      <div class="split-text reveal">
-        <p class="eyebrow">Shell · Privacy Protect</p>
-        <h2 class="display h2" id="privacy-h">Every prompt gets a shell. <span class="dm">Even the model can't see inside.</span></h2>
-        <p>Before a single token reaches the model, Privacy Protect swaps names, account numbers, health details and secrets for placeholders. The answer comes back with the real values restored, for your people only.</p>
-        <ul class="mini-list">
-          <li><svg class="i" aria-hidden="true"><use href="#i-eye-off"/></svg>PII, health data, payment data and API keys</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-key"/></svg>Add your own terms: client names, project codes</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>On by default, for every model and every seat</li>
-        </ul>
-        <a class="link-arrow" href="#">Read the privacy architecture <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </div>
-      <div class="priv reveal" role="img" aria-label="An employee's prompt with a patient name, date of birth, claim number and card digits is masked into placeholders before the model sees it, then the reply is restored with real values for the employee only.">
-        <div class="pcard">
-          <div class="pk"><span class="who"><span class="av">AO</span>Typed by Amara</span><span>Support · 10:42</span></div>
-          <p class="pt">Draft a reply to <span class="e">Maria Lopez</span> (DOB <span class="e">14/03/1986</span>) about claim <span class="e">HX-48213</span>. Her card ending <span class="e">4421</span> was charged twice.</p>
-        </div>
-        <div class="gate"><span><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Privacy Protect <em>· 4 entities masked</em></span></div>
-        <div class="pcard dark">
-          <div class="pk"><span class="who">What the model sees</span><span>halden-assistant v10</span></div>
-          <p class="pt">Draft a reply to <span class="t">[PERSON_1]</span> (DOB <span class="t">[DATE_1]</span>) about claim <span class="t">[CLAIM_1]</span>. Her card ending <span class="t">[CARD_1]</span> was charged twice.</p>
-        </div>
-        <div class="gate"><span><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>Restored <em>· for Amara only</em></span></div>
-        <div class="pcard">
-          <div class="pk"><span class="who"><span class="av">AO</span>Returned to Amara</span><span>1.2s</span></div>
-          <p class="pt">Hi <span class="r">Maria</span>, thanks for flagging claim <span class="r">HX-48213</span>. I can see the duplicate charge on your card ending <span class="r">4421</span> and have issued a refund.</p>
-        </div>
-        <span class="claw" id="p-claw" aria-hidden="true"><svg class="crab-live"></svg></span><div class="pfoot"><div><span>Entities masked</span><b>4</b></div><div><span>Originals sent to model</span><b>0</b></div><div><span>Added latency</span><b>18 ms</b></div></div>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ============ API + chat ============ -->
-<section class="block" id="api" aria-labelledby="doors-h">
-  <div class="container"><div class="panel">
-    <div class="sec-head center reveal">
-      <p class="eyebrow">API + team chat</p>
-      <h2 class="display h2" id="doors-h">Your developers get an API. <span class="dm">Everyone else gets a chat.</span></h2>
-      <p>One model, one bill, one set of guardrails. Build on it in code and roll it out to every employee on the same day.</p>
-    </div>
-    <div class="bento gap-top reveal">
-      <article class="bento-card">
-        <div class="bento-copy"><p class="k">For developers</p><h3>Swap two lines. Keep your code.</h3><p>An OpenAI-compatible endpoint with streaming, function calling and JSON mode. Your existing SDKs just work.</p></div>
-        <div class="bento-visual"><div class="code">
-          <div class="code-top"><span class="dots"><i></i><i></i><i></i></span><span class="ctab">terminal</span><span>streaming</span></div>
-<pre><span class="c"># Same request, now on a model you own</span>
-<span class="f">curl</span> https://api.craby.ai/v1/chat/completions \
-  -H <span class="s">"Authorization: Bearer $CRABY_API_KEY"</span> \
-  -d <span class="s">'{
-    "model": "halden-assistant",
-    "stream": true,
-    "messages": [{"role": "user",
-      "content": "Summarise ticket 4821"}]
-  }'</span>
-
-<span class="c"># → 212 ms to first token · 3 entities masked</span></pre>
         </div></div>
       </article>
       <article class="bento-card">
-        <div class="bento-copy"><p class="k">For everyone else</p><h3>A private chat your whole company can use.</h3><p>SSO, roles and per-team limits out of the box. Answers cite your own documents, and nobody pays per seat.</p></div>
+        <div class="bento-copy"><p class="k">For everyone else</p><h3>A private chat for the whole company.</h3><p>SSO, roles and per-team limits. Answers cite your own documents, and nobody pays per seat.</p></div>
         <div class="bento-visual"><div class="chat">
-          <div class="chat-top"><span class="app-badge"><svg aria-hidden="true"><use href="#craby"/></svg></span><div><b>Halden Assistant</b><small>Support workspace · v10</small></div><span class="pp"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Protected</span></div>
+          <div class="chat-top"><span class="app-badge"><svg class="crab-live" aria-hidden="true"></svg></span><div><b>Halden Assistant</b><small>Support workspace · v10</small></div><span class="pp"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Protected</span></div>
           <div class="chat-body">
             <div class="msg-u">What's our refund window for annual plans?</div>
-            <div class="msg-a"><span class="app-badge"><svg aria-hidden="true"><use href="#craby"/></svg></span><div class="bub">Annual plans get a full refund within 30 days of renewal. After that, customers receive a prorated credit for the unused months.<br><span class="src"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg>Refund policy v4.pdf · p.2</span></div></div>
+            <div class="msg-a"><span class="app-badge"><svg class="crab-live" aria-hidden="true"></svg></span><div class="bub">Annual plans get a full refund within 30 days of renewal. After that, customers receive a prorated credit for the unused months.<br><span class="src"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg>Refund policy v4.pdf · p.2</span></div></div>
           </div>
-          <div class="chat-in">Ask Halden Assistant anything<span class="send"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
         </div></div>
       </article>
     </div>
-  </div></div>
+    <div class="facts reveal">
+      <div class="regions"><span class="k">Regions</span><span class="region"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>US</span><span class="region"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>EU</span><span class="region"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>GCC</span><span class="region"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>Asia</span></div>
+      <ul>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Serverless by default</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Dedicated GPUs on Enterprise</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Export your weights anytime</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<!-- ============ Feature bento (live mini-visuals) + small features ============ -->
-<section class="block" id="features" aria-labelledby="feat-h">
-  <div class="container"><div class="panel">
-    <div class="sec-head split-head reveal">
-      <p class="eyebrow">Inside the shell</p>
-      <h2 class="display h2" id="feat-h">Everything your team needs. <span class="dm">Nothing it doesn't.</span></h2>
-      <p>One deployment gives you the model, the guardrails and the tools to put it to work.</p>
-    </div>
-    <div class="fbento gap-top">
-      <article class="fcard wide reveal">
-        <div class="fvis fv-prompt">
-          <div class="ptabs" role="tablist" aria-label="Example assistants">
-            <button class="ptab" role="tab" aria-selected="true" data-k="support">Support bot</button>
-            <button class="ptab" role="tab" aria-selected="false" data-k="contract">Contract review</button>
-            <button class="ptab" role="tab" aria-selected="false" data-k="wiki">Internal search</button>
-          </div>
-          <div class="pbox"><svg class="crab-live" aria-hidden="true"></svg><span id="ptype"></span><span class="pcaret" aria-hidden="true"></span><span class="penter" aria-hidden="true">↵</span></div>
-          <div class="presult" id="presult" aria-live="polite">
-            <div class="pr-top"><span class="app-badge"><svg class="crab-live" aria-hidden="true"></svg></span><div><b id="pr-name">Support Assistant</b><small id="pr-meta">Llama 3.3 70B · Shell: PII + payment</small></div><span class="pill-live">Live</span></div>
-            <p class="pr-sample" id="pr-sample"></p>
-          </div>
-        </div>
-        <div class="fcopy"><h3>Ship an assistant in a sentence.</h3><p>Describe what you need. Craby.AI sets up the model, the privacy policy and a chat your whole team can use.</p></div>
-      </article>
-      <article class="fcard reveal">
-        <div class="fvis fv-globe" aria-hidden="true">
-          <svg viewBox="0 0 320 220" class="globe">
-            <defs>
-              <pattern id="gdots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.1" fill="#171E52" opacity=".28"/></pattern>
-              <radialGradient id="grim" cx="50%" cy="50%" r="50%"><stop offset=".78" stop-color="#FF9B6E" stop-opacity="0"/><stop offset="1" stop-color="#FF9B6E" stop-opacity=".45"/></radialGradient>
-              <clipPath id="gclip"><circle cx="160" cy="125" r="92"/></clipPath>
-            </defs>
-            <circle cx="160" cy="125" r="96" fill="url(#grim)"/>
-            <circle cx="160" cy="125" r="92" fill="#fff"/>
-            <rect x="60" y="30" width="200" height="190" fill="url(#gdots)" clip-path="url(#gclip)"/>
-            <g fill="none" stroke="#171E52" stroke-opacity=".12"><ellipse cx="160" cy="125" rx="92" ry="30"/><ellipse cx="160" cy="125" rx="40" ry="92"/><ellipse cx="160" cy="125" rx="75" ry="92"/></g>
-            <path class="garc" d="M108 112 Q135 70 160 92 Q182 82 196 112 Q214 96 228 118" fill="none" stroke="#F2713A" stroke-width="1.6"/>
-            <g class="gpin"><circle cx="108" cy="112" r="10" class="gring"/><circle cx="108" cy="112" r="4" fill="#F2713A"/></g>
-            <g class="gpin"><circle cx="160" cy="92" r="10" class="gring"/><circle cx="160" cy="92" r="4" fill="#F2713A"/></g>
-            <g class="gpin"><circle cx="196" cy="112" r="10" class="gring"/><circle cx="196" cy="112" r="4" fill="#F2713A"/></g>
-            <g class="gpin"><circle cx="228" cy="118" r="10" class="gring"/><circle cx="228" cy="118" r="4" fill="#F2713A"/></g>
-          </svg>
-          <span class="gchip" style="left:5%;top:58%"><b>US</b> Live</span>
-          <span class="gchip" style="left:22%;top:12%"><b>EU</b> Live</span>
-          <span class="gchip" style="left:56%;top:76%"><b>GCC</b> Live</span>
-          <span class="gchip" style="right:4%;top:30%"><b>Asia</b> Live</span>
-        </div>
-        <div class="fcopy"><h3>Deploy in your region</h3><p>US, EU, GCC or Asia. Your data stays where you put it.</p></div>
-      </article>
-      <article class="fcard reveal">
-        <div class="fvis fv-molt" aria-hidden="true">
-          <div class="mline">
-            <span class="mn"><i></i><b>v8</b><small>88.9</small></span>
-            <span class="mn"><i></i><b>v9</b><small>90.2</small></span>
-            <span class="mn rej"><i></i><b>cand.</b><small>89.7</small></span>
-            <span class="mn"><i></i><b>v10</b><small>92.1</small></span>
-            <span class="mn next"><i></i><b>v11</b><small>collecting</small></span>
-          </div>
-          <div class="mprog"><span>Next molt: 1,840 of 2,500 approved examples</span><i><em></em></i></div>
-        </div>
-        <div class="fcopy"><h3>Molts into a stronger version</h3><p>Molts kick in once enough data is approved. Every candidate is scored on your evals; losers are shed, winners ship.</p></div>
-      </article>
-      <article class="fcard reveal">
-        <div class="fvis fv-snip">
-          <p class="snip-text" id="snip-text">Email <span class="ent" data-tok="[PERSON_1]">Priya Shah</span> about invoice <span class="ent" data-tok="[INVOICE_1]">INV-2231</span> and her account <span class="ent" data-tok="[ACCT_1]">4471-09</span>.</p>
-          <span class="claw" id="f-claw" aria-hidden="true"><svg class="crab-live"></svg></span>
-        </div>
-        <div class="fcopy"><h3>Snips what the model shouldn't see</h3><p>Sensitive values become tokens before inference, then come back for your people only.</p></div>
-      </article>
-    </div>
-    <div class="fgrid gap-top">
-      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span><h4>SSO and roles</h4><p>SAML, SCIM and per-team permissions.</p></div>
-      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg></span><h4>Audit logs</h4><p>Every prompt and admin action, exportable.</p></div>
-      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg></span><h4>Spend limits</h4><p>Caps and alerts per team. No surprise bills.</p></div>
-      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-bolt"/></svg></span><h4>Streaming and tools</h4><p>Function calling and JSON mode built in.</p></div>
-      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-rewind"/></svg></span><h4>One-click rollback</h4><p>Return to any molt, any time.</p></div>
-      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></span><h4>Weight export</h4><p>Take your model with you.</p></div>
-      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-server"/></svg></span><h4>Private VPC</h4><p>Run inside your own cloud on Enterprise.</p></div>
-      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span><h4>Unlimited seats</h4><p>Pay for tokens. Never for people.</p></div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ============ Statement (Ramp two-tone) ============ -->
-<section class="statement" aria-label="Statement">
+<!-- ============ 5. The math (illustrative) ============ -->
+<section class="sec" id="math" aria-labelledby="math-h" style="padding-top:0">
   <div class="container">
-    <h2 class="display reveal">Rent intelligence and you pay for it forever. <span class="dm">Own it and it compounds.</span></h2>
-    <!-- [PROOF NEEDED] Ramp-style receipts wall: add 6 to 9 named design-partner quotes here.
-    <div class="wall"><figure class="quote"><blockquote>...</blockquote><figcaption>Name · Title, Company</figcaption></figure></div>
-    -->
-  </div>
-</section>
-
-<!-- ============ Why now band ============ -->
-<section class="band on-dark" aria-labelledby="band-h">
-  <div class="container band-grid" data-nav="dark">
-    <div>
-      <p class="eyebrow reveal">Why now</p>
-      <h2 class="display reveal-blur" id="band-h">Open weights.<br><span class="dm">Closed doors.</span></h2>
-      <p class="band-lead reveal">Open models now hold their own against closed ones on real work. What was missing was a way to own one without hiring a research team. That's Craby.AI.</p>
-      <div class="principles reveal">
-        <div><span class="n">01 · SHELL</span><p>Your prompts are masked by default.</p></div>
-        <div><span class="n">02 · MOLT</span><p>Your model improves only on your data.</p></div>
-        <div><span class="n">03 · CLAWS</span><p>Your weights are yours. Export them anytime.</p></div>
-      </div>
-    </div>
-    <div class="crab-art reveal" aria-hidden="true"><canvas id="halftone"></canvas></div>
-  </div>
-</section>
-
-<!-- ============ Calculator ============ -->
-<section class="block first" id="math" aria-labelledby="math-h">
-  <div class="container"><div class="panel">
-    <div class="sec-head split-head reveal">
-      <p class="eyebrow">The math</p>
+    <div class="split-head reveal">
+      <p class="label"><span>04</span>The math</p>
       <h2 class="display h2" id="math-h">Stop renting intelligence. <span class="dm">Start owning it.</span></h2>
       <p>Move the sliders to match your team. We compare a leading closed API plus per-seat chat licences against your own model on Craby.AI.</p>
     </div>
-    <div class="calc gap-top reveal">
+    <div class="panel calc gap-top reveal">
       <div class="calc-controls">
         <div class="ctrl"><div class="ctrl-top"><label for="tok">Tokens per month</label><output id="tok-out" for="tok">1B</output></div><input id="tok" type="range" min="0" max="1000" step="1" value="741"><div class="ctrl-scale"><span>10M</span><span>5B</span></div></div>
         <div class="ctrl"><div class="ctrl-top"><label for="seats">People using chat</label><output id="seats-out" for="seats">150</output></div><input id="seats" type="range" min="0" max="2000" step="10" value="150"><div class="ctrl-scale"><span>0</span><span>2,000</span></div></div>
@@ -1373,131 +753,95 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
         <p class="assume" id="assume"></p>
       </div>
     </div>
-  </div></div>
+  </div>
 </section>
 
-<!-- ============ Use cases ============ -->
-<section class="block" aria-labelledby="who-h">
-  <div class="container"><div class="panel">
-    <div class="sec-head split-head reveal">
-      <p class="eyebrow">Who it's for</p>
-      <h2 class="display h2" id="who-h">Built for teams with data <span class="dm">worth protecting.</span></h2>
-      <p>Regulated, customer-facing or just careful. If your prompts contain things a vendor should never see, Craby.AI was built for you.</p>
-    </div>
-    <div class="feature-row gap-top">
-      <div class="reveal"><span class="icon-box"><svg class="i" aria-hidden="true"><use href="#i-headset"/></svg></span><h3>Customer support</h3><p>Answers grounded in your help centre, sharpened by every ticket your team resolves.</p><div class="tags"><span>Help centre</span><span>Ticket drafts</span><span>Macros</span></div></div>
-      <div class="reveal"><span class="icon-box"><svg class="i" aria-hidden="true"><use href="#i-pulse"/></svg></span><h3>Healthcare and insurance</h3><p>Patient and policy details are masked before the model reads a single word.</p><div class="tags"><span>Claims</span><span>Clinical notes</span><span>Member letters</span></div></div>
-      <div class="reveal"><span class="icon-box"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg></span><h3>Finance and legal</h3><p>Contracts, statements and filings processed without exposing a single account number.</p><div class="tags"><span>Contract review</span><span>KYC</span><span>Reporting</span></div></div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ============ Pricing ============ -->
-<!-- PLACEHOLDER: confirm pricing and plan features -->
-<section class="block" id="pricing" aria-labelledby="pricing-h">
-  <div class="container"><div class="panel">
-    <div class="sec-head center reveal">
-      <p class="eyebrow">Pricing</p>
-      <h2 class="display h2" id="pricing-h">Pay for tokens. <span class="dm">Not for seats.</span></h2>
-    </div>
-    <div class="pricing-grid gap-top reveal">
-      <div class="price-card dark">
-        <div class="p-top"><span class="p-name">Self-serve</span><span class="p-tag">Most teams start here</span></div>
-        <div class="p-price">Pay as you go</div>
-        <p class="p-sub">Add credit from $10. Per-token rates by model size.</p>
-        <ul class="p-list">
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Serverless: pay only for tokens used</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Privacy Protect on every request</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Continuous fine-tuning and evals</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>API plus team chat, unlimited seats</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Spend limits and usage alerts</li>
-        </ul>
-        <div class="p-cta"><a class="btn btn-accent" href="#start">Start free <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+<!-- ============ 6. Enterprise band ============ -->
+<section class="band on-dark" id="enterprise" aria-labelledby="ent-h">
+  <div class="nav-zone" data-nav="dark" aria-hidden="true"></div>
+  <div class="container">
+    <div class="band-top">
+      <div class="reveal">
+        <p class="label"><span>05</span>Enterprise</p>
+        <h2 class="display" id="ent-h">Open weights.<br><span class="dm">Closed doors.</span></h2>
+        <p class="band-lead">Built for regulated and customer-facing teams in healthcare, finance, legal and support. The controls your security review will ask for are there from day one.</p>
       </div>
-      <div class="price-card">
-        <div class="p-top"><span class="p-name">Enterprise</span></div>
-        <div class="p-price">Let's talk</div>
-        <p class="p-sub">For regulated teams and large rollouts.</p>
-        <ul class="p-list">
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Dedicated GPUs on request, or your own VPC</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Custom Privacy Protect policies</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>SSO, SAML and SCIM provisioning</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Uptime SLA and audit exports</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>A named engineer on Slack</li>
-        </ul>
-        <div class="p-cta"><a class="btn btn-ghost" href="#">Talk to us <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-      </div>
+      <div class="crab-art reveal" aria-hidden="true"><canvas id="halftone"></canvas></div>
     </div>
-  </div></div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="block" id="faq" aria-labelledby="faq-h">
-  <div class="container"><div class="panel">
-    <div class="faq">
-      <div class="faq-side reveal">
-        <p class="eyebrow">FAQ</p>
-        <h2 class="display h2" id="faq-h" style="margin-top:18px">Frequently asked <span class="dm">questions.</span></h2>
-        <p>Something we missed? <a href="#">Talk to an engineer</a>, not a sales script.</p>
-      </div>
-      <div class="faq-list reveal">
-        <details open><summary>Why a crab?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Crabs carry their own shell, grow by molting, and never let go of what's theirs. That's the product: private by default, better with every molt, and fully yours. And yes, the only thing we're crabby about is your data.</div></details>
-        <details><summary>What does "own your intelligence" actually mean?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">The fine-tuned version of your model is yours. Your data only ever trains your model, never anyone else's, and you can export your weights whenever you like. No lock-in.</div></details>
-        <details><summary>Which models can I deploy?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">The leading open-weight families, including Llama, Qwen, Mistral, Gemma, DeepSeek and gpt-oss, from small fast models to 100B+ parameters. New releases usually land within days.</div></details>
-        <details><summary>How does Privacy Protect work?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Every prompt passes through a detection layer before it reaches the model. Sensitive values are replaced with typed placeholders, the model writes its answer, and Craby.AI restores the real values for authorised users only. The model never sees the originals.</div></details>
-        <details><summary>How does the model get smarter over time?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">You decide which conversations count as training data. Craby.AI fine-tunes a candidate on them, scores it against your evaluation set, and promotes it only if it wins. A molt starts once enough approved data has built up, so the pace follows your usage, not a calendar. Every version is kept, so rolling back takes one click.</div></details>
-        <details><summary>How does billing work?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Add credit, then pay per token at the rate for your model's size. There are no seat fees and no minimum spend. Turn on auto-recharge and set spend limits per team.</div></details>
-        <details><summary>Will my existing code work?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Yes. The endpoint is OpenAI-compatible, so most apps move over by changing the base URL and the API key.</div></details>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ============ Final CTA (dark) ============ -->
-<section class="final on-dark" aria-labelledby="final-h">
-  <div class="bubbles" data-n="10" aria-hidden="true"></div>
-  <div class="container" data-nav="dark">
-    <div class="cta-card reveal">
-      <div><svg class="mark" aria-hidden="true"><use href="#craby"/></svg><h2 class="display h2" id="final-h">Build intelligence <span class="dm">you actually own.</span></h2></div>
-      <div>
-        <p>Deploy your first private model in under five minutes. Start with free credit, no card needed.</p>
-        <div class="cta-btns"><a class="btn btn-accent" href="#start">Start free <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="link-arrow" href="#">Book a demo <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-      </div>
+    <div class="fgrid">
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span><h4>SSO and roles</h4><p>SAML, SCIM and per-team permissions.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg></span><h4>Audit logs</h4><p>Every prompt and admin action, exportable.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-server"/></svg></span><h4>Private VPC</h4><p>Run inside your own cloud.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-bolt"/></svg></span><h4>Dedicated GPUs</h4><p>Guaranteed capacity on request.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg></span><h4>Four regions</h4><p>US, EU, GCC and Asia data residency.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><h4>Encryption</h4><p>In transit and at rest, by default.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg></span><h4>Spend limits</h4><p>Caps and alerts per team.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></span><h4>Weight export</h4><p>Take your model with you.</p></div>
     </div>
     <!-- PLACEHOLDER: only list certifications you actually hold -->
     <div class="compliance reveal">
       <span class="comp"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>GDPR ready</span>
       <span class="comp"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>US, EU, GCC and Asia regions</span>
-      <span class="comp"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>Encrypted in transit and at rest</span>
       <span class="comp"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg>SOC 2 Type II in progress</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. FAQ ============ -->
+<section class="sec" id="faq" aria-labelledby="faq-h" style="padding-top:clamp(40px,5vw,64px)">
+  <div class="container faq">
+    <div class="faq-side reveal">
+      <p class="label"><span>06</span>FAQ</p>
+      <h2 class="display h2" id="faq-h">Frequently asked <span class="dm">questions.</span></h2>
+      <p>Something we missed? <a href="#">Talk to the founders</a>.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details open><summary>Why a crab?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Crabs carry their own shell, grow by molting, and never let go of what's theirs. That's the product: private by default, better with every molt, and fully yours. And yes, the only thing we're crabby about is your data.</div></details>
+      <details><summary>When can I get access?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">We're onboarding early-access teams in waves ahead of launch. Request access with your work email and we'll reach out with a start date and an onboarding call.</div></details>
+      <details><summary>What does "own your intelligence" mean?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">The fine-tuned version of your model is yours. Your data only ever trains your model, never anyone else's, and you can export your weights whenever you like. No lock-in.</div></details>
+      <details><summary>How does Privacy Protect work?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Every prompt passes through a detection layer before it reaches the model. Sensitive values are replaced with typed placeholders, the model writes its answer, and Craby.AI restores the real values for authorised users only. The model never sees the originals.</div></details>
+      <details><summary>How does the model improve?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">You decide which conversations count as training data. Once enough are approved, Craby.AI fine-tunes a candidate, scores it on your evaluation set and promotes it only if it wins. Every version is kept, so rollback is one click.</div></details>
+      <details><summary>Which models launch first?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">We launch with two open-weight models and will roll out more over time. The endpoint is OpenAI-compatible, so moving to a new model later is a configuration change, not a rewrite.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. Final CTA ============ -->
+<section class="final on-dark" id="access" aria-labelledby="final-h">
+  <div class="nav-zone" data-nav="dark" aria-hidden="true"></div>
+  <div class="container">
+    <div class="cta-card reveal">
+      <svg class="mark crab-live" aria-hidden="true"></svg>
+      <h2 class="display h2" id="final-h">Build intelligence <span class="dm">you actually own.</span></h2>
+      <p>Early access opens in waves. Leave your work email and we'll be in touch.</p>
+      <div class="signup">
+        <form class="input-cta" data-signup novalidate>
+          <svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>
+          <label class="sr-only" for="cta-email">Work email</label>
+          <input id="cta-email" type="email" placeholder="Your work email" autocomplete="email" required>
+          <button class="btn btn-accent" type="submit">Request early access <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </form>
+        <div class="form-row"><p class="form-note" role="status" aria-live="polite"></p></div>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
 
+<!-- ============ 9. Footer ============ -->
 <footer class="footer" id="footer" data-nav="dark">
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand"><a class="logo" href="#"><svg class="crab-live" aria-hidden="true"></svg><span class="wordmark">Craby<em>.AI</em></span></a><p>Private by shell. Smarter by molt. Yours by claw.</p></div>
-      <div class="foot-col"><h4>Product</h4><ul><li><a href="#how">Deploy</a></li><li><a href="#learn">Fine-tuning</a></li><li><a href="#privacy">Privacy Protect</a></li><li><a href="#">Team chat</a></li><li><a href="#pricing">Pricing</a></li></ul></div>
-      <div class="foot-col"><h4>Developers</h4><ul><li><a href="#">Docs</a></li><li><a href="#">API reference</a></li><li><a href="#models">Model catalogue</a></li><li><a href="#">Status</a></li><li><a href="#">Changelog</a></li></ul></div>
-      <div class="foot-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Blog</a></li><li><a href="#">Contact</a></li></ul></div>
-      <div class="foot-col"><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">DPA</a></li><li><a href="#">Security</a></li></ul></div>
+      <div class="foot-col"><h4>Product</h4><ul><li><a href="#shell">Privacy Protect</a></li><li><a href="#molt">Fine-tuning</a></li><li><a href="#claws">Deploy</a></li><li><a href="#enterprise">Security</a></li></ul></div>
+      <div class="foot-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Contact the founders</a></li></ul></div>
+      <div class="foot-col"><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Security</a></li></ul></div>
     </div>
-    <div class="foot-bottom"><span>© 2026 Craby.AI. All rights reserved.</span><span><i style="width:7px;height:7px;border-radius:50%;background:#3FB07A;display:inline-block"></i>All systems operational</span></div>
+    <div class="foot-bottom"><span>© 2026 Craby.AI. All rights reserved.</span><span>Coming soon · Early access open</span></div>
   </div>
-  <div class="seafloor" aria-hidden="true">
-    <div class="bubbles" data-n="8"></div>
-    <canvas class="giant-dots" id="wordmark"></canvas>
-  </div>
+  <div class="wordmark-wrap" aria-hidden="true"><canvas id="wordmark"></canvas></div>
 </footer>
-
-<!-- PLACEHOLDER: wire ticker to real metrics or remove -->
-<div class="ticker hide" id="ticker-bar" aria-label="Live platform activity">
-  <span class="ticker-label">Craby.AI today</span>
-  <div class="ticker-view"><div class="ticker-track" style="--dur:60s" id="ticker"></div></div>
-</div>
 
 <script>
 (() => {
@@ -1518,223 +862,49 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   $$('svg.crab-live').forEach(svg => { svg.setAttribute('viewBox', '0 0 64 64'); svg.innerHTML = CRAB; });
 
   /* ---------------- Config (edit me) ---------------- */
-  // PLACEHOLDER: illustrative pricing. Replace with real rates.
+  // PLACEHOLDER: illustrative pricing for the calculator. Replace with real rates at launch.
   const PRICING = { closedPerM: 5.00, seatPerMonth: 30, crabyPerM: 1.50, chatTokensPerSeatM: 0.8 };
-  // PLACEHOLDER: live ticker + hero stat.
-  const TICKER = [
-    { label: 'Tokens served', v: 48213907, inc: [1800, 5200] },
-    { label: 'Prompts protected', v: 1204551, inc: [12, 40] },
-    { label: 'Entities masked', v: 3982118, inc: [30, 110] },
-    { label: 'Fine-tunes promoted', v: 37 },
-    { label: 'Models live', v: 214 },
-    { label: 'Avg. time to deploy', text: '1m 52s' }
-  ];
-  const MODELS = [['Llama','Meta'],['Qwen','Alibaba'],['Mistral','Mistral AI'],['DeepSeek','DeepSeek'],['Gemma','Google'],['gpt-oss','OpenAI'],['Phi','Microsoft'],['Kimi','Moonshot'],['GLM','Zhipu'],['OLMo','Ai2']];
+  // Illustrative fine-tuning run (weekly snapshots; steps happen when a molt ships).
   const FT = {
     craby:   [71.3, 74.0, 76.8, 76.8, 79.5, 81.9, 83.4, 86.6, 86.6, 88.9, 90.2, 90.2, 92.1],
     version: [1, 2, 3, 3, 4, 5, 6, 7, 7, 8, 9, 9, 10],
     rejected: [{ w: 3, v: 74.9 }, { w: 8, v: 85.1 }, { w: 11, v: 89.7 }],
     base: 71.3, closed: 86.0
   };
-  // PLACEHOLDER: comparison tabs.
-  const BARS = {
-    cost: { fmt: v => '$' + v.toFixed(2), rows: [['Leading closed API', 5.00], ['Craby.AI, Llama 3.3 70B', 1.50]] },
-    lat:  { fmt: v => Math.round(v) + ' ms', rows: [['Leading closed API', 820], ['Craby.AI, Llama 3.3 70B', 212]] },
-    data: { fmt: v => Math.round(v) + '%', rows: [['Leading closed API', 100], ['Craby.AI with Privacy Protect', 0]] }
-  };
 
   /* ---------------- Reveal ---------------- */
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-  $$('.reveal, .reveal-blur').forEach(el => {
+  $$('.reveal').forEach(el => {
     const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
     const i = sibs.indexOf(el); if (i > 0) el.style.transitionDelay = Math.min(i, 5) * 70 + 'ms';
     io.observe(el);
   });
 
-  /* ---------------- Morphing nav ---------------- */
-  const nav = $('#nav'), announce = $('#announce'), ddBtn = $('.nav-dd'), mega = $('#mega'), walker = $('.walker'), prog = $('.progress');
-  let walkT;
-  const megaOpen = () => mega.classList.contains('open');
-  const onNav = () => {
-    const y = scrollY;
-    nav.style.top = (!announce || announce.hidden ? 0 : Math.max(0, announce.getBoundingClientRect().bottom)) + 'px';
-    const compact = y > 80;
-    nav.classList.toggle('compact', compact);
-    const max = document.documentElement.scrollHeight - innerHeight, p = max > 0 ? clamp(y / max, 0, 1) : 0;
-    prog.style.setProperty('--p', (p * 100).toFixed(2) + '%');
-    walker.style.setProperty('--x', (p * Math.max(0, prog.clientWidth - 18)).toFixed(1) + 'px');
-    if (!reduce) { walker.classList.add('walking'); clearTimeout(walkT); walkT = setTimeout(() => walker.classList.remove('walking'), 160); }
-  };
-  addEventListener('scroll', onNav, { passive: true }); addEventListener('resize', onNav); onNav();
-  if (announce) $('button', announce).addEventListener('click', () => { announce.hidden = true; onNav(); });
+  /* ---------------- Nav: morph to pill, dark over navy, active section ---------------- */
+  const nav = $('#nav');
+  const onNav = () => nav.classList.toggle('compact', scrollY > 80);
+  addEventListener('scroll', onNav, { passive: true }); onNav();
   const darkSet = new Set();
   const darkIO = new IntersectionObserver(es => { es.forEach(e => e.isIntersecting ? darkSet.add(e.target) : darkSet.delete(e.target)); nav.classList.toggle('dark', darkSet.size > 0); }, { rootMargin: '-40px 0px -90% 0px' });
   $$('[data-nav=dark]').forEach(x => darkIO.observe(x));
   const secLinks = $$('.nav-links a[data-sec]');
   const secIO = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) secLinks.forEach(a => a.classList.toggle('active', a.dataset.sec === e.target.id)); }), { rootMargin: '-45% 0px -50% 0px' });
-  $$('main > section, main > div, footer').forEach(x => secIO.observe(x));
-  // Product mega-menu: hover, click and keyboard
-  let hoverT, hoverAt = 0;
-  const setMega = open => { mega.classList.toggle('open', open); ddBtn.setAttribute('aria-expanded', open); };
-  ddBtn.addEventListener('click', () => { if (performance.now() - hoverAt < 400) return; setMega(!megaOpen()); if (megaOpen()) setTimeout(() => $('a', mega).focus(), 40); });
-  [ddBtn, mega].forEach(x => {
-    x.addEventListener('pointerenter', e => { if (e.pointerType !== 'mouse') return; clearTimeout(hoverT); if (!megaOpen()) { hoverAt = performance.now(); setMega(true); } });
-    x.addEventListener('pointerleave', e => { if (e.pointerType !== 'mouse') return; hoverT = setTimeout(() => setMega(false), 200); });
-  });
-  mega.addEventListener('keydown', e => {
-    const links = $$('a', mega);
-    if (e.key === 'Escape') { setMega(false); ddBtn.focus(); }
-    if (e.key === 'Tab') {
-      if (!e.shiftKey && document.activeElement === links[links.length - 1]) { e.preventDefault(); links[0].focus(); }
-      if (e.shiftKey && document.activeElement === links[0]) { e.preventDefault(); links[links.length - 1].focus(); }
-    }
-  });
-  $$('a', mega).forEach(a => a.addEventListener('click', () => setMega(false)));
-  document.addEventListener('click', e => { if (megaOpen() && !nav.contains(e.target)) setMega(false); });
-  addEventListener('keydown', e => { if (e.key === 'Escape' && megaOpen()) { setMega(false); ddBtn.focus(); } });
-  // Mobile sheet
+  $$('main > section, footer').forEach(x => secIO.observe(x));
   const sheet = $('#sheet'), menuBtn = $('.nav .menu-btn');
   const setSheet = open => { sheet.classList.toggle('open', open); menuBtn.setAttribute('aria-expanded', open); document.body.style.overflow = open ? 'hidden' : ''; if (open) $('[data-close]', sheet).focus(); };
   menuBtn.addEventListener('click', () => setSheet(true));
   $$('[data-close]', sheet).forEach(b => b.addEventListener('click', () => setSheet(false)));
   addEventListener('keydown', e => { if (e.key === 'Escape' && sheet.classList.contains('open')) { setSheet(false); menuBtn.focus(); } });
 
-  /* ---------------- Sign-up (demo) ---------------- */
+  /* ---------------- Early-access forms (front-end demo) ---------------- */
   $$('form[data-signup]').forEach(f => f.addEventListener('submit', e => {
     e.preventDefault();
-    const input = $('input[type=email]', f), note = $('.form-note');
-    if (!input.value.trim() || !input.checkValidity()) { note.textContent = 'Enter a valid work email to get started.'; input.focus(); return; }
-    note.textContent = `Thanks. We've sent a sign-up link to ${input.value.trim()}.`; input.value = '';
+    const input = $('input[type=email]', f), note = $('.form-note', f.parentElement);
+    if (!input.value.trim() || !input.checkValidity()) { note.textContent = 'Enter a valid work email to request access.'; input.focus(); return; }
+    note.textContent = `You're on the early-access list. We'll be in touch at ${input.value.trim()}.`; input.value = '';
   }));
 
-  /* ---------------- Crab snip: the claw pinches each sensitive value into a token ---------------- */
-  function makeSnipper(host, claw) {
-    let seq = 0;
-    return {
-      cancel() { seq++; claw.classList.remove('on', 'pinch'); },
-      run(spans, onEach, done) {
-        const id = ++seq; let k = 0; claw.classList.add('on');
-        const alive = () => id === seq;
-        const next = () => {
-          if (!alive()) return;
-          if (k >= spans.length) { setTimeout(() => { if (alive()) { claw.classList.remove('on'); done && done(); } }, 380); return; }
-          const sp = spans[k], hr = host.getBoundingClientRect(), r = sp.getBoundingClientRect();
-          claw.style.transform = `translate(${(r.left - hr.left + r.width / 2 - 14).toFixed(1)}px, ${(r.top - hr.top - 24).toFixed(1)}px)`;
-          setTimeout(() => {
-            if (!alive()) return;
-            claw.classList.remove('pinch'); void claw.offsetWidth; claw.classList.add('pinch');
-            setTimeout(() => {
-              if (!alive()) return;
-              onEach(sp, k); sp.classList.add('spark'); setTimeout(() => sp.classList.remove('spark'), 520);
-              k++; setTimeout(next, 260);
-            }, 150);
-          }, 380);
-        };
-        next();
-      }
-    };
-  }
-
-  /* ---------------- Hero Privacy Protect card: typed → snipped → restored ---------------- */
-  const gPrompt = $('#g-prompt'), gReply = $('#g-reply'), gLabel = $('#stage-label'), gStep = $('#glass-step'), gDots = $$('.glass-dots i');
-  const gEnts = $$('.ent', gPrompt); gEnts.forEach(x => { x.dataset.orig = x.textContent; });
-  const gSnip = makeSnipper($('.glass-body'), $('#g-claw'));
-  const LABELS = ['What Amara typed', 'What the model sees', 'What Amara gets back'], HOLD = [2200, 2600, 3200];
-  let stage = 0, gTimer, gAuto = !reduce;
-  const setEnt = (x, tok) => { x.textContent = tok ? x.dataset.tok : x.dataset.orig; x.classList.toggle('tok', tok); };
-  const paintStage = i => { stage = i; gLabel.textContent = LABELS[i]; gStep.textContent = `${i + 1} / 3`; gDots.forEach((d, k) => d.classList.toggle('on', k === i)); gPrompt.hidden = i === 2; gReply.hidden = i !== 2; };
-  const schedule = () => { clearTimeout(gTimer); if (gAuto) gTimer = setTimeout(() => goStage((stage + 1) % 3, true), HOLD[stage]); };
-  function goStage(i, animate) {
-    i = (i + 3) % 3; gSnip.cancel(); clearTimeout(gTimer);
-    if (i === 1 && animate && !reduce) {
-      paintStage(1); gLabel.textContent = 'Craby is snipping sensitive data';
-      gEnts.forEach(x => setEnt(x, false));
-      gSnip.run(gEnts, x => setEnt(x, true), () => { gLabel.textContent = LABELS[1]; schedule(); });
-      return;
-    }
-    paintStage(i); gEnts.forEach(x => setEnt(x, i === 1)); schedule();
-  }
-  $('.glass-arrows .next').addEventListener('click', () => goStage(stage + 1, true));
-  $('.glass-arrows .back').addEventListener('click', () => goStage(stage - 1, false));
-  if (!reduce) new IntersectionObserver(([e]) => { gAuto = e.isIntersecting; if (gAuto) schedule(); else clearTimeout(gTimer); }).observe($('.glass'));
-  paintStage(0);
-
-  /* ---------------- Ticker + marquee ---------------- */
-  const ticker = $('#ticker');
-  for (let rep = 0; rep < 2; rep++) TICKER.forEach((t, i) => {
-    const item = document.createElement('span'); item.className = 't-item'; if (rep) item.setAttribute('aria-hidden', 'true');
-    item.append(document.createTextNode(t.label));
-    const b = document.createElement('b'); b.dataset.k = i; b.textContent = t.text || fmtInt(t.v); item.append(b); ticker.append(item);
-  });
-  if (!reduce) setInterval(() => {
-    TICKER.forEach((t, i) => { if (!t.inc) return; t.v += Math.round(t.inc[0] + Math.random() * (t.inc[1] - t.inc[0])); $$(`b[data-k="${i}"]`, ticker).forEach(b => { b.textContent = fmtInt(t.v); }); });
-  }, 1600);
-  const tbar = $('#ticker-bar');
-  const tbState = new Map();
-  const tbIO = new IntersectionObserver(es => { es.forEach(e => tbState.set(e.target, e.isIntersecting)); tbar.classList.toggle('hide', [...tbState.values()].some(Boolean)); }, { threshold: 0 });
-  tbIO.observe($('.hero')); tbIO.observe($('.final'));
-  const mq = $('#models-marquee');
-  for (let rep = 0; rep < 2; rep++) MODELS.forEach(([name, org]) => {
-    const w = document.createElement('span'); w.className = 'model-word'; if (rep) w.setAttribute('aria-hidden', 'true');
-    w.append(document.createTextNode(name)); const s = document.createElement('small'); s.textContent = org; w.append(s); mq.append(w);
-  });
-
-  /* ---------------- Sea lines + bubbles ---------------- */
-  function buildSea() {
-    const wave = (amp, period, phase) => { let d = ''; for (let x = 0; x <= 2880; x += 12) d += (x ? ' L' : 'M') + x + ' ' + (100 + amp * Math.sin((x / period) * 2 * Math.PI + phase)).toFixed(1); return d; };
-    $$('.sea').forEach(sea => {
-      [['w1', 16, 360, 0], ['w2', 10, 240, 1.3], ['w3', 22, 480, 2.4]].forEach(([c, a, p, ph], k) => {
-        const svg = el('svg', { class: c, viewBox: '0 0 2880 200', preserveAspectRatio: 'none', style: `top:${k * 22}px` });
-        el('path', { d: wave(a, p, ph) }, svg); sea.append(svg);
-      });
-    });
-    $$('.bubbles').forEach(b => {
-      const n = +b.dataset.n || 10;
-      for (let i = 0; i < n; i++) {
-        const bub = document.createElement('i'), d = 10 + Math.random() * 10;
-        bub.style.setProperty('--x', (4 + Math.random() * 92).toFixed(1) + '%');
-        bub.style.setProperty('--s', (6 + Math.random() * 12).toFixed(1) + 'px');
-        bub.style.setProperty('--d', d.toFixed(1) + 's');
-        bub.style.setProperty('--dl', (-Math.random() * d).toFixed(1) + 's');
-        b.append(bub);
-      }
-    });
-  }
-
-  /* ---------------- Privacy section: claw snips, tokens pop in ---------------- */
-  function privacySnip() {
-    const priv = $('.priv'); if (!priv || reduce) return;
-    const es = $$('.pcard:first-of-type .e', priv), ts = $$('.pcard.dark .t', priv);
-    const snip = makeSnipper(priv, $('#p-claw'));
-    priv.classList.add('armed');
-    new IntersectionObserver(([e], obs) => {
-      if (!e.isIntersecting) return; obs.disconnect();
-      setTimeout(() => snip.run(es, (x, k) => ts[k] && ts[k].classList.add('pop')), 500);
-    }, { threshold: 0.55 }).observe(priv);
-  }
-
-  /* ---------------- How it works ---------------- */
-  const track = $('.how-track'), stepsEl = $('.steps'), steps = $$('.step'), vizzes = $$('.viz');
-  const desk = matchMedia('(min-width: 1001px)'), STICKY_TOP = 84;
-  let active = 0;
-  const setActive = i => { if (i === active) return; active = i; steps.forEach((s, k) => { s.classList.toggle('on', k === i); s.setAttribute('aria-pressed', k === i); }); vizzes.forEach((v, k) => v.classList.toggle('on', k === i)); };
-  steps.forEach((s, k) => s.setAttribute('aria-pressed', k === 0));
-  const stickyH = () => innerHeight - 100;
-  const howScroll = () => {
-    if (!desk.matches) return;
-    const r = track.getBoundingClientRect(), total = track.offsetHeight - stickyH();
-    const p = clamp((STICKY_TOP - r.top) / total, 0, 1);
-    stepsEl.style.setProperty('--p', p.toFixed(4));
-    setActive(Math.min(steps.length - 1, Math.floor(p * steps.length * 0.999)));
-  };
-  addEventListener('scroll', howScroll, { passive: true }); addEventListener('resize', howScroll); howScroll();
-  steps.forEach((s, i) => s.addEventListener('click', () => {
-    if (desk.matches) { const top = track.getBoundingClientRect().top + scrollY - STICKY_TOP, total = track.offsetHeight - stickyH(); scrollTo({ top: top + total * (i + 0.5) / steps.length, behavior: reduce ? 'auto' : 'smooth' }); }
-    else { setActive(i); stepsEl.style.setProperty('--p', ((i + 1) / steps.length).toFixed(3)); }
-  }));
-  if (!desk.matches) stepsEl.style.setProperty('--p', 0.25);
-
-  /* ---------------- SVG helpers ---------------- */
+  /* ---------------- SVG + table helpers ---------------- */
   const el = (tag, attrs = {}, parent) => { const n = document.createElementNS(SVGNS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.append(n); return n; };
   const txt = (attrs, content, parent) => { const n = el('text', attrs, parent); n.textContent = content; return n; };
   const tipRow = (tip, key, value, name) => {
@@ -1774,9 +944,9 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
 
   /* ---------------- Accuracy step chart ---------------- */
   function ftChart() {
-    const box = $('#ft-chart'); if (!box || !box.offsetParent) return;
+    const box = $('#ft-chart'); if (!box) return;
     const W = box.clientWidth; if (!W) return;
-    const narrow = W < 560, H = narrow ? 250 : 290;
+    const narrow = W < 560, H = narrow ? 240 : 280;
     const m = { l: 42, r: narrow ? 14 : 112, t: 14, b: 32 }, iw = W - m.l - m.r, ih = H - m.t - m.b;
     const lo = 64, hi = 96, x = w => m.l + (w / 12) * iw, y = v => m.t + (1 - (v - lo) / (hi - lo)) * ih;
     const svg = el('svg', { width: W, height: H, class: 'viz-svg', 'aria-hidden': 'true' });
@@ -1826,19 +996,18 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   buildTable($('#ft-table'), ['Week', 'Craby.AI', 'Version', 'Closed API', 'Base model'],
     FT.craby.map((v, i) => [i === 0 ? 'Deploy' : String(i), v.toFixed(1) + '%', 'v' + FT.version[i], FT.closed.toFixed(1) + '%', FT.base.toFixed(1) + '%']));
 
-  /* ---------------- Generic horizontal bar chart ---------------- */
-  function barChart(box, rows, fmt, compactAxis) {
-    if (!box || !box.offsetParent) return;
+  /* ---------------- Horizontal bar chart ---------------- */
+  function barChart(box, rows, fmt) {
+    if (!box) return;
     const W = box.clientWidth; if (!W) return;
     const m = { r: 92, b: 26 }, iw = W - m.r;
     const max = niceMax(Math.max(...rows.map(r => r.v), 1e-9) * 1.02);
     const ticks = W < 460 ? [0, max / 2, max] : [0, max / 4, max / 2, max * 3 / 4, max];
     const bh = 24, rowH = 70, H = rows.length * rowH + m.b, x = v => (v / max) * iw;
     const svg = el('svg', { width: W, height: H, class: 'viz-svg' });
-    const axisFmt = compactAxis ? fmtCompactUSD : fmt;
     ticks.forEach((tv, i) => {
       el('line', { x1: x(tv), x2: x(tv), y1: 0, y2: H - m.b, class: i === 0 ? 'axl' : 'g' }, svg);
-      txt({ x: x(tv), y: H - 6, class: 'ax', 'text-anchor': i === 0 ? 'start' : i === ticks.length - 1 ? 'end' : 'middle' }, axisFmt(tv), svg);
+      txt({ x: x(tv), y: H - 6, class: 'ax', 'text-anchor': i === 0 ? 'start' : i === ticks.length - 1 ? 'end' : 'middle' }, fmtCompactUSD(tv), svg);
     });
     const tip = getTip(box);
     rows.forEach((r, i) => {
@@ -1847,13 +1016,13 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
       txt({ x: 0, y: y0 - 9, class: 'bl' }, r.label, g);
       const rad = Math.min(4, x1);
       el('path', { class: 'bar', fill: r.c, d: `M0 ${y0} H${x1 - rad} Q${x1} ${y0} ${x1} ${y0 + rad} V${y0 + bh - rad} Q${x1} ${y0 + bh} ${x1 - rad} ${y0 + bh} H0 Z` }, g);
-      txt({ x: x1 + 10, y: y0 + bh / 2, class: 'bv', 'dominant-baseline': 'middle' }, compactAxis ? fmtCompactUSD(r.v) : fmt(r.v), g);
+      txt({ x: x1 + 10, y: y0 + bh / 2, class: 'bv', 'dominant-baseline': 'middle' }, fmtCompactUSD(r.v), g);
       el('rect', { x: 0, y: y0 - 24, width: W, height: rowH - 4, fill: 'transparent' }, g);
       const showTip = () => {
         tip.replaceChildren();
         const hd = document.createElement('div'); hd.className = 'tip-h'; hd.textContent = r.label; tip.append(hd);
-        (r.parts || [['Value', r.v]]).forEach(([n, v]) => tipRow(tip, { c: r.c }, fmt(v), n));
-        if (r.parts) tipRow(tip, { c: 'transparent' }, fmt(r.v), 'Total');
+        r.parts.forEach(([n, v]) => tipRow(tip, { c: r.c }, fmt(v), n));
+        tipRow(tip, { c: 'transparent' }, fmt(r.v), 'Total');
         const tw = tip.offsetWidth || 220; tip.style.transform = `translate(${clamp(x1 - tw / 2, 0, Math.max(0, W - tw))}px, ${y0 + bh + 8}px)`; tip.classList.add('show');
       };
       g.addEventListener('pointerenter', showTip); g.addEventListener('focus', showTip);
@@ -1861,40 +1030,16 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     });
     box.replaceChildren(svg, tip);
   }
-  const tabBars = () => $$('[data-bars]').forEach(box => {
-    const cfg = BARS[box.dataset.bars];
-    barChart(box, cfg.rows.map(([label, v], i) => ({ label, v, c: i ? css('--accent') : css('--context') })), cfg.fmt);
-  });
 
-  /* ---------------- Tabs (keyboard accessible) ---------------- */
-  const tabs = $$('[role=tab]');
-  const selectTab = (t, focus) => {
-    tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; $('#' + x.getAttribute('aria-controls')).hidden = !on; });
-    if (focus) t.focus();
-    ftChart(); tabBars();
-  };
-  tabs.forEach((t, i) => {
-    t.addEventListener('click', () => selectTab(t));
-    t.addEventListener('keydown', e => {
-      const k = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
-      if (k) { e.preventDefault(); selectTab(tabs[(i + k + tabs.length) % tabs.length], true); }
-      if (e.key === 'Home') { e.preventDefault(); selectTab(tabs[0], true); }
-      if (e.key === 'End') { e.preventDefault(); selectTab(tabs[tabs.length - 1], true); }
-    });
-  });
-
-
-  /* ---------------- Calculator ---------------- */
+  /* ---------------- Calculator (illustrative) ---------------- */
   const tok = $('#tok'), seats = $('#seats');
   const tokens = v => { const T = 10 * Math.pow(500, v / 1000); return T < 100 ? Math.round(T) : T < 1000 ? Math.round(T / 10) * 10 : Math.round(T / 50) * 50; };
   const fmtTok = T => T >= 1000 ? (T / 1000).toFixed(2).replace(/\.?0+$/, '') + 'B' : T + 'M';
   let calc = {};
-  function costChart() {
-    barChart($('#cost-chart'), [
-      { label: 'Closed API + chat seats', v: calc.closed, c: css('--context'), parts: [['Model usage', calc.closedApi], ['Chat seats', calc.closedSeats]] },
-      { label: 'Craby.AI', v: calc.craby, c: css('--accent'), parts: [['Model usage', calc.crabyApi], ['Chat (tokens, no seats)', calc.crabyChat]] }
-    ], fmtUSD, true);
-  }
+  const costChart = () => barChart($('#cost-chart'), [
+    { label: 'Closed API + chat seats', v: calc.closed, c: css('--context'), parts: [['Model usage', calc.closedApi], ['Chat seats', calc.closedSeats]] },
+    { label: 'Craby.AI', v: calc.craby, c: css('--accent'), parts: [['Model usage', calc.crabyApi], ['Chat (tokens, no seats)', calc.crabyChat]] }
+  ], fmtUSD);
   function compute() {
     const T = tokens(+tok.value), S = +seats.value;
     const closedApi = T * PRICING.closedPerM * 12, closedSeats = S * PRICING.seatPerMonth * 12;
@@ -1915,96 +1060,78 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
       ['Total', fmtUSD(calc.closed), fmtUSD(calc.craby)]
     ]);
   }
-  $('#assume').textContent = `Illustrative pricing. Assumes a closed API at $${PRICING.closedPerM.toFixed(2)} per million tokens plus $${PRICING.seatPerMonth} per chat seat per month, and Craby.AI at $${PRICING.crabyPerM.toFixed(2)} per million tokens with no seat fees. Chat users are estimated at ${PRICING.chatTokensPerSeatM}M tokens each per month. Your numbers will vary.`;
+  $('#assume').textContent = `Illustrative pricing, not final rates. Assumes a closed API at $${PRICING.closedPerM.toFixed(2)} per million tokens plus $${PRICING.seatPerMonth} per chat seat per month, and Craby.AI at $${PRICING.crabyPerM.toFixed(2)} per million tokens with no seat fees. Chat users are estimated at ${PRICING.chatTokensPerSeatM}M tokens each per month.`;
   tok.addEventListener('input', compute); seats.addEventListener('input', compute);
 
-  /* ---------------- Halftone Craby ---------------- */
+  /* ---------------- Crab snip: the claw pinches each sensitive value into a token ---------------- */
+  function makeSnipper(host, claw) {
+    let seq = 0;
+    return {
+      cancel() { seq++; claw.classList.remove('on', 'pinch'); },
+      run(spans, onEach, done) {
+        const id = ++seq; let k = 0; claw.classList.add('on');
+        const alive = () => id === seq;
+        const next = () => {
+          if (!alive()) return;
+          if (k >= spans.length) { setTimeout(() => { if (alive()) { claw.classList.remove('on'); done && done(); } }, 380); return; }
+          const sp = spans[k], hr = host.getBoundingClientRect(), r = sp.getBoundingClientRect();
+          claw.style.transform = `translate(${(r.left - hr.left + r.width / 2 - 14).toFixed(1)}px, ${(r.top - hr.top - 24).toFixed(1)}px)`;
+          setTimeout(() => {
+            if (!alive()) return;
+            claw.classList.remove('pinch'); void claw.offsetWidth; claw.classList.add('pinch');
+            setTimeout(() => { if (!alive()) return; onEach(sp, k); sp.classList.add('spark'); setTimeout(() => sp.classList.remove('spark'), 520); k++; setTimeout(next, 260); }, 150);
+          }, 380);
+        };
+        next();
+      }
+    };
+  }
+  function privacySnip() {
+    const priv = $('.priv'); if (!priv || reduce) return;
+    const es = $$('.pcard:first-of-type .e', priv), ts = $$('.pcard.dark .t', priv);
+    const snip = makeSnipper(priv, $('#p-claw'));
+    priv.classList.add('armed');
+    new IntersectionObserver(([e], obs) => {
+      if (!e.isIntersecting) return; obs.disconnect();
+      setTimeout(() => snip.run(es, (x, k) => ts[k] && ts[k].classList.add('pop')), 500);
+    }, { threshold: 0.4 }).observe(priv);
+  }
+
+  /* ---------------- Halftone Craby (one-time build-in) ---------------- */
   function halftone() {
     const canvas = $('#halftone'); if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const img = new Image();
-    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`<svg xmlns="${SVGNS}" viewBox="0 0 64 64">${$('#craby').innerHTML.replace(/currentColor/g, '#000')}</svg>`);
-    let dots = [], bg = [], W = 0, H = 0, progress = reduce ? 1 : 0, rippleT = 0;
+    const ctx = canvas.getContext('2d'), img = new Image();
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`<svg xmlns="${SVGNS}" viewBox="0 0 64 64">${CRAB.replace(/currentColor/g, '#000')}</svg>`);
+    let dots = [], W = 0, H = 0, progress = reduce ? 1 : 0, started = false;
     function build() {
       const r = canvas.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2);
       W = r.width; H = r.height; if (!W || !img.complete) return;
       canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       const off = document.createElement('canvas'); off.width = Math.round(W); off.height = Math.round(H);
-      const o = off.getContext('2d'), S = Math.min(W, H) * 0.9; o.drawImage(img, (W - S) / 2, (H - S) / 2 - H * 0.04, S, S);
+      const o = off.getContext('2d'), S = Math.min(W, H) * 0.92; o.drawImage(img, (W - S) / 2, (H - S) / 2 - H * 0.04, S, S);
       const data = o.getImageData(0, 0, off.width, off.height).data;
       const a = (px, py) => { px = Math.round(px); py = Math.round(py); if (px < 0 || py < 0 || px >= off.width || py >= off.height) return 0; return data[(py * off.width + px) * 4 + 3] / 255; };
-      const pitch = Math.max(5.5, W / 58), lx = W * 0.3, ly = H * 0.2, R = Math.hypot(W, H) * 0.7;
-      dots = []; bg = [];
+      const pitch = Math.max(4.5, W / 52), lx = W * 0.3, ly = H * 0.2, R = Math.hypot(W, H) * 0.7;
+      dots = [];
       for (let row = 0, py = pitch / 2; py < H; row++, py += pitch * 0.866) for (let px = (row % 2 ? pitch : pitch / 2); px < W; px += pitch) {
         const q = pitch * 0.3, cov = (a(px, py) * 2 + a(px - q, py) + a(px + q, py) + a(px, py - q) + a(px, py + q)) / 6;
-        if (cov > 0.04) { const shade = 1 - clamp(Math.hypot(px - lx, py - ly) / R, 0, 1); dots.push({ x: px, y: py, r: pitch * 0.5 * Math.sqrt(cov) * (0.3 + 0.7 * shade), s: shade, d: (H - py) / H }); }
-        else { const fall = clamp(1 - Math.hypot(px - W * 0.55, py - H * 0.55) / (W * 0.62), 0, 1); if (fall > 0.02) bg.push({ x: px, y: py, a: 0.05 + 0.18 * fall * fall }); }
+        if (cov > 0.04) { const shade = 1 - clamp(Math.hypot(px - lx, py - ly) / R, 0, 1); dots.push({ x: px, y: py, r: pitch * 0.5 * Math.sqrt(cov) * (0.35 + 0.65 * shade), s: shade, d: (H - py) / H }); }
       }
       paint();
     }
     function paint() {
-      ctx.clearRect(0, 0, W, H); ctx.fillStyle = '#A9B0D6';
-      bg.forEach(b => { ctx.globalAlpha = b.a * Math.min(1, progress * 1.5); ctx.beginPath(); ctx.arc(b.x, b.y, 0.9, 0, 6.2832); ctx.fill(); });
-      ctx.globalAlpha = 1;
+      ctx.clearRect(0, 0, W, H);
       dots.forEach(p => {
         const local = clamp(progress * 1.6 - p.d * 0.6, 0, 1); if (local <= 0) return;
         const e = 1 - Math.pow(1 - local, 3), t = p.s;
-        const rip = rippleT ? 1 + 0.14 * Math.sin(rippleT * 1.8 - p.x * 0.035 - p.y * 0.022) : 1;
         ctx.fillStyle = `rgb(${Math.round(242 + 13 * t)},${Math.round(113 + 42 * t)},${Math.round(58 + 52 * t)})`;
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r * e * rip, 0, 6.2832); ctx.fill();
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r * e, 0, 6.2832); ctx.fill();
       });
     }
     img.onload = () => {
       build(); new ResizeObserver(build).observe(canvas);
-      if (reduce) return;
-      let visible = false, t0 = null, raf = 0;
-      const step = now => {
-        if (!visible) { raf = 0; return; }
-        if (t0 === null) t0 = now;
-        progress = clamp((now - t0) / 1700, 0, 1); rippleT = progress >= 1 ? now / 1000 : 0;
-        paint(); raf = requestAnimationFrame(step);
-      };
-      new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible && !raf) raf = requestAnimationFrame(step); }, { threshold: 0.2 }).observe(canvas);
+      if (!reduce) new IntersectionObserver(([e], obs) => { if (e.isIntersecting && !started) { started = true; obs.disconnect(); const t0 = performance.now(); const step = now => { progress = clamp((now - t0) / 1600, 0, 1); paint(); if (progress < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); } }, { threshold: 0.3 }).observe(canvas);
     };
-  }
-
-
-  /* ---------------- Feature bento: self-typing assistant builder ---------------- */
-  function promptDemo() {
-    const DATA = {
-      support:  { p: 'Make a support bot that answers from our help centre', n: 'Support Assistant', m: 'Llama 3.3 70B · Shell: PII + payment', q: 'Q: Can I change plans mid-cycle?  A: Yes. Upgrades apply now and are prorated.' },
-      contract: { p: 'Review our NDAs and flag anything unusual', n: 'Contract Reviewer', m: 'Qwen3 32B · Shell: PII + client names', q: 'Flagged: a non-standard 5-year term in section 4.2.' },
-      wiki:     { p: 'Let staff search our internal wiki', n: 'Wiki Search', m: 'Mistral Small 3.1 · Shell: secrets + keys', q: 'Found 3 pages about the on-call rota.' }
-    };
-    const tabs = $$('.ptab'), out = $('#ptype'), res = $('#presult'); if (!out) return;
-    let key = 'support', timers = [], visible = false;
-    const clear = () => { timers.forEach(clearTimeout); timers = []; };
-    const show = (k, animate) => {
-      clear(); key = k;
-      tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.k === k));
-      const d = DATA[k];
-      $('#pr-name').textContent = d.n; $('#pr-meta').textContent = d.m; $('#pr-sample').textContent = d.q;
-      if (!animate || reduce) { out.textContent = d.p; res.classList.add('on'); return; }
-      out.textContent = ''; res.classList.remove('on');
-      [...d.p].forEach((ch, i) => timers.push(setTimeout(() => { out.textContent += ch; }, 300 + i * 32)));
-      const done = 300 + d.p.length * 32;
-      timers.push(setTimeout(() => res.classList.add('on'), done + 350));
-      timers.push(setTimeout(() => { if (visible) { const ks = Object.keys(DATA); show(ks[(ks.indexOf(key) + 1) % ks.length], true); } }, done + 4200));
-    };
-    tabs.forEach(t => t.addEventListener('click', () => show(t.dataset.k, true)));
-    show('support', false);
-    if (!reduce) new IntersectionObserver(([e]) => { const was = visible; visible = e.isIntersecting; if (visible && !was) show(key, true); if (!visible) clear(); }, { threshold: 0.4 }).observe($('.fv-prompt'));
-  }
-
-  /* ---------------- Feature bento: snip loop ---------------- */
-  function snipCard() {
-    const host = $('.fv-snip'); if (!host) return;
-    const ents = $$('.ent', host); ents.forEach(x => { x.dataset.orig = x.textContent; });
-    const set = (x, tok) => { x.textContent = tok ? x.dataset.tok : x.dataset.orig; x.classList.toggle('tok', tok); };
-    if (reduce) { ents.forEach(x => set(x, true)); return; }
-    const snip = makeSnipper(host, $('#f-claw')); let loop, visible = false;
-    const run = () => { ents.forEach(x => set(x, false)); snip.run(ents, x => set(x, true), () => { loop = setTimeout(() => visible && run(), 2600); }); };
-    new IntersectionObserver(([e]) => { visible = e.isIntersecting; clearTimeout(loop); if (visible) run(); else snip.cancel(); }, { threshold: 0.5 }).observe(host);
   }
 
   /* ---------------- Halftone footer wordmark ---------------- */
@@ -2015,19 +1142,16 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
       const r = c.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2), W = r.width, H = r.height; if (!W || !H) return;
       c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
       const off = document.createElement('canvas'); off.width = Math.round(W); off.height = Math.round(H);
-      const o = off.getContext('2d'), text = 'Craby.AI';
-      let fs = H; o.font = `600 ${fs}px "Instrument Sans", system-ui, sans-serif`;
-      let m = o.measureText(text);
-      fs = Math.min(fs * (W * 0.9) / m.width, H * 1.25); o.font = `600 ${fs}px "Instrument Sans", system-ui, sans-serif`;
-      m = o.measureText(text);
-      const fit = (H * 0.88) / (m.actualBoundingBoxAscent + m.actualBoundingBoxDescent);
-      if (fit < 1) { fs *= fit; o.font = `600 ${fs}px "Instrument Sans", system-ui, sans-serif`; m = o.measureText(text); }
-      const asc = m.actualBoundingBoxAscent, desc = m.actualBoundingBoxDescent;
-      o.fillStyle = '#000'; o.fillText(text, (W - m.width) / 2, (H - (asc + desc)) / 2 + asc);
-      const data = o.getImageData(0, 0, off.width, off.height).data;
-      const pitch = Math.max(4, W / 190), top = (H - (asc + desc)) / 2, span = asc + desc;
-      for (let y = pitch / 2; y < H; y += pitch) for (let x = pitch / 2; x < W; x += pitch) {
-        const a = data[(Math.round(y) * off.width + Math.round(x)) * 4 + 3] / 255; if (a < 0.35) continue;
+      const o = off.getContext('2d'), text = 'Craby.AI', font = fs => `600 ${fs}px "Instrument Sans", system-ui, sans-serif`;
+      let fs = H; o.font = font(fs); let m = o.measureText(text);
+      fs = fs * (W * 0.9) / m.width; o.font = font(fs); m = o.measureText(text);
+      const fit = (H * 0.86) / (m.actualBoundingBoxAscent + m.actualBoundingBoxDescent);
+      if (fit < 1) { fs *= fit; o.font = font(fs); m = o.measureText(text); }
+      const asc = m.actualBoundingBoxAscent, desc = m.actualBoundingBoxDescent, top = (H - (asc + desc)) / 2;
+      o.fillStyle = '#000'; o.fillText(text, (W - m.width) / 2, top + asc);
+      const data = o.getImageData(0, 0, off.width, off.height).data, pitch = Math.max(4, W / 190), span = asc + desc;
+      for (let y = pitch / 2; y < off.height - 0.5; y += pitch) for (let x = pitch / 2; x < off.width - 0.5; x += pitch) {
+        const a = data[(Math.round(y) * off.width + Math.round(x)) * 4 + 3] / 255; if (!(a >= 0.35)) continue;
         const t = clamp((y - top) / span, 0, 1);
         ctx.fillStyle = `rgb(${Math.round(255 - 13 * t)},${Math.round(155 - 42 * t)},${Math.round(110 - 52 * t)})`;
         ctx.beginPath(); ctx.arc(x, y, pitch * 0.4, 0, 6.2832); ctx.fill();
@@ -2038,8 +1162,8 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   }
 
   /* ---------------- Init ---------------- */
-  const renderCharts = () => { spark(); ftChart(); tabBars(); costChart(); };
-  compute(); renderCharts(); halftone(); buildSea(); privacySnip(); promptDemo(); snipCard(); dotWordmark();
+  const renderCharts = () => { spark(); ftChart(); costChart(); };
+  compute(); renderCharts(); privacySnip(); halftone(); dotWordmark();
   let rz; new ResizeObserver(() => { cancelAnimationFrame(rz); rz = requestAnimationFrame(renderCharts); }).observe(document.body);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(renderCharts);
 })();
