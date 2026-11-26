@@ -143,6 +143,7 @@ table{border-collapse:collapse}
 .mi .ib{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--border);border-radius:var(--r);background:#fff}
 .mi .ib .i{width:17px;height:17px}
 .mi b{display:block;font-weight:600;font-size:14.5px;letter-spacing:-.015em}
+.mi .tag{font:500 9.5px/1 var(--font-mono);font-style:normal;letter-spacing:.1em;color:var(--accent-text);margin-left:8px;vertical-align:2px}
 .mi small{display:block;margin-top:3px;font-size:13px;color:var(--muted);line-height:1.4}
 .mega-card{grid-column:3;grid-row:1 / span 2;display:flex;flex-direction:column;justify-content:space-between;gap:16px;padding:16px;border-radius:var(--r);background:linear-gradient(180deg,var(--sky-2),var(--sky));text-decoration:none;color:var(--ink)}
 .mega-card svg{width:48px;height:48px;color:var(--accent);overflow:visible}
@@ -193,9 +194,9 @@ table{border-collapse:collapse}
 }
 
 /* ---------- Hero (sky to sea-foam) ---------- */
-.hero{position:relative;background:linear-gradient(180deg,var(--sky) 0%,#D3ECF6 42%,#EAF5FA 78%,var(--bg) 100%);color:var(--ink);isolation:isolate;overflow:hidden;padding:clamp(128px,13vw,168px) 0 clamp(250px,24vw,300px)}
+.hero{position:relative;background:linear-gradient(180deg,var(--sky) 0%,#D3ECF6 42%,#EAF5FA 78%,var(--bg) 100%);color:var(--ink);isolation:isolate;overflow:hidden;padding:clamp(128px,13vw,168px) 0 clamp(200px,17vw,240px)}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse 50% 60% at 88% 18%,rgba(255,255,255,.75),transparent 70%),radial-gradient(ellipse 40% 40% at 72% 82%,rgba(255,155,110,.18),transparent 70%)}
-.sea{position:absolute;left:0;right:0;bottom:clamp(110px,10vw,140px);height:200px;z-index:-1;pointer-events:none;overflow:hidden}
+.sea{position:absolute;left:0;right:0;bottom:24px;height:150px;z-index:-1;pointer-events:none;overflow:hidden}
 .sea svg{position:absolute;left:0;top:0;width:200%;height:100%;overflow:visible}
 .sea path{fill:none;stroke-width:1.5;vector-effect:non-scaling-stroke}
 .sea .w1 path{stroke:rgba(23,30,82,.14)}
@@ -206,9 +207,7 @@ table{border-collapse:collapse}
 .on-dark .bubbles i{border-color:rgba(189,226,241,.28);background:radial-gradient(circle at 32% 30%,rgba(189,226,241,.45),transparent 65%)}
 @media (prefers-reduced-motion:reduce){.bubbles{display:none}}
 .hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(32px,5vw,72px);align-items:center}
-.stat-pill{display:inline-flex;flex-wrap:wrap;align-items:center;gap:10px;font:500 11px/1 var(--font-mono);letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
-.stat-pill b{font-weight:500;letter-spacing:.02em;color:var(--ink);background:rgba(255,255,255,.72);border:1px solid rgba(23,30,82,.12);padding:5px 8px;border-radius:var(--r);font-variant-numeric:tabular-nums}
-.hero h1{margin-top:22px}
+.hero h1{margin-top:0}
 .hero h1 .dm{display:block}
 .hero .lead{margin-top:22px;max-width:560px;color:var(--ink-2)}
 .signup{margin-top:34px;max-width:540px}
@@ -248,7 +247,7 @@ table{border-collapse:collapse}
 .glass-arrows .back .i{transform:rotate(180deg)}
 .priv.armed .t{opacity:.15;transform:scale(.9);display:inline-block;transition:opacity .3s,transform .3s var(--ease)}
 .priv.armed .t.pop{opacity:1;transform:none}
-.hero-models{position:absolute;left:0;right:0;bottom:clamp(140px,13vw,170px);padding:0}
+.hero-models{position:relative;padding:clamp(44px,5vw,64px) 0 0}
 .hero-models .lbl{font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center}
 .marquee-view{margin-top:16px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
 .marquee{display:flex;gap:56px;width:max-content;padding-right:56px}
@@ -695,48 +694,10 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
 .foot-bottom span{display:inline-flex;align-items:center;gap:8px}
 .seafloor{position:relative;height:clamp(190px,21vw,300px);margin-top:8px;overflow:hidden;user-select:none;pointer-events:none;isolation:isolate}
 .seafloor::before{content:"";position:absolute;left:0;right:0;bottom:0;height:75%;z-index:-1;background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(255,155,110,.22),transparent 70%)}
-.giant{position:absolute;left:0;right:0;bottom:12%;text-align:center;z-index:0}
-.giant span{font:600 clamp(5rem,1rem + 17vw,16rem)/.8 var(--font-ui);letter-spacing:-.07em;color:#1E2766}
+.giant{position:absolute;left:0;right:0;bottom:21%;text-align:center;z-index:0}
+.giant span{font:600 clamp(5rem,1rem + 17vw,16rem)/.8 var(--font-ui);letter-spacing:-.06em;color:var(--accent)}
 .dunes{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;z-index:1}
 .pebble{position:absolute;z-index:2;border-radius:50%}
-.arena{position:absolute;left:0;right:0;bottom:13%;height:70px;z-index:3}
-.crab{position:absolute;bottom:0;left:var(--l)}
-.crab .body{display:block;transform-origin:50% 100%}
-.crab svg{display:block;overflow:visible;filter:drop-shadow(0 4px 3px rgb(14 19 64/.25))}
-.crab::after{content:"";position:absolute;left:12%;right:12%;bottom:-3px;height:6px;border-radius:50%;background:rgba(120,80,40,.22);z-index:-1}
-.crab-a{--l:40%}
-.crab-a svg{width:clamp(52px,5.4vw,82px);height:auto;color:var(--accent)}
-.crab-b{--l:45.5%}
-.crab-b svg{width:clamp(42px,4.4vw,66px);height:auto;color:var(--peach)}
-.crab-a .body{transform:rotate(6deg)}
-.crab-b .body{transform:rotate(-6deg)}
-.crab .claw-l{transform:rotate(-14deg)}
-.crab .claw-r{transform:rotate(14deg)}
-.puff{position:absolute;left:45%;bottom:18px;width:2px;height:2px;z-index:4}
-.puff i{position:absolute;width:7px;height:7px;border-radius:50%;background:#F3D9B1;opacity:0}
-.puff i:nth-child(1){--dx:-16px;--dy:-14px}.puff i:nth-child(2){--dx:2px;--dy:-22px}.puff i:nth-child(3){--dx:18px;--dy:-12px}
-@media (prefers-reduced-motion:no-preference){
-  .seafloor .crab{animation:var(--path) 12s var(--ease) infinite}
-  .crab-a{--path:pathA}.crab-b{--path:pathB}
-  .seafloor .crab .body{animation:var(--hop) 12s linear infinite}
-  .crab-a .body{--hop:hopA}.crab-b .body{--hop:hopB}
-  .seafloor .crab .legs-l{animation:legA .18s linear infinite}
-  .seafloor .crab .legs-r{animation:legB .18s linear infinite}
-  .seafloor .crab .claw-l{animation:fightL 12s linear infinite}
-  .seafloor .crab .claw-r{animation:fightR 12s linear infinite}
-  .seafloor .crab-b .claw-l,.seafloor .crab-b .claw-r{animation-delay:-.12s}
-  .seafloor .puff i{animation:puff 12s ease-out infinite}
-  .seafloor .puff i:nth-child(2){animation-delay:.08s}.seafloor .puff i:nth-child(3){animation-delay:.16s}
-  .seafloor:not(.playing) *{animation-play-state:paused !important}
-}
-@keyframes pathA{0%{left:4%}32%{left:39%}66%{left:39%}93%{left:3%}100%{left:4%}}
-@keyframes pathB{0%{left:20%}30%{left:49%}36%{left:45.5%}66%{left:45.5%}94%{left:17%}100%{left:20%}}
-@keyframes hopA{0%,30%{transform:rotate(0)}36%{transform:rotate(6deg)}44%,48%,52%,56%,60%,64%{transform:translateY(0) rotate(6deg)}46%,54%,62%{transform:translateY(-9px) rotate(10deg)}50%,58%{transform:translateY(-4px) rotate(2deg)}66%{transform:rotate(-4deg)}70%,100%{transform:rotate(0)}}
-@keyframes hopB{0%,30%{transform:rotate(0)}36%{transform:rotate(-6deg)}44%,48%,52%,56%,60%,64%{transform:translateY(0) rotate(-6deg)}46%,54%,62%{transform:translateY(-4px) rotate(-2deg)}50%,58%{transform:translateY(-10px) rotate(-11deg)}66%{transform:rotate(-8deg)}70%,100%{transform:rotate(0)}}
-@keyframes fightL{0%,40%{transform:rotate(-6deg)}44%,48%,52%,56%,60%,64%{transform:rotate(-26deg)}46%,50%,54%,58%,62%{transform:rotate(4deg)}68%,100%{transform:rotate(-6deg)}}
-@keyframes fightR{0%,40%{transform:rotate(6deg)}44%,48%,52%,56%,60%,64%{transform:rotate(4deg)}46%,50%,54%,58%,62%{transform:rotate(26deg)}68%,100%{transform:rotate(6deg)}}
-@keyframes puff{0%,45%{opacity:0;transform:translate(0,0) scale(.4)}47%{opacity:.95}53%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.3)}54%{opacity:0;transform:translate(0,0) scale(.4)}56%{opacity:.9}62%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.3)}100%{opacity:0}}
-@media (max-width:640px){.arena{bottom:12%}}
 
 /* ---------- Bottom ticker (Ramp) ---------- */
 .ticker{position:fixed;left:0;right:0;bottom:0;z-index:80;height:44px;display:flex;align-items:center;gap:16px;padding-left:var(--gutter);background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--border);transition:transform .35s var(--ease)}
@@ -874,13 +835,13 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     </nav>
     <div class="nav-right">
       <a class="signin collapse" href="#">Sign in</a>
-      <a class="btn btn-accent" href="#start">Get started</a>
+      <a class="btn btn-accent" href="#start">Start free</a>
       <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
     <div class="mega" id="mega" role="region" aria-label="Product">
-      <a class="mi" href="#how"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-server"/></svg></span><span><b>Deploy</b><small>Any open model on dedicated GPUs in one click.</small></span></a>
-      <a class="mi" href="#learn"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><span><b>Continuous fine-tuning</b><small>Gets smarter nightly, ships only when it wins.</small></span></a>
-      <a class="mi" href="#privacy"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><span><b>Privacy Protect</b><small>Sensitive values masked before the model reads them.</small></span></a>
+      <a class="mi" href="#how"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-server"/></svg></span><span><b>Deploy<em class="tag">CLAWS</em></b><small>Any open model on dedicated GPUs in one click.</small></span></a>
+      <a class="mi" href="#learn"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><span><b>Continuous fine-tuning<em class="tag">MOLT</em></b><small>Gets smarter nightly, ships only when it wins.</small></span></a>
+      <a class="mi" href="#privacy"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><span><b>Privacy Protect<em class="tag">SHELL</em></b><small>Sensitive values masked before the model reads them.</small></span></a>
       <a class="mi" href="#api"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg></span><span><b>API + team chat</b><small>OpenAI-compatible endpoint and a private chat.</small></span></a>
       <a class="mega-card" href="#pick"><svg class="crab-live" aria-hidden="true"></svg><span><b>Find your model →</b><small>Tell us your use case. Get a setup in seconds.</small></span></a>
     </div>
@@ -893,7 +854,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     <button class="menu-btn" type="button" aria-label="Close menu" data-close><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
   </div>
   <nav aria-label="Mobile"><a href="#how" data-close>Product</a><a href="#models" data-close>Models</a><a href="#privacy" data-close>Privacy</a><a href="#pricing" data-close>Pricing</a><a href="#" data-close>Docs</a><a href="#" data-close>Sign in</a></nav>
-  <a class="btn btn-accent" href="#start" data-close>Get started <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-accent" href="#start" data-close>Start free <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
 </div>
 
 <main id="main">
@@ -903,18 +864,16 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   <div class="sea" aria-hidden="true"></div><div class="bubbles" data-n="12" aria-hidden="true"></div>
   <div class="container hero-grid">
     <div>
-      <!-- PLACEHOLDER: live stat -->
-      <p class="stat-pill reveal">Prompts protected by Craby.AI <b id="live-stat">1,204,551</b></p>
-      <h1 class="display h1 reveal" id="hero-h">Own your intelligence. <span class="dm">Smarter every day you use it.</span></h1>
+      <h1 class="display h1 reveal" id="hero-h">Own your intelligence. <span class="dm">Smarter every day.</span></h1>
       <p class="lead reveal">Craby.AI deploys an open-weight model for your team in minutes, fine-tunes it on how you work, and keeps every prompt private. You get an API and a team chat on day one.</p>
       <div class="signup reveal">
         <form class="input-cta" data-signup novalidate>
           <svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>
           <label class="sr-only" for="hero-email">Work email</label>
           <input id="hero-email" type="email" placeholder="What's your work email?" autocomplete="email" required>
-          <button class="btn btn-accent" type="submit">Get started <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <button class="btn btn-accent" type="submit">Start free <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
         </form>
-        <div class="hero-actions"><a class="btn btn-glass btn-sm" href="#">Talk to an engineer</a><p class="form-note" role="status" aria-live="polite"></p></div>
+        <div class="hero-actions"><a class="link-arrow" href="#">Book a 15-min demo <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a><p class="form-note" role="status" aria-live="polite"></p></div>
       </div>
       <ul class="checks reveal">
         <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Live in under 5 minutes</li>
@@ -935,10 +894,6 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
         <div class="glass-arrows"><button type="button" class="back" aria-label="Previous step"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button><button type="button" class="next" aria-label="Next step"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
       </div>
     </div>
-  </div>
-  <div class="hero-models">
-    <p class="lbl">Deploy the open models you already trust</p>
-    <div class="marquee-view"><div class="marquee" id="models-marquee"></div></div>
   </div>
 </section>
 
@@ -978,10 +933,10 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
             <div class="c-card"><h4>Eval score by week <span>Your eval set · 412 cases</span></h4><div class="spark" id="spark"></div></div>
             <div class="c-card vers"><h4>Versions <span>Auto-promote on</span></h4>
               <ul class="versions">
-                <li><span class="v-tag">v10</span><span class="v-st"><b>Promoted</b> · 2h ago</span><span class="v-up">+1.9</span></li>
+                <li><span class="v-tag">v10</span><span class="v-st"><b>Molted</b> · 2h ago</span><span class="v-up">+1.9</span></li>
                 <li><span class="v-tag">cand.</span><span class="v-st">Rejected · 1d ago</span><span class="v-dn">−0.5</span></li>
-                <li><span class="v-tag">v9</span><span class="v-st"><b>Promoted</b> · 9d ago</span><span class="v-up">+1.3</span></li>
-                <li><span class="v-tag">v8</span><span class="v-st"><b>Promoted</b> · 16d ago</span><span class="v-up">+2.3</span></li>
+                <li><span class="v-tag">v9</span><span class="v-st"><b>Molted</b> · 9d ago</span><span class="v-up">+1.3</span></li>
+                <li><span class="v-tag">v8</span><span class="v-st"><b>Molted</b> · 16d ago</span><span class="v-up">+2.3</span></li>
               </ul>
             </div>
           </div>
@@ -994,12 +949,18 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
       <div class="foot"><span>3 entities masked</span><b>+14 ms</b></div>
     </div>
     <div class="float float-b" aria-hidden="true"><div class="handles"><i></i><i></i><i></i><i></i></div>
-      <div class="k"><svg class="i"><use href="#i-trend"/></svg>Fine-tune promoted</div>
+      <div class="k"><svg class="i"><use href="#i-trend"/></svg>Molted to v10</div>
       <div class="big">v10 <small>+1.9 pts</small></div>
       <div class="foot"><span>2,418 approved chats</span><span>412 evals</span></div>
     </div>
   </div>
 </div>
+
+<!-- ============ Model strip (Ramp logo-row placement) ============ -->
+<section class="hero-models" aria-label="Supported model families">
+  <p class="lbl">Deploy the open models you already trust</p>
+  <div class="marquee-view"><div class="marquee" id="models-marquee"></div></div>
+</section>
 
 <!-- ============ How it works ============ -->
 <section class="block first" id="how" aria-labelledby="how-h">
@@ -1081,9 +1042,9 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
 <section class="block" id="learn" aria-labelledby="learn-h">
   <div class="container"><div class="panel">
     <div class="sec-head split-head reveal">
-      <p class="eyebrow">Continuous fine-tuning</p>
-      <h2 class="display h2" id="learn-h">AI that learns from your team. <span class="dm">And proves it before it ships.</span></h2>
-      <p>Every night Craby.AI trains a candidate on conversations your team approved, scores it on your own evals, and only promotes it if it wins.</p>
+      <p class="eyebrow">Molt · Continuous fine-tuning</p>
+      <h2 class="display h2" id="learn-h">AI that learns from your team. <span class="dm">It molts into a stronger version every night.</span></h2>
+      <p>Crabs grow by molting. So does Craby.AI. Every night it trains a candidate on conversations your team approved and scores it on your own evals. The old shell is shed only if the new one wins.</p>
     </div>
     <div class="tabs-grid gap-top reveal">
       <div>
@@ -1147,8 +1108,8 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   <div class="container"><div class="panel">
     <div class="split rev">
       <div class="split-text reveal">
-        <p class="eyebrow">Privacy Protect</p>
-        <h2 class="display h2" id="privacy-h">Your prompts stay private. <span class="dm">Even from the model.</span></h2>
+        <p class="eyebrow">Shell · Privacy Protect</p>
+        <h2 class="display h2" id="privacy-h">Every prompt gets a shell. <span class="dm">Even the model can't see inside.</span></h2>
         <p>Before a single token reaches the model, Privacy Protect swaps names, account numbers, health details and secrets for placeholders. The answer comes back with the real values restored, for your people only.</p>
         <ul class="mini-list">
           <li><svg class="i" aria-hidden="true"><use href="#i-eye-off"/></svg>PII, health data, payment data and API keys</li>
@@ -1250,9 +1211,9 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
       <h2 class="display reveal-blur" id="band-h">Open weights.<br><span class="dm">Closed doors.</span></h2>
       <p class="band-lead reveal">Open models now hold their own against closed ones on real work. What was missing was a way to own one without hiring a research team. That's Craby.AI.</p>
       <div class="principles reveal">
-        <div><span class="n">01</span><p>Your data trains your model. Nobody else's.</p></div>
-        <div><span class="n">02</span><p>Your weights are yours. Export them anytime.</p></div>
-        <div><span class="n">03</span><p>Your prompts are masked by default.</p></div>
+        <div><span class="n">01 · SHELL</span><p>Your prompts are masked by default.</p></div>
+        <div><span class="n">02 · MOLT</span><p>Your model improves only on your data.</p></div>
+        <div><span class="n">03 · CLAWS</span><p>Your weights are yours. Export them anytime.</p></div>
       </div>
     </div>
     <div class="crab-art reveal" aria-hidden="true"><canvas id="halftone"></canvas></div>
@@ -1361,7 +1322,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
           <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>API plus team chat, unlimited seats</li>
           <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Spend limits and usage alerts</li>
         </ul>
-        <div class="p-cta"><a class="btn btn-accent" href="#start">Get started <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <div class="p-cta"><a class="btn btn-accent" href="#start">Start free <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
       </div>
       <div class="price-card">
         <div class="p-top"><span class="p-name">Enterprise</span></div>
@@ -1390,7 +1351,8 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
         <p>Something we missed? <a href="#">Talk to an engineer</a>, not a sales script.</p>
       </div>
       <div class="faq-list reveal">
-        <details open><summary>What does "own your intelligence" actually mean?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">The fine-tuned version of your model is yours. Your data only ever trains your model, never anyone else's, and you can export your weights whenever you like. No lock-in.</div></details>
+        <details open><summary>Why a crab?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Crabs carry their own shell, grow by molting, and never let go of what's theirs. That's the product: private by default, better every week, and fully yours. And yes, the only thing we're crabby about is your data.</div></details>
+        <details><summary>What does "own your intelligence" actually mean?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">The fine-tuned version of your model is yours. Your data only ever trains your model, never anyone else's, and you can export your weights whenever you like. No lock-in.</div></details>
         <details><summary>Which models can I deploy?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">The leading open-weight families, including Llama, Qwen, Mistral, Gemma, DeepSeek and gpt-oss, from small fast models to 100B+ parameters. New releases usually land within days.</div></details>
         <details><summary>How does Privacy Protect work?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">Every prompt passes through a detection layer before it reaches the model. Sensitive values are replaced with typed placeholders, the model writes its answer, and Craby.AI restores the real values for authorised users only. The model never sees the originals.</div></details>
         <details><summary>How does the model get smarter over time?<span class="pm" aria-hidden="true"></span></summary><div class="faq-a">You decide which conversations count as training data. Craby.AI fine-tunes a candidate on them, scores it against your evaluation set, and promotes it only if it wins. Every version is kept, so rolling back takes one click.</div></details>
@@ -1409,7 +1371,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
       <div><svg class="mark" aria-hidden="true"><use href="#craby"/></svg><h2 class="display h2" id="final-h">Build intelligence <span class="dm">you actually own.</span></h2></div>
       <div>
         <p>Deploy your first private model in under five minutes. Start with free credit, no card needed.</p>
-        <div class="cta-btns"><a class="btn btn-accent" href="#start">Get started <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="link-arrow" href="#">Book a demo <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <div class="cta-btns"><a class="btn btn-accent" href="#start">Start free <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="link-arrow" href="#">Book a demo <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
       </div>
     </div>
     <!-- PLACEHOLDER: only list certifications you actually hold -->
@@ -1427,7 +1389,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
 <footer class="footer" id="footer" data-nav="dark">
   <div class="container">
     <div class="foot-grid">
-      <div class="foot-brand"><a class="logo" href="#"><svg class="crab-live" aria-hidden="true"></svg><span class="wordmark">Craby<em>.AI</em></span></a><p>Private, self-improving open models for every team. Own your intelligence.</p></div>
+      <div class="foot-brand"><a class="logo" href="#"><svg class="crab-live" aria-hidden="true"></svg><span class="wordmark">Craby<em>.AI</em></span></a><p>Private by shell. Smarter by molt. Yours by claw.</p></div>
       <div class="foot-col"><h4>Product</h4><ul><li><a href="#how">Deploy</a></li><li><a href="#learn">Fine-tuning</a></li><li><a href="#privacy">Privacy Protect</a></li><li><a href="#">Team chat</a></li><li><a href="#pricing">Pricing</a></li></ul></div>
       <div class="foot-col"><h4>Developers</h4><ul><li><a href="#">Docs</a></li><li><a href="#">API reference</a></li><li><a href="#models">Model catalogue</a></li><li><a href="#">Status</a></li><li><a href="#">Changelog</a></li></ul></div>
       <div class="foot-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Blog</a></li><li><a href="#">Contact</a></li></ul></div>
@@ -1437,7 +1399,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   </div>
   <div class="seafloor" aria-hidden="true">
     <div class="bubbles" data-n="8"></div>
-    <div class="giant"><span>craby.ai</span></div>
+    <div class="giant"><span>Craby.AI</span></div>
     <svg class="dunes" viewBox="0 0 1440 160" preserveAspectRatio="none">
       <defs>
         <linearGradient id="sandfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3D9B1"/><stop offset="1" stop-color="#E7C493"/></linearGradient>
@@ -1451,16 +1413,11 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     <span class="pebble" style="left:27%;bottom:9%;width:7px;height:5px;background:#FF9B6E;opacity:.7"></span>
     <span class="pebble" style="left:71%;bottom:7%;width:14px;height:8px;background:#CFA373"></span>
     <span class="pebble" style="left:86%;bottom:11%;width:8px;height:6px;background:#FF9B6E;opacity:.6"></span>
-    <div class="arena">
-      <div class="crab crab-a"><span class="body"><svg class="crab-live"></svg></span></div>
-      <div class="crab crab-b"><span class="body"><svg class="crab-live"></svg></span></div>
-      <div class="puff"><i></i><i></i><i></i></div>
-    </div>
   </div>
 </footer>
 
 <!-- PLACEHOLDER: wire ticker to real metrics or remove -->
-<div class="ticker" id="ticker-bar" aria-label="Live platform activity">
+<div class="ticker hide" id="ticker-bar" aria-label="Live platform activity">
   <span class="ticker-label">Craby.AI today</span>
   <div class="ticker-view"><div class="ticker-track" style="--dur:60s" id="ticker"></div></div>
 </div>
@@ -1620,7 +1577,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   function goStage(i, animate) {
     i = (i + 3) % 3; gSnip.cancel(); clearTimeout(gTimer);
     if (i === 1 && animate && !reduce) {
-      paintStage(1); gLabel.textContent = 'Privacy Protect is masking';
+      paintStage(1); gLabel.textContent = 'Craby is snipping sensitive data';
       gEnts.forEach(x => setEnt(x, false));
       gSnip.run(gEnts, x => setEnt(x, true), () => { gLabel.textContent = LABELS[1]; schedule(); });
       return;
@@ -1641,10 +1598,11 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   });
   if (!reduce) setInterval(() => {
     TICKER.forEach((t, i) => { if (!t.inc) return; t.v += Math.round(t.inc[0] + Math.random() * (t.inc[1] - t.inc[0])); $$(`b[data-k="${i}"]`, ticker).forEach(b => { b.textContent = fmtInt(t.v); }); });
-    $('#live-stat').textContent = fmtInt(TICKER[1].v);
   }, 1600);
   const tbar = $('#ticker-bar');
-  new IntersectionObserver(es => es.forEach(e => tbar.classList.toggle('hide', e.isIntersecting)), { threshold: 0 }).observe($('.final'));
+  const tbState = new Map();
+  const tbIO = new IntersectionObserver(es => { es.forEach(e => tbState.set(e.target, e.isIntersecting)); tbar.classList.toggle('hide', [...tbState.values()].some(Boolean)); }, { threshold: 0 });
+  tbIO.observe($('.hero')); tbIO.observe($('.final'));
   const mq = $('#models-marquee');
   for (let rep = 0; rep < 2; rep++) MODELS.forEach(([name, org]) => {
     const w = document.createElement('span'); w.className = 'model-word'; if (rep) w.setAttribute('aria-hidden', 'true');
@@ -1955,8 +1913,6 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   /* ---------------- Init ---------------- */
   const renderCharts = () => { spark(); ftChart(); tabBars(); costChart(); };
   compute(); renderCharts(); halftone(); buildSea(); privacySnip();
-  const floor = $('.seafloor');
-  if (floor) new IntersectionObserver(([e]) => floor.classList.toggle('playing', e.isIntersecting)).observe(floor);
   let rz; new ResizeObserver(() => { cancelAnimationFrame(rz); rz = requestAnimationFrame(renderCharts); }).observe(document.body);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(renderCharts);
 })();
