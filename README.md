@@ -35,6 +35,9 @@ assets/craby-mark.svg   Craby mascot / logomark, standalone
   - **Hero:** sea lines drift and bubbles rise behind it. Bubbles also rise in the final CTA.
   - **Halftone crab:** ripples like water.
   - **Primary buttons:** let out bubbles on hover.
+  - **Sea floor (bottom of the page):** two crabs chase each other across sand dunes, clash claws with sand puffs, then the chase reverses. It runs as a 12s loop and only plays while it's on screen.
+- **Nav stays visible:** the bar morphs into a pill after 80px and never auto-hides.
+- **Colour blends:** the navy band and the final CTA fade in and out of the sea-foam over roughly 190px, so there are no hard lines between light and dark sections.
   - **Reduced motion:** every animation stops and the page shows static states.
 
 ## Before launch: replace every placeholder
