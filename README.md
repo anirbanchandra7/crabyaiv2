@@ -9,57 +9,41 @@ assets/craby-mark.svg   Craby mascot / logomark, standalone
 
 ## Design system
 
-- **Direction:** OpenLake + Ramp.
-  - From OpenLake: dark cinematic hero, floating pill nav, white document panels on a grey page, tabbed comparison charts, struck-through metric cards.
-  - From Ramp: live stat, email capture, product UI as hero art, bottom live ticker, recommendation picker, two-tone statements.
-- **Palette:** black, grey and white for every layout. Coral is used only for the mascot, the primary CTA and chart highlights.
+- **Palette, "ocean depth":** the page gets darker as you scroll, like diving.
 
-  | Token | Hex |
+  | Role | Colour |
   |---|---|
-  | Page | `#F5F5F4` |
-  | Panels | `#FFFFFF` |
-  | Ink | `#0A0A0A` |
-  | Muted | `#6B6B73` |
-  | Hairline | `#E4E4E7` |
-  | Dark | `#050507` / `#17191D` |
-  | Coral | `#D4401F` (4.6:1 with white text) |
+  | Sky (hero) | `#BDE2F1` |
+  | Sea-foam (page) | `#F2F8FB` |
+  | Navy (ink, bands) | `#171E52` |
+  | Deep navy (CTA, footer) | `#0E1340` |
+  | Crab orange (mascot, CTA, data) | `#F2713A` |
+  | Peach (tints) | `#FF9B6E` |
 
-- **Type:** Instrument Sans 500 for headlines (tracking -0.035em) and body. Geist Mono only for eyebrows, tickers, metric captions and code.
-- **Radius:** 2px everywhere (technical). Fully rounded only for the nav pill, badges and chips.
-- **Layout rhythm:**
-  1. Dark left hero with a glass card on the right
-  2. Model strip
-  3. Overlapping console
-  4. Split header with sticky steps
-  5. Tabs left, chart right
-  6. Model cards row
-  7. Visual left, text right (Privacy Protect)
-  8. Centred bento
-  9. Centred statement
-  10. Dark band
-  11. Centred picker
-  12. Calculator
-  13. Three-up use cases
-  14. Centred pricing
-  15. Split FAQ
-  16. Dark CTA
-  17. Black footer
-- **Mascot:** a geometric Craby on a 64px grid, single coral, with a 3px stroke.
-- **Charts:** hand-built SVG.
-  - Hairline gridlines and 2px lines.
-  - Direct labels plus a legend.
-  - Coral marks the highlighted series; context series are grey.
-  - Tooltips, arrow-key navigation and a table view.
+  - Buttons use navy text on orange, at 5.4:1 contrast. White on that orange only reaches 2.9:1, which fails.
+  - Orange used as text on white is `#C94E1C`, at 4.6:1.
+- **Type:** Instrument Sans for headlines and body, Geist Mono for labels and code.
+- **Radius:** 2px everywhere. Fully rounded only for the nav pill, badges and chips.
+- **Nav (morphing bar):**
+  - At the top it's a full-width bar.
+  - After 80px of scroll it becomes a frosted pill, hides when you scroll down and comes back when you scroll up.
+  - It turns navy over dark sections, marks the active section with an orange dot, and has a Product mega-menu that works with hover, click and keyboard.
+- **Crab motion:** every part of the `#craby` symbol is grouped (`claw-l/r`, `legs-l/r`, `shell`), so inline copies (`svg.crab-live`) can animate.
+  - **Privacy snip:** a claw pinches each sensitive word into its `[TOKEN]`. It runs in the hero card and in the Privacy section.
+  - **Scroll progress:** Craby walks along the line under the nav pill.
+  - **Logo:** the claws pinch on hover.
+  - **Hero:** sea lines drift and bubbles rise behind it. Bubbles also rise in the final CTA.
+  - **Halftone crab:** ripples like water.
+  - **Primary buttons:** let out bubbles on hover.
+  - **Reduced motion:** every animation stops and the page shows static states.
 
 ## Before launch: replace every placeholder
 
 Search the file for `PLACEHOLDER` and `PROOF NEEDED`. None of these numbers are real yet.
 
-- [ ] **Hero live stat + bottom ticker** (`TICKER`): connect them to real usage or delete them. Invented traction on a site YC reviewers will open is a credibility risk.
-- [ ] **Accuracy chart** (`FT`) and **comparison tabs** (`BARS`): both are labelled illustrative.
-- [ ] **Model cards**: the latency figures.
-- [ ] **Picker** (`PICKS`): models, policies and token estimates.
-- [ ] **Calculator pricing** (`PRICING`).
+- [ ] **Hero live stat + bottom ticker** (`TICKER`): connect them to real usage or delete them.
+- [ ] **Accuracy chart** (`FT`), **comparison tabs** (`BARS`) and **model card** latencies.
+- [ ] **Picker** (`PICKS`) and **calculator pricing** (`PRICING`).
 - [ ] **Receipts wall**: commented out until you have named design-partner quotes.
 - [ ] **Compliance pills**: only list what you actually hold.
 - [ ] **Product claims to confirm**:
