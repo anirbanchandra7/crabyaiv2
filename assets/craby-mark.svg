@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Craby">
+  <title>Craby</title>
+  <g fill="#CF4426" stroke="#CF4426" stroke-linecap="round" stroke-linejoin="round">
+    <!-- shell -->
+    <path stroke="none" d="M13 41C13 31.5 21.5 26.5 32 26.5S51 31.5 51 41C51 45 44 47 32 47S13 45 13 41Z"/>
+    <!-- eye stalks + eyes -->
+    <path fill="none" stroke-width="3" d="M26 27V22M38 27V22"/>
+    <circle stroke="none" cx="26" cy="19.5" r="3.4"/>
+    <circle stroke="none" cx="38" cy="19.5" r="3.4"/>
+    <!-- claws -->
+    <path stroke="none" d="M18.25 13.18A7.5 7.5 0 1 1 9.94 10.95L13.2 17.3Z"/>
+    <path stroke="none" d="M45.75 13.18A7.5 7.5 0 1 0 54.06 10.95L50.8 17.3Z"/>
+    <!-- arms + legs -->
+    <path fill="none" stroke-width="3" d="M16 24.2L21.4 30.4M14.2 39L7.4 40.8M15.2 42.6L9.7 46.9M18.2 45.1L14.7 51.2M48 24.2L42.6 30.4M49.8 39L56.6 40.8M48.8 42.6L54.3 46.9M45.8 45.1L49.3 51.2"/>
+  </g>
+</svg>
