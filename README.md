@@ -35,7 +35,18 @@ assets/craby-mark.svg   Craby mascot / logomark, standalone
   - **Hero:** sea lines drift and bubbles rise behind it. Bubbles also rise in the final CTA.
   - **Halftone crab:** ripples like water.
   - **Primary buttons:** let out bubbles on hover.
-  - **Footer:** the giant "Craby.AI" wordmark in crab orange sits on the bottom edge of the page, with bubbles rising behind it.
+  - **Footer:** a giant "Craby.AI" wordmark drawn in halftone dots, fading from peach to orange, with bubbles rising behind it. It's drawn on canvas.
+  - **Feature bento:**
+    - a self-typing assistant builder with tabs
+    - a region globe with pinging pins
+    - a molt timeline with a training bar
+    - a looping claw snip
+    - an 8-icon grid for the smaller features
+- **Hero:**
+  - a "New" badge
+  - a two-step headline: "Most AI is rented. / This one's yours."
+  - Shell / Molt / Claws pillar cards
+  - The announcement bar is removed, because the badge replaces it.
 - **Brand pillars, taken from crab biology:**
   - **Shell = Privacy Protect.** Every prompt gets a shell.
   - **Molt = continuous fine-tuning.** Each nightly version is a molt, kept only if it's stronger.

@@ -207,8 +207,21 @@ table{border-collapse:collapse}
 .on-dark .bubbles i{border-color:rgba(189,226,241,.28);background:radial-gradient(circle at 32% 30%,rgba(189,226,241,.45),transparent 65%)}
 @media (prefers-reduced-motion:reduce){.bubbles{display:none}}
 .hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(32px,5vw,72px);align-items:center}
-.hero h1{margin-top:0}
-.hero h1 .dm{display:block}
+.hero h1{margin-top:22px}
+.hero h1 .setup{display:block;margin-bottom:.22em;font-size:.5em;line-height:1.1;letter-spacing:-.025em;color:var(--muted)}
+.badge{display:inline-flex;align-items:center;gap:10px;height:32px;padding:0 12px 0 4px;border:1px solid rgba(23,30,82,.12);background:rgba(255,255,255,.72);border-radius:var(--r-pill);font-size:13.5px;color:var(--ink-2);text-decoration:none;transition:border-color .2s,background-color .2s}
+.badge:hover{border-color:rgba(23,30,82,.25);background:#fff}
+.badge b{font:500 10.5px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;border-radius:var(--r-pill);padding:6px 9px}
+.badge .i{width:14px;height:14px;color:var(--muted)}
+/* hero pillar cards: Shell / Molt / Claws */
+.pillars{margin-top:clamp(44px,5vw,64px);display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pillar{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:18px 20px;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:var(--r);box-shadow:0 1px 2px rgb(23 30 82/.04),0 8px 24px rgb(23 30 82/.06)}
+.pillar .ib{width:44px;height:44px;display:grid;place-items:center;border-radius:var(--r);background:var(--ink);color:var(--peach)}
+.pillar .ib .i{width:20px;height:20px}
+.pillar .k{display:block;font:500 10.5px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-text)}
+.pillar h3{margin-top:6px;font:600 16px/1.3 var(--font-ui);letter-spacing:-.015em}
+.pillar p{margin-top:4px;font-size:14px;line-height:1.5;color:var(--muted)}
+@media (max-width:900px){.pillars{grid-template-columns:1fr}}
 .hero .lead{margin-top:22px;max-width:560px;color:var(--ink-2)}
 .signup{margin-top:34px;max-width:540px}
 .input-cta{display:flex;align-items:center;gap:8px;height:56px;padding:5px 5px 5px 16px;background:#fff;border-radius:var(--r);border:1px solid rgba(23,30,82,.14);box-shadow:0 14px 34px -18px rgb(23 30 82/.35)}
@@ -550,6 +563,72 @@ table{border-collapse:collapse}
 .chip{display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 12px;border:1px solid var(--border);border-radius:var(--r-pill);background:#fff;font-size:13px;color:var(--ink-2)}
 .chip .i{width:14px;height:14px;color:var(--muted)}
 
+
+/* ---------- Feature bento + small-feature grid ---------- */
+.fbento{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fcard{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:var(--r);background:#fff;overflow:hidden;min-width:0}
+.fcard.wide{grid-column:1 / -1}
+.fvis{position:relative;height:230px;background:#F7FBFD;border-bottom:1px solid var(--border);overflow:hidden}
+.fcard.wide .fvis{height:300px}
+.fcopy{padding:20px 22px 22px}
+.fcopy h3{font:600 17px/1.3 var(--font-ui);letter-spacing:-.02em}
+.fcopy p{margin-top:6px;font-size:14.5px;color:var(--muted)}
+.fv-prompt{display:flex;flex-direction:column;align-items:center;padding:26px 20px;background:radial-gradient(ellipse 60% 70% at 50% 110%,rgba(255,155,110,.25),transparent 70%),#F7FBFD}
+.ptabs{display:inline-flex;gap:2px;padding:3px;border:1px solid var(--border);border-radius:var(--r);background:#fff}
+.ptab{height:30px;padding:0 12px;border-radius:var(--r);font-size:13px;color:var(--muted)}
+.ptab[aria-selected=true]{background:var(--ink);color:#fff}
+.pbox{margin-top:16px;width:min(100%,520px);height:46px;display:flex;align-items:center;gap:10px;padding:0 10px 0 12px;background:#fff;border:1px solid var(--border-strong);border-radius:var(--r);font-size:15px;color:var(--ink)}
+.pbox svg{width:22px;height:22px;color:var(--accent);flex:none;overflow:visible}
+.pcaret{width:1.5px;height:18px;background:var(--ink);animation:blink 1s steps(1) infinite}
+.penter{margin-left:auto;width:26px;height:26px;display:grid;place-items:center;border:1px solid var(--border);border-radius:var(--r);font-size:12px;color:var(--muted)}
+.presult{margin-top:14px;width:min(100%,520px);padding:12px 14px;background:#fff;border:1px solid var(--border);border-radius:var(--r);opacity:0;transform:translateY(8px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.presult.on{opacity:1;transform:none}
+.pr-top{display:flex;align-items:center;gap:10px}
+.pr-top .app-badge{width:30px;height:30px}
+.pr-top .app-badge svg{width:22px;height:22px;overflow:visible}
+.pr-top b{display:block;font-weight:600;font-size:14px}
+.pr-top small{display:block;font:400 11.5px/1.3 var(--font-mono);color:var(--muted)}
+.pr-top .pill-live{margin-left:auto}
+.pr-sample{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:13.5px;color:var(--ink-2)}
+.globe{position:absolute;left:50%;top:50%;width:300px;height:auto;transform:translate(-50%,-50%)}
+.gring{fill:none;stroke:#F2713A;stroke-opacity:.5;transform-box:fill-box;transform-origin:center}
+.garc{stroke-dasharray:4 5}
+.gchip{position:absolute;display:inline-flex;gap:6px;align-items:center;height:26px;padding:0 9px;background:#fff;border:1px solid var(--border);border-radius:var(--r);font:400 11.5px/1 var(--font-mono);color:var(--muted);white-space:nowrap}
+.gchip b{font-weight:500;color:var(--ink)}
+.fv-molt{display:flex;flex-direction:column;justify-content:center;padding:0 22px}
+.mline{position:relative;display:flex;justify-content:space-between;align-items:flex-start}
+.mline::before{content:"";position:absolute;left:8px;right:8px;top:7px;height:2px;background:linear-gradient(90deg,var(--accent) 0 78%,var(--border-strong) 78%)}
+.mn{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;width:44px}
+.mn i{width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px #F7FBFD}
+.mn b{margin-top:6px;font:500 12px/1 var(--font-mono);color:var(--ink)}
+.mn small{font:400 11px/1 var(--font-mono);color:var(--muted)}
+.mn.rej i{background:#fff;border:1.5px solid var(--context);transform:translateY(16px) scale(.8)}
+.mn.rej b,.mn.rej small{transform:translateY(16px);color:var(--muted)}
+.mn.next i{background:#fff;border:2px dashed var(--accent)}
+.mprog{margin-top:42px;font-size:12.5px;color:var(--ink-2)}
+.mprog i{display:block;margin-top:8px;height:4px;background:var(--surface-3);overflow:hidden}
+.mprog em{display:block;height:100%;width:64%;background:var(--accent)}
+.fv-snip{display:flex;align-items:center;padding:0 24px}
+.snip-text{position:relative;font-size:16px;line-height:1.9;color:var(--ink)}
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 24px;padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--border)}
+.fgrid .ib{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--border-strong);border-radius:var(--r);background:#fff}
+.fgrid .ib .i{width:17px;height:17px}
+.fgrid h4{margin-top:14px;font:600 15px/1.3 var(--font-ui);letter-spacing:-.01em}
+.fgrid p{margin-top:4px;font-size:14px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){
+  .gring{animation:gping 2.4s var(--ease) infinite}
+  .gpin:nth-of-type(2) .gring{animation-delay:1.2s}
+  .garc{animation:gdash 1.6s linear infinite}
+  .mn.next i{animation:spin 6s linear infinite}
+  .mprog em{animation:molt 4s var(--ease) infinite alternate}
+}
+@keyframes gping{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.8);opacity:0}}
+@keyframes gdash{to{stroke-dashoffset:-18}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes molt{from{width:42%}to{width:86%}}
+@media (max-width:1000px){.fbento{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.fgrid{grid-template-columns:1fr}.fcard.wide .fvis{height:340px}.ptab{padding:0 8px;font-size:12px}}
+
 /* ---------- Statement (Ramp) ---------- */
 .statement{padding:clamp(80px,10vw,140px) 0;text-align:center}
 .statement h2{max-width:980px;margin:0 auto;font-size:clamp(2rem,1.3rem + 2.4vw,3.4rem);line-height:1.08}
@@ -692,9 +771,9 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
 .foot-col a:hover{color:#fff}
 .foot-bottom{margin-top:56px;padding:20px 0;border-top:1px solid var(--dark-border);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--on-dark-muted)}
 .foot-bottom span{display:inline-flex;align-items:center;gap:8px}
-.seafloor{position:relative;height:clamp(110px,13vw,210px);margin-top:8px;overflow:hidden;user-select:none;pointer-events:none;isolation:isolate}
+.seafloor{position:relative;height:clamp(120px,17vw,260px);margin-top:8px;overflow:hidden;user-select:none;pointer-events:none;isolation:isolate}
 .seafloor::before{content:"";position:absolute;left:0;right:0;bottom:0;height:75%;z-index:-1;background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(255,155,110,.22),transparent 70%)}
-.giant{position:absolute;left:0;right:0;bottom:-0.02em;line-height:0;text-align:center;z-index:0}
+.giant-dots{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;z-index:0}
 .giant span{font:600 clamp(5rem,1rem + 17vw,16rem)/.8 var(--font-ui);letter-spacing:-.06em;color:var(--accent)}
 
 /* ---------- Bottom ticker (Ramp) ---------- */
@@ -817,11 +896,6 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M4 4l16 16"/><path d="M9.9 5.2A9.5 9.5 0 0 1 12 5c5 0 8.5 4.5 9.5 7-.4 1-1.2 2.4-2.4 3.7M6.6 6.6C4.6 7.9 3.2 10 2.5 12c1 2.5 4.5 7 9.5 7 1.8 0 3.4-.6 4.8-1.4"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
 </svg>
 
-<!-- ============ Announcement (OpenLake / Ramp) ============ -->
-<div class="announce" id="announce" role="region" aria-label="Announcement">
-  <b>Introducing Privacy Protect.</b>Every prompt masked before the model sees it.<a href="#privacy">Learn more →</a>
-  <button type="button" aria-label="Dismiss announcement"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
-</div>
 
 <!-- ============ Floating pill nav (OpenLake) ============ -->
 <header class="nav" id="nav">
@@ -862,7 +936,8 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   <div class="sea" aria-hidden="true"></div><div class="bubbles" data-n="12" aria-hidden="true"></div>
   <div class="container hero-grid">
     <div>
-      <h1 class="display h1 reveal" id="hero-h">Own your intelligence. <span class="dm">Smarter every day.</span></h1>
+      <a class="badge reveal" href="#privacy"><b>New</b>Privacy Protect ships with every model<svg class="i" aria-hidden="true"><use href="#i-right"/></svg></a>
+      <h1 class="display h1 reveal" id="hero-h"><span class="setup">Most AI is rented.</span> This one's yours.</h1>
       <p class="lead reveal">Craby.AI deploys an open-weight model for your team in minutes, fine-tunes it on how you work, and keeps every prompt private. You get an API and a team chat on day one.</p>
       <div class="signup reveal">
         <form class="input-cta" data-signup novalidate>
@@ -891,6 +966,13 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
         <div class="glass-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
         <div class="glass-arrows"><button type="button" class="back" aria-label="Previous step"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button><button type="button" class="next" aria-label="Next step"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
       </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pillars">
+      <div class="pillar reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><div><span class="k">Shell</span><h3>Every prompt masked</h3><p>Names, IDs and health data are swapped out before the model reads a word.</p></div></div>
+      <div class="pillar reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></span><div><span class="k">Molt</span><h3>Smarter every night</h3><p>A new version trains on your approved chats and ships only if it wins.</p></div></div>
+      <div class="pillar reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-key"/></svg></span><div><span class="k">Claws</span><h3>Fully yours</h3><p>Your data, your weights, your rollback button. Export anytime.</p></div></div>
     </div>
   </div>
 </section>
@@ -1175,18 +1257,84 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
         </div></div>
       </article>
     </div>
-    <div class="chips reveal" aria-label="Also included">
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>SSO and SAML</span>
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg>Role-based access</span>
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg>Audit logs</span>
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg>Spend limits per team</span>
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>EU and US regions</span>
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-bolt"/></svg>Streaming</span>
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>Function calling</span>
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg>LoRA adapters</span>
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-rewind"/></svg>One-click rollback</span>
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Weight export</span>
-      <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-server"/></svg>Private VPC</span>
+  </div></div>
+</section>
+
+<!-- ============ Feature bento (live mini-visuals) + small features ============ -->
+<section class="block" id="features" aria-labelledby="feat-h">
+  <div class="container"><div class="panel">
+    <div class="sec-head split-head reveal">
+      <p class="eyebrow">Inside the shell</p>
+      <h2 class="display h2" id="feat-h">Everything your team needs. <span class="dm">Nothing it doesn't.</span></h2>
+      <p>One deployment gives you the model, the guardrails and the tools to put it to work.</p>
+    </div>
+    <div class="fbento gap-top">
+      <article class="fcard wide reveal">
+        <div class="fvis fv-prompt">
+          <div class="ptabs" role="tablist" aria-label="Example assistants">
+            <button class="ptab" role="tab" aria-selected="true" data-k="support">Support bot</button>
+            <button class="ptab" role="tab" aria-selected="false" data-k="contract">Contract review</button>
+            <button class="ptab" role="tab" aria-selected="false" data-k="wiki">Internal search</button>
+          </div>
+          <div class="pbox"><svg class="crab-live" aria-hidden="true"></svg><span id="ptype"></span><span class="pcaret" aria-hidden="true"></span><span class="penter" aria-hidden="true">↵</span></div>
+          <div class="presult" id="presult" aria-live="polite">
+            <div class="pr-top"><span class="app-badge"><svg class="crab-live" aria-hidden="true"></svg></span><div><b id="pr-name">Support Assistant</b><small id="pr-meta">Llama 3.3 70B · Shell: PII + payment</small></div><span class="pill-live">Live</span></div>
+            <p class="pr-sample" id="pr-sample"></p>
+          </div>
+        </div>
+        <div class="fcopy"><h3>Ship an assistant in a sentence.</h3><p>Describe what you need. Craby.AI sets up the model, the privacy policy and a chat your whole team can use.</p></div>
+      </article>
+      <article class="fcard reveal">
+        <div class="fvis fv-globe" aria-hidden="true">
+          <svg viewBox="0 0 320 220" class="globe">
+            <defs>
+              <pattern id="gdots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.1" fill="#171E52" opacity=".28"/></pattern>
+              <radialGradient id="grim" cx="50%" cy="50%" r="50%"><stop offset=".78" stop-color="#FF9B6E" stop-opacity="0"/><stop offset="1" stop-color="#FF9B6E" stop-opacity=".45"/></radialGradient>
+              <clipPath id="gclip"><circle cx="160" cy="125" r="92"/></clipPath>
+            </defs>
+            <circle cx="160" cy="125" r="96" fill="url(#grim)"/>
+            <circle cx="160" cy="125" r="92" fill="#fff"/>
+            <rect x="60" y="30" width="200" height="190" fill="url(#gdots)" clip-path="url(#gclip)"/>
+            <g fill="none" stroke="#171E52" stroke-opacity=".12"><ellipse cx="160" cy="125" rx="92" ry="30"/><ellipse cx="160" cy="125" rx="40" ry="92"/><ellipse cx="160" cy="125" rx="75" ry="92"/></g>
+            <path class="garc" d="M118 112 Q160 60 205 98" fill="none" stroke="#F2713A" stroke-width="1.6"/>
+            <g class="gpin"><circle cx="118" cy="112" r="10" class="gring"/><circle cx="118" cy="112" r="4" fill="#F2713A"/></g>
+            <g class="gpin"><circle cx="205" cy="98" r="10" class="gring"/><circle cx="205" cy="98" r="4" fill="#F2713A"/></g>
+          </svg>
+          <span class="gchip" style="left:6%;top:56%"><b>us-east</b> Virginia · Live</span>
+          <span class="gchip" style="right:5%;top:20%"><b>eu-central</b> Frankfurt · Live</span>
+        </div>
+        <div class="fcopy"><h3>Deploy in your region</h3><p>Dedicated GPUs in the EU or US. Your data stays where you put it.</p></div>
+      </article>
+      <article class="fcard reveal">
+        <div class="fvis fv-molt" aria-hidden="true">
+          <div class="mline">
+            <span class="mn"><i></i><b>v8</b><small>88.9</small></span>
+            <span class="mn"><i></i><b>v9</b><small>90.2</small></span>
+            <span class="mn rej"><i></i><b>cand.</b><small>89.7</small></span>
+            <span class="mn"><i></i><b>v10</b><small>92.1</small></span>
+            <span class="mn next"><i></i><b>v11</b><small>training</small></span>
+          </div>
+          <div class="mprog"><span>Molting on 2,418 approved chats</span><i><em></em></i></div>
+        </div>
+        <div class="fcopy"><h3>Molts into a stronger version</h3><p>Every candidate is scored on your evals. Losers are shed, winners ship.</p></div>
+      </article>
+      <article class="fcard reveal">
+        <div class="fvis fv-snip">
+          <p class="snip-text" id="snip-text">Email <span class="ent" data-tok="[PERSON_1]">Priya Shah</span> about invoice <span class="ent" data-tok="[INVOICE_1]">INV-2231</span> and her account <span class="ent" data-tok="[ACCT_1]">4471-09</span>.</p>
+          <span class="claw" id="f-claw" aria-hidden="true"><svg class="crab-live"></svg></span>
+        </div>
+        <div class="fcopy"><h3>Snips what the model shouldn't see</h3><p>Sensitive values become tokens before inference, then come back for your people only.</p></div>
+      </article>
+    </div>
+    <div class="fgrid gap-top">
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span><h4>SSO and roles</h4><p>SAML, SCIM and per-team permissions.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg></span><h4>Audit logs</h4><p>Every prompt and admin action, exportable.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg></span><h4>Spend limits</h4><p>Caps and alerts per team. No surprise bills.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-bolt"/></svg></span><h4>Streaming and tools</h4><p>Function calling and JSON mode built in.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-rewind"/></svg></span><h4>One-click rollback</h4><p>Return to any molt, any time.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></span><h4>Weight export</h4><p>Take your model with you.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-server"/></svg></span><h4>Private VPC</h4><p>Run inside your own cloud on Enterprise.</p></div>
+      <div class="reveal"><span class="ib"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span><h4>Unlimited seats</h4><p>Pay for tokens. Never for people.</p></div>
     </div>
   </div></div>
 </section>
@@ -1397,7 +1545,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   </div>
   <div class="seafloor" aria-hidden="true">
     <div class="bubbles" data-n="8"></div>
-    <div class="giant"><span>Craby.AI</span></div>
+    <canvas class="giant-dots" id="wordmark"></canvas>
   </div>
 </footer>
 
@@ -1472,7 +1620,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
   const megaOpen = () => mega.classList.contains('open');
   const onNav = () => {
     const y = scrollY;
-    nav.style.top = (announce.hidden ? 0 : Math.max(0, announce.getBoundingClientRect().bottom)) + 'px';
+    nav.style.top = (!announce || announce.hidden ? 0 : Math.max(0, announce.getBoundingClientRect().bottom)) + 'px';
     const compact = y > 80;
     nav.classList.toggle('compact', compact);
     const max = document.documentElement.scrollHeight - innerHeight, p = max > 0 ? clamp(y / max, 0, 1) : 0;
@@ -1481,7 +1629,7 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     if (!reduce) { walker.classList.add('walking'); clearTimeout(walkT); walkT = setTimeout(() => walker.classList.remove('walking'), 160); }
   };
   addEventListener('scroll', onNav, { passive: true }); addEventListener('resize', onNav); onNav();
-  $('button', announce).addEventListener('click', () => { announce.hidden = true; onNav(); });
+  if (announce) $('button', announce).addEventListener('click', () => { announce.hidden = true; onNav(); });
   const darkSet = new Set();
   const darkIO = new IntersectionObserver(es => { es.forEach(e => e.isIntersecting ? darkSet.add(e.target) : darkSet.delete(e.target)); nav.classList.toggle('dark', darkSet.size > 0); }, { rootMargin: '-40px 0px -90% 0px' });
   $$('[data-nav=dark]').forEach(x => darkIO.observe(x));
@@ -1895,9 +2043,78 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(-
     };
   }
 
+
+  /* ---------------- Feature bento: self-typing assistant builder ---------------- */
+  function promptDemo() {
+    const DATA = {
+      support:  { p: 'Make a support bot that answers from our help centre', n: 'Support Assistant', m: 'Llama 3.3 70B · Shell: PII + payment', q: 'Q: Can I change plans mid-cycle?  A: Yes. Upgrades apply now and are prorated.' },
+      contract: { p: 'Review our NDAs and flag anything unusual', n: 'Contract Reviewer', m: 'Qwen3 32B · Shell: PII + client names', q: 'Flagged: a non-standard 5-year term in section 4.2.' },
+      wiki:     { p: 'Let staff search our internal wiki', n: 'Wiki Search', m: 'Mistral Small 3.1 · Shell: secrets + keys', q: 'Found 3 pages about the on-call rota.' }
+    };
+    const tabs = $$('.ptab'), out = $('#ptype'), res = $('#presult'); if (!out) return;
+    let key = 'support', timers = [], visible = false;
+    const clear = () => { timers.forEach(clearTimeout); timers = []; };
+    const show = (k, animate) => {
+      clear(); key = k;
+      tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.k === k));
+      const d = DATA[k];
+      $('#pr-name').textContent = d.n; $('#pr-meta').textContent = d.m; $('#pr-sample').textContent = d.q;
+      if (!animate || reduce) { out.textContent = d.p; res.classList.add('on'); return; }
+      out.textContent = ''; res.classList.remove('on');
+      [...d.p].forEach((ch, i) => timers.push(setTimeout(() => { out.textContent += ch; }, 300 + i * 32)));
+      const done = 300 + d.p.length * 32;
+      timers.push(setTimeout(() => res.classList.add('on'), done + 350));
+      timers.push(setTimeout(() => { if (visible) { const ks = Object.keys(DATA); show(ks[(ks.indexOf(key) + 1) % ks.length], true); } }, done + 4200));
+    };
+    tabs.forEach(t => t.addEventListener('click', () => show(t.dataset.k, true)));
+    show('support', false);
+    if (!reduce) new IntersectionObserver(([e]) => { const was = visible; visible = e.isIntersecting; if (visible && !was) show(key, true); if (!visible) clear(); }, { threshold: 0.4 }).observe($('.fv-prompt'));
+  }
+
+  /* ---------------- Feature bento: snip loop ---------------- */
+  function snipCard() {
+    const host = $('.fv-snip'); if (!host) return;
+    const ents = $$('.ent', host); ents.forEach(x => { x.dataset.orig = x.textContent; });
+    const set = (x, tok) => { x.textContent = tok ? x.dataset.tok : x.dataset.orig; x.classList.toggle('tok', tok); };
+    if (reduce) { ents.forEach(x => set(x, true)); return; }
+    const snip = makeSnipper(host, $('#f-claw')); let loop, visible = false;
+    const run = () => { ents.forEach(x => set(x, false)); snip.run(ents, x => set(x, true), () => { loop = setTimeout(() => visible && run(), 2600); }); };
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; clearTimeout(loop); if (visible) run(); else snip.cancel(); }, { threshold: 0.5 }).observe(host);
+  }
+
+  /* ---------------- Halftone footer wordmark ---------------- */
+  function dotWordmark() {
+    const c = $('#wordmark'); if (!c) return;
+    const ctx = c.getContext('2d');
+    const draw = () => {
+      const r = c.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2), W = r.width, H = r.height; if (!W || !H) return;
+      c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+      const off = document.createElement('canvas'); off.width = Math.round(W); off.height = Math.round(H);
+      const o = off.getContext('2d'), text = 'Craby.AI';
+      let fs = H; o.font = `600 ${fs}px "Instrument Sans", system-ui, sans-serif`;
+      let m = o.measureText(text);
+      fs = Math.min(fs * (W * 0.9) / m.width, H * 1.25); o.font = `600 ${fs}px "Instrument Sans", system-ui, sans-serif`;
+      m = o.measureText(text);
+      const fit = (H * 0.88) / (m.actualBoundingBoxAscent + m.actualBoundingBoxDescent);
+      if (fit < 1) { fs *= fit; o.font = `600 ${fs}px "Instrument Sans", system-ui, sans-serif`; m = o.measureText(text); }
+      const asc = m.actualBoundingBoxAscent, desc = m.actualBoundingBoxDescent;
+      o.fillStyle = '#000'; o.fillText(text, (W - m.width) / 2, (H - (asc + desc)) / 2 + asc);
+      const data = o.getImageData(0, 0, off.width, off.height).data;
+      const pitch = Math.max(4, W / 190), top = (H - (asc + desc)) / 2, span = asc + desc;
+      for (let y = pitch / 2; y < H; y += pitch) for (let x = pitch / 2; x < W; x += pitch) {
+        const a = data[(Math.round(y) * off.width + Math.round(x)) * 4 + 3] / 255; if (a < 0.35) continue;
+        const t = clamp((y - top) / span, 0, 1);
+        ctx.fillStyle = `rgb(${Math.round(255 - 13 * t)},${Math.round(155 - 42 * t)},${Math.round(110 - 52 * t)})`;
+        ctx.beginPath(); ctx.arc(x, y, pitch * 0.4, 0, 6.2832); ctx.fill();
+      }
+    };
+    draw(); new ResizeObserver(draw).observe(c);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+  }
+
   /* ---------------- Init ---------------- */
   const renderCharts = () => { spark(); ftChart(); tabBars(); costChart(); };
-  compute(); renderCharts(); halftone(); buildSea(); privacySnip();
+  compute(); renderCharts(); halftone(); buildSea(); privacySnip(); promptDemo(); snipCard(); dotWordmark();
   let rz; new ResizeObserver(() => { cancelAnimationFrame(rz); rz = requestAnimationFrame(renderCharts); }).observe(document.body);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(renderCharts);
 })();
